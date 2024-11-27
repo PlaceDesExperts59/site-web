@@ -1,0 +1,508 @@
+/* Importer la nouvelle police depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Style pour le logo */
+.logo-site {
+    width: 120px;
+    height: auto;
+}
+
+/* Style pour le menu */
+.navbar {
+    background-color: #ffffff00;
+    padding: 10px 20px;
+}
+
+/* Appliquer un background à tout le site */
+body {
+    background-image: url('../images/background/3.png'); /* Mettre ici le chemin de l'image */
+    background-color: #f0f0f0; /* Couleur de fond (facultatif si vous avez une image) */
+    background-size: cover; /* Ajuste l'image pour couvrir toute la page */
+    background-repeat: repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed;  /*Garde l'image fixe pendant le défilement */
+    background-position: center; /* Centre l'image */
+}
+
+/* Style pour les liens du menu */
+.nav-link {
+    font-size: 18px;
+    color: #333; /* Texte en gris foncé */
+    padding: 10px 20px; /* Espacement ajusté */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Espacement entre les lettres */
+}
+
+/* Indiquer la page active ("Accueil") */
+.nav-link.active {
+    background-color: #e0e9eb86;
+    border-radius: 10px;
+}
+
+/* Espacement supplémentaire entre les éléments du menu */
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+/* Style pour la loupe */
+.bi-search {
+    font-size: 20px;
+    color: #333; /* Gris foncé pour la loupe */
+    cursor: pointer; /* Curseur en forme de main */
+}
+
+.bi-search:hover {
+    color: #245360; /* Bleu au survol */
+}
+
+/************************************************************************************************/
+
+/* Section avec bord arrondi et couleur personnalisée */
+section {
+    position: relative; /* Pour positionner la flèche */
+    padding: 20px 0; /* Espacement interne */
+    margin-top: -25px; /* Espacement avec le menu */
+}
+
+.bulles {
+    background-color: #245360;
+    border-radius: 35px;
+}
+
+/* Conteneur du contenu centré avec largeur limitée */
+.container {
+    max-width: 1200px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centrage horizontal */
+    border-radius: 30px; /* Bords arrondis pour le conteneur */
+    overflow: hidden; /* Pour que les coins arrondis affectent les éléments internes */
+    background-color: transparent;
+}
+
+/* Fond du texte pour correspondre à la couleur du bloc */
+.text-container {
+    background-color: #245360; /* Couleur de fond du texte */
+    border-radius: 30px; /* Bords arrondis pour le texte */
+    padding: 30px; /* Espacement interne */
+    color: #fff; /* Couleur du texte */
+    position: relative; /* Pour positionner les logos */
+}
+
+/* Style pour le texte et le titre */
+.text-container h1 {
+    font-size: 2.5rem; /* Taille réduite du titre */
+    font-family: 'Playfair Display', serif; 
+    font-weight: 700; /* Gras pour le titre */
+}
+
+.h1 {
+    font-size: 2.5rem; /* Taille réduite du titre */
+    font-family: 'Playfair Display', serif; 
+    font-weight: 700; /* Gras pour le titre */
+}
+
+h2 {
+    font-size: 2rem; /* Taille réduite du titre */
+    font-family: 'Playfair Display', serif; /* Nouvelle police élégante */
+    font-weight: 700; /* Gras pour le titre */
+}
+
+.text-container p {
+    font-size: 1.2rem; /* Texte de description */
+}
+
+
+/*************************************************************************************/
+/* Footer*/
+/* Style pour le footer */
+
+.footer {
+    background-color: #fff; /* Couleur de fond du footer */
+    padding: 30px 0; /* Espacement interne */
+    color: #333; /* Couleur du texte */
+}
+
+.footer .container {
+    max-width: 1200px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+.row {
+    display: flex; /* Disposer les colonnes en ligne */
+    justify-content: space-between; /* Espacement entre les colonnes */
+}
+
+.footer-col {
+    flex: 1; /* Chaque colonne occupe une part égale de la largeur */
+    margin: 0 15px; /* Espacement horizontal entre les colonnes */
+}
+
+.footer-col h3 {
+    font-size: 1.5rem; /* Taille du titre des colonnes */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    font-family: 'Playfair Display', serif; /* Police du titre */
+    color: #245360; /* Couleur du titre */
+}
+
+.footer-links {
+    list-style: none; /* Supprimer les puces */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
+
+.footer-links a {
+    color: #333; /* Couleur des liens */
+    text-decoration: none; /* Supprimer la sous-ligne */
+    font-size: 1rem; /* Taille du texte des liens */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Souligner les liens au survol */
+    color: #245360; /* Couleur au survol */
+}
+
+.footer-bottom {
+    text-align: center; /* Centrer le texte de bas de page */
+    margin-top: 30px; /* Espacement au-dessus du texte */
+    font-size: 0.9rem; /* Taille du texte */
+    color: #333; /* Couleur du texte */
+}
+
+.footer-separator {
+    border: none; /* Supprimer la bordure par défaut */
+    border-top: 2px solid #245360; /* Ajouter une bordure en haut de 2px de couleur personnalisée */
+    margin: 0; /* Supprimer le margin par défaut */
+}
+
+/*********************************************************************************************************************************/
+/*Section carré bleu*/
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 2px 0;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 2px;
+    text-align: center;
+}
+th {
+    background-color: #ACBBC9
+    ;
+}
+/* Section formulaire */
+h1.text-center {
+    text-align: center; /* Centrer le titre */
+    font-family: 'Playfair Display', serif; /* Utiliser la nouvelle police */
+    font-size: 2.5rem; /* Taille du titre */
+    font-weight: 700; /* Gras */
+    margin-bottom: 2rem; /* Espacement sous le titre */
+}
+
+/* Styles pour les placeholders */
+input::placeholder,
+textarea::placeholder {
+    color: #6c757d; /* Couleur des placeholders */
+    font-size: 1rem; /* Taille de la police des placeholders */
+}
+
+/* Styles pour les champs de formulaire côte à côte */
+.form-row {
+    display: flex; /* Utiliser Flexbox pour aligner les champs côte à côte */
+    gap: 1rem; /* Espacement entre les champs */
+}
+
+.mb-3 {
+    margin-bottom: 1rem; /* Espacement sous chaque champ */
+}
+
+/* Style du bouton Envoyer*/
+.btn-custom2 {
+    background-color: white; /* Couleur de fond du bouton */
+    color: #245360; /* Couleur du texte */
+    border-radius: 30px; /* Bords arrondis */
+    padding: 10px 40px; /* Espacement interne */
+    text-decoration: none; /* Supprimer la sous-ligne */
+    font-size: 1rem; /* Taille du texte */
+    font-family: 'Playfair Display', serif; /* Même police que les titres */
+    border: 2px solid #245360; /* Bordure autour du bouton */
+}
+
+.btn-custom2:hover{
+    background-color: #245360;
+    color : white;
+}
+
+.btn-custom {
+    background-color: white; /* Couleur de fond du bouton */
+    color: #245360; /* Couleur du texte */
+    border-radius: 30px; /* Bords arrondis */
+    padding: 10px 40px; /* Espacement interne */
+    text-decoration: none; /* Supprimer la sous-ligne */
+    font-size: 1rem; /* Taille du texte */
+    font-family: 'Playfair Display', serif; /* Même police que les titres */
+    border: 2px solid #245360; /* Bordure autour du bouton */
+    transition: background-color 0.3s, color 0.3s; /* Transition douce pour les effets de survol */
+}
+
+/**************************************************************************************************************/
+/*Section prendre RDV*/
+
+.prendre-rdv-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #245360;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Ombre autour du conteneur */
+    border: 2px solid #ffffff50; /* Bordure blanche semi-transparente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prendre-rdv-container:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */
+}
+
+.rdv-title {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.rdv-subtitle {
+    font-size: 1.5rem;
+    color: #d9f1f7;
+    margin-bottom: 20px;
+}
+
+.img-fluid2 {
+    border-radius: 20px; /* Bords arrondis pour l'image */
+    width: 300px; /* Largeur de l'image ajustée */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+}
+
+/* Style pour l'image Pennylane */
+.pennylane-logo {
+    max-width: 200px; /* Taille de l'image */
+   
+    border: 2px solid #245360; /* Bordure bleue */
+    padding:10px;
+    border-radius: 10px; /* Coins arrondis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet de survol */
+   
+}
+
+/* Animation au survol */
+.pennylane-logo:hover {
+    transform: scale(1.05); /* Légère augmentation de taille */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+}
+
+.circle-dot {
+    width: 20px; 
+    height: 20px; 
+    background-color: #245360; /* Couleur du point */
+    border-radius: 50%; /* Forme ronde */
+    display: inline-block; 
+    margin: 2px;
+}
+
+.btn-horaire {
+    background-color: #fff;
+    color: #245360;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-right: 10px; /* Espacement entre les boutons */
+    margin-left: 10px; /* Espacement entre les boutons */
+    margin-top: 10px; /* Espacement entre les lignes si nécessaire */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-horaire:hover {
+    background-color: #d9f1f7; /* Couleur de survol */
+}
+
+/**************************************************************************************************************/
+/*Espace recrutement*/
+
+.text-container-recrutement {
+    padding: 30px; /* Espacement interne */
+    position: relative; /* Pour positionner les logos */
+}
+
+.text-container-recrutement h1 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif; /* Police élégante */
+    margin-bottom: 20px;
+}
+
+/* Style du rectangle */
+.rectangle {
+    background-color: #E0E9EB;
+    display: flex;
+    position: relative;
+}
+
+/* Style de l'icône */
+.icon {
+    font-size: 2rem;
+    color: #000000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.p{
+    margin-top: 10px;
+}
+
+/* Style pour les liens des adresses */
+.map-link {
+    text-decoration: none; /* Retirer le soulignement */
+    color: inherit; /* Garder la couleur de base du texte */
+    font-size: 1.1rem; /* Ajuste la taille du texte pour rendre ça plus visible */
+    position: relative;
+}
+
+.map-link:hover {
+    color: #67909b; /* Changer la couleur au survol pour indiquer qu'il est cliquable */
+}
+
+.map-icon {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    color: #67909b; /* Ajouter une icône avec la couleur de ton site */
+    transition: transform 0.3s ease;
+}
+
+.map-link:hover .map-icon {
+    transform: translateX(5px); /* Animation de déplacement au survol */
+}
+
+
+/* Style pour le bouton de retour en haut de la page */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 2.7rem; /* Taille de l'icône */
+    display: none; /* Caché par défaut */
+    z-index: 1000; /* Au-dessus du contenu */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-to-top i:hover {
+    color: #f9a825; /* Couleur au survol */
+    transform: translateY(-5px); /* Animation légère de déplacement */
+}
+
+.scroll-to-top.show {
+    display: block; /* Affiche la flèche lorsque la classe 'show' est ajoutée */
+}
+
+.scroll-to-top i {
+    font-size: 2.7rem; /* Taille de l'icône */
+    color: #67909b; /* Couleur de l'icône */
+}
+
+.decoration-graphic {
+    position: absolute;
+    top: 0%; /* Utilisez % pour un positionnement relatif */
+    right: -1%; /* Utilisez % pour un positionnement adaptable */
+    width: 80px;
+    height: auto;
+    z-index: 1;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.services-list {
+    list-style: none; /* Enlever les puces par défaut */
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem; /* Taille du texte de la liste */
+    line-height: 1.6; /* Hauteur de ligne pour lisibilité */
+    color:#ffffff
+}
+
+.services-list li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
+
+@media (max-width: 1024px) {
+    .col-lg-6 .img-fluid2 {
+        display: none;
+    }
+    #rdv2 {
+        padding:5px !important;
+    }
+    /* Met le Calendly après le texte "Prenons RDV" */
+    .prendre-rdv-container .col-lg-5 {
+        order: 2;
+    }
+    .prendre-rdv-container .col-lg-7 {
+        order: 1;
+    }
+    .footer .footer-col:nth-child(3) {
+        order: 3;
+        text-align: center;
+        margin-top: 20px; /* Optionnel : ajout d'espacement en haut */
+    }
+
+    .footer-bottom {
+        text-align: left;
+        width: 100%;
+    }
+
+     /* Réduction de l’espace entre la section RDV et Recrutement */
+     #rdv {
+        margin-bottom: 0px !important; /* Réduction de l’espace en bas de RDV */
+        padding: 0px !important;
+    }
+
+    #recrutement {
+        margin-top: 0px !important; /* Réduction de l’espace en haut de Recrutement */
+        padding: 0px !important;
+    }
+
+    .calendly{
+        margin-top:30px;
+    }
+
+    .contacteznous{
+        margin-top:50px;
+    }
+
+    body {
+        background-color: #ffffff !important;
+        background-image: none !important; /* Supprime toute image de fond */
+    }
+
+    .text-container h1,
+    .text-container2 h1,
+    .section-title {
+        text-align: left !important;
+    }
+
+    .text-container-recrutement{
+        padding:0px !important;
+    }
+
+    .text-container{
+        padding : 20px !important;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+}

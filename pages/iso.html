@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Place des Experts</title>
+        <!-- Lien vers Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="../images/logo.png" type="image/png">
+        <!-- Lien vers Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Lien vers Google Fonts pour la police "Roboto" -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- Lien vers le fichier CSS personnalisé -->
+        <link rel="stylesheet" href="../style/style.css">
+    </head>
+    <body>
+
+        <!-- Barre de navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- Logo du site -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/logo.png" alt="Logo" class="logo-site" style="width: 120px;">
+                </a>
+
+                <!-- Bouton pour mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Liens du menu -->
+                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center; padding-right: 120px;"> <!-- Ajuster la position du menu -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/cabinet.html">Le cabinet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/expertises.html">Nos expertises</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/secteurs.html">Nos secteurs d’activité</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/outils.html">Nos outils</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Section ISO 9001 -->
+        <section class="container">
+
+            <!-- Section rectangle-->
+            <div class="services container rounded text-white p-5 d-flex align-items-center position-relative">
+                <div class="row w-100">
+                    <!-- Colonne gauche : texte -->
+                    <div class="col-lg-6 ">
+                        </br><h2 class="section-title isoo2">Place des Experts certifié ISO 9001</h2></br>
+                        <ul class="services-list isoo" style="text-align: justify;">
+                            La certification ISO 9001 représente une étape clé dans l’engagement de Place des Experts envers ses clients, attestant de notre volonté d’offrir des services de haute qualité et de maintenir des processus efficaces. Obtenue en 2021 puis renouvelée en septembre 2024, cette norme internationale de management de la qualité témoigne de notre dévouement à améliorer constamment nos pratiques tout en plaçant la satisfaction client  au centre de nos préoccupations.
+                    </div>
+                    <!-- Colonne droite : image -->
+                    <div class="col-lg-6 position-relative">
+                        <img src="../images/gouttes.png" alt="Décoration ISO" class="decoration-graphic2">
+                        <img src="../images/Accueil/5-Logo ISO 9001.pdf.png" alt="Image gauche" class="img-fluid2 rounded justify-content-center" style="max-width: 350px; margin-left:100px;">
+                    </div>     
+                </div>
+            </div></br></br>
+
+            <!-- Section cartes-->
+            <h2 class="section-title "><span class="circle-dot"></span>  Qu’est-ce que la certification ISO 9001 ?</h2></br>
+            <div class="bubble-containerr">
+                <div class="bubblee" onclick="flipBubble(this)">
+                    <div class="bubble-front">
+                        <p class="bubble-title" style="color:white;">Qu’est-ce que la certification ISO 9001 ?</p>
+                        <i class="fas fa-sync-alt click-icon"></i> <!-- Icône rotation -->
+                    </div>
+                    <div class="bubble-back">
+                        <p class="bubble-text">L’ISO 9001 est une norme de référence reconnue mondialement dans le domaine du management de la qualité.</br> Elle s’applique à tous les types d’organismes, indépendamment de leur taille ou de leur secteur d’activité.</p>
+                    </div>
+                </div>
+                <div class="bubblee" onclick="flipBubble(this)">
+                    <div class="bubble-front">
+                        <p class="bubble-title" style="color:white;">Quel est l’objectif de cette certification ?</p>
+                        <i class="fas fa-sync-alt click-icon"></i> <!-- Icône rotation -->
+                    </div>
+                    <div class="bubble-back">
+                        <p class="bubble-text">Aider les entreprises à optimiser leurs performances en établissant un cadre rigoureux pour améliorer continuellement la qualité des produits et services.</br> En adoptant cette norme, nous avons mis en place des processus efficaces, formé nos collaborateurs et renforcé nos systèmes de gestion pour garantir une réponse systématique aux attentes des clients.</p>
+                    </div>
+                </div>
+                <div class="bubblee" onclick="flipBubble(this)">
+                    <div class="bubble-front">
+                        <p class="bubble-title" style="color:white;">Quels sont les principes clés de la certification ?</p>
+                        <i class="fas fa-sync-alt click-icon"></i> <!-- Icône rotation -->
+                    </div>
+                    <div class="bubble-back">
+                        <p class="bubble-text">Plusieurs principes clés :</br> l'orientation client, le leadership, la gestion des processus, et l'amélioration continue.</br></br> Ces principes assurent que nous repondrons aux besoins de nos clients de manière proactive, en offrant des services conformes aux exigences légales et réglementaires, tout en optimisant constamment nos processus internes.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section check-->
+            </br></br>
+            <h2 class="section-title"><span class="circle-dot"></span> Pourquoi avoir renouvelé la certification ISO 9001 ?</h2>
+
+            <ul class="services-list isoo">
+                <li style="text-align: justify; font-size: 1.1rem;"><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Confirmer notre engagement à maintenir un haut niveau d’excellence</li>
+                <li style="text-align: justify; font-size: 1.1rem;"><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Système de management de la qualité conforme aux exigences de la norme, et conçu pour évoluer et s’améliorer
+                    continuellement</li>
+                <li style="text-align: justify; font-size: 1.1rem;"><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Garantir à nos clients que nous fournissons des services fiables et de qualité, en matière de comptabilité, fiscalité,
+                    juridique ou social.</li>
+                <li style="text-align: justify; font-size: 1.1rem;"><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Renforcer la confiance de nos clients en apportant la certitude que nos pratiques sont rigoureuses, transparentes, et
+                    centrées sur leur satisfaction.</li>
+            </ul>
+
+            <!-- Section Accordion-->
+            </br></br><h2 class="section-title"><span class="circle-dot"></span> Les avantages de la norme ISO 9001</h2></br>
+                
+                    <div class="accordion" id="accordionExample">
+
+                        <!-- Question 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading100">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse100" aria-expanded="false" aria-controls="collapse100">
+                                    Que vous apporte une certification comme l’ISO 9001 dans le choix de votre Expert-Comptable ?
+                                </button>
+                            </h2>
+                            <div id="collapse100" class="accordion-collapse collapse" aria-labelledby="heading100" data-bs-parent="#accordionExample">
+                                <div class="accordion-body" style="text-align: justify;"> La certification ISO 9001 prouve notre capacité à offrir des services qui respectent des normes de qualité élevées. Cela
+                                    permet aux clients de savoir que Place des Experts a mis en place des services rigoureux de contrôle de la qualité et
+                                    d’augmenter leur confiance en nos services. En tant que cabinet d’expertise-comptable certifié ISO 9001, nous garantissons
+                                    que nos services sont conformes aux exigences les plus strictes du marché, tout en offrant une approche personnalisée et
+                                    aux besoins spécifiques de chaque client.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading101">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse101" aria-expanded="false" aria-controls="collapse101">
+                                    De quelle manière la norme ISO 9001 améliore-t-elle notre traitement des réclamations ?
+                                </button>
+                            </h2>
+                            <div id="collapse101" class="accordion-collapse collapse" aria-labelledby="heading101" data-bs-parent="#accordionExample">
+                                <div class="accordion-body" style="text-align: justify;">La norme ISO 9001 nous aide dans la gestion des réclamations des clients. Grâce à des processus bien établis, Place des
+                                    Experts est en mesure de traiter rapidement et efficacement toute réclamation, offrant à nos clients des solutions rapides et
+                                    satisfaisantes. Cette réactivité renforce la relation de confiance avec nos clients, mais permet également de maintenir des
+                                    standards de services élevés en continu.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading102">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse102" aria-expanded="false" aria-controls="collapse102">
+                                    Comment la norme ISO 9001 contribue-t-elle à l’amélioration continue de nos processus ?
+                                </button>
+                            </h2>
+                            <div id="collapse102" class="accordion-collapse collapse" aria-labelledby="heading102" data-bs-parent="#accordionExample">
+                                <div class="accordion-body" style="text-align: justify;">La norme ISO 9001 aide à identifier et à éliminer toute les inefficacités dans les processus d’une entreprise. Cela nous
+                                    permet d’évaluer régulièrement nos pratiques, éliminer les gaspillages de ressources, et améliorer l’efficacité de nos
+                                    opérations.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading103">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse103" aria-expanded="false" aria-controls="collapse103">
+                                    Comment la norme ISO 9001 assure-t-elle notre performance à long terme ?
+                                </button>
+                            </h2>
+                            <div id="collapse103" class="accordion-collapse collapse" aria-labelledby="heading103" data-bs-parent="#accordionExample">
+                                <div class="accordion-body" style="text-align: justify;">La norme ISO 9001 nous encourage à effectuer un processus d’audit interne et de réévaluation régulière, garantissant une
+                                    optimisation continue du système de management de la qualité. En mettant en place des audits fréquents, nous identifions
+                                    de nouvelles opportunités d’amélioration et restons compétitifs sur le marché. Cela nous permet d’assurer la satisfaction de
+                                    nos clients, mais aussi de garantir notre performance à long terme.
+                                </div>
+                            </div>
+                        </div>
+                    </div></br>
+                    
+        </section>
+
+        <!-- Bouton pour remonter en haut de la page -->
+        <a href="#" class="scroll-to-top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+        </a>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function flipBubble(element) {
+                element.classList.toggle("flip");
+            }
+        </script>
+        
+        
+        <script>
+            // Afficher/Masquer le bouton selon le défilement
+            window.addEventListener('scroll', function() {
+                var scrollToTopButton = document.querySelector('.scroll-to-top');
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.add('show');
+                } else {
+                    scrollToTopButton.classList.remove('show');
+                }
+            });
+
+            // Remonter en haut de la page lorsqu'on clique sur le bouton
+            document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+        </script>
+        
+    </body>
+    
+    <hr class="footer-separator">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Colonne 2: Le cabinet -->
+                <div class="footer-col">
+                    <h3>Le cabinet</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/cabinet.html">Notre équipe</a></li>
+                        <li><a href="../pages/cabinet.html#valeurs">Nos valeurs</a></li>
+                        <li><a href="../pages/outils.html">Nos outils</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                        <li><a href="../pages/iso.html">ISO 9001</a></li>
+                        <li><a href="../pages/mentions.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <!-- Colonne 3: Nous retrouver -->
+                <div class="footer-col">
+                    <h3>Nous retrouver</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/contact.html">Contact</a></li>
+                        <li><a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/placedesexperts/profilecard/?igsh=MTJ0YzkxNzA2NDBhZA==" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>
+                        <li><a href="../pages/contact.html#rdv">Prendre rendez-vous</a></li>
+                        <li><a href="../pages/contact.html#recrutement">Espace recrutement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Et si on collaborait ensemble ?</h3>
+                    <a href="https://www.pennylane.com" target="_blank">
+                        <i class="bi bi-arrow-return-right" style="color:#245360;font-size: 50px;margin-right:10px;margin-top: 10px; vertical-align: middle;"></i><img src="../images/Accueil/1-logo-pennylane.png" alt="Pennylane Logo" class="pennylane-logo">
+                    </a>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tous droits réservés | SARL Place des Experts</p>
+            </div>
+        </div>
+    </footer>
+    
+</html>

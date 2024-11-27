@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Place des Experts</title>
+        <!-- Lien vers Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Lien vers Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="icon" href="../images/logo.png" type="image/png">
+
+        <!-- Lien vers Google Fonts pour la police "Roboto" -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- Lien vers le fichier CSS personnalisé -->
+        <link rel="stylesheet" href="../style/blog.css">
+    </head>
+    <body>
+
+        <!-- Barre de navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- Logo du site -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/logo.png" alt="Logo" class="logo-site" style="width: 120px;">
+                </a>
+
+                <!-- Bouton pour mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Liens du menu -->
+                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center; padding-right: 120px;"> <!-- Ajouter padding-right -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/cabinet.html">Le cabinet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/expertises.html">Nos expertises</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/secteurs.html">Nos secteurs d’activité</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../pages/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/outils.html">Nos outils</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Section sous le menu avec le rectangle bleu -->
+        <section>
+            <div class="container rounded text-white d-flex align-items-center position-relative p-5">
+                <div class="row bulles">
+                <img src="../images/gouttes.png" alt="Décoration graphique" class="decoration-graphic">
+                    <!-- Colonne gauche : texte, titre et logos -->
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                        </br><h1 class="display-4">BLOG</h1></br>
+                            <p class="lead" style="text-align: justify;">
+                                Cette page est votre source d'informations incontournable pour la comptabilité et la gestion quotidienne de votre activité. </br></br>
+                                
+                                Explorez nos articles, régulièrement mis à jour, et rédigés par nos experts. Vous y trouverez les dernières actualités fiscales et comptables, des informations pour la gestion de votre activité, des conseils pratiques, des retours d'expérience, et bien d’autres sujets.</br></br> 
+                                
+                                Vous pouvez également suivre les actualités de notre cabinet sur notre compte LinkedIn : <a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank" class="text-link">Place des Experts</a>.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <!-- Colonne droite : image pleine largeur -->
+                    <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                        <img src="../images/Accueil/6-introduction.png" alt="Image d'accueil" class="img-fluid2 rounded custom-image">
+                    </div> 
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Barre de recherche avec icône de loupe -->
+        <div class="search-bar-container d-flex align-items-center">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" id="search-input" placeholder="Rechercher dans les articles..." class="form-control">
+        </div>
+
+
+        <div id="blog-cards-container" class="blog-cards-list container"></div>
+
+
+        <!-- Bouton pour remonter en haut de la page -->
+        <a href="#" class="scroll-to-top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+        </a>
+
+
+        <script>
+            // Afficher/Masquer le bouton selon le défilement
+            window.addEventListener('scroll', function() {
+                var scrollToTopButton = document.querySelector('.scroll-to-top');
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.add('show');
+                } else {
+                    scrollToTopButton.classList.remove('show');
+                }
+            });
+
+            // Remonter en haut de la page lorsqu'on clique sur le bouton
+            document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+        <script>
+            const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeYPB8TcxaqiZL2FUMsiHxLkpg6669WPPq3gzfgz16s-EYrMA8Q4NrzJODs2EFr1cuL3OsvRtMi0Nq/pub?output=csv';
+        
+            async function fetchCSV() {
+                try {
+                    const response = await fetch(csvUrl);
+                    const data = await response.text();
+        
+                    const blogCardsContainer = document.getElementById('blog-cards-container');
+                    blogCardsContainer.innerHTML = '';
+        
+                    // Analyser le CSV avec PapaParse
+                    const parsedData = Papa.parse(data, {
+                        header: true,
+                        skipEmptyLines: true
+                    });
+        
+                    // Nettoyer les clés des objets
+                    const articlesData = parsedData.data.map(entry => {
+                        const cleanedEntry = {};
+                        Object.keys(entry).forEach(key => {
+                            const cleanedKey = key.trim(); // Supprimer les espaces autour de la clé
+                            cleanedEntry[cleanedKey] = entry[key].trim();
+                        });
+                        return cleanedEntry;
+                    });
+        
+                    // Fonction pour parser les dates au format DD/MM/YYYY
+                    function parseDate(dateString) {
+                        if (!dateString) return new Date(0);
+                        const [day, month, year] = dateString.split('/');
+                        return new Date(`${year}-${month}-${day}`);
+                    }
+        
+                    // Trier les articles par date (du plus récent au plus ancien)
+                    articlesData.sort((a, b) => {
+                        const dateA = parseDate(a['Date de publication']);
+                        const dateB = parseDate(b['Date de publication']);
+                        return dateB - dateA;
+                    });
+        
+                    // Afficher les articles triés
+                    articlesData.forEach((entry, index) => {
+                        const title = entry['Titre'];
+                        const author = entry["Auteur de l'article"];
+                        const date = entry['Date de publication'];
+                        const imageUrl = entry['Image principale'];
+                        const content = entry["Texte d'introduction"];
+                        const excerpt = content.split(' ').slice(0, 25).join(' ') + ' ...';
+        
+                        const cardHTML = `
+                            <div class="blog-card">
+                                <img id="blogImage${index}" class="blog-card-image" src="${imageUrl}" alt="${title}" onerror="this.src='../images/Nos expertises/Comptabilite╠ü/2-Vision moderne.png';">
+                                <div class="blog-card-content">
+                                    <h3>${title}</h3>
+                                    <p><em>Par ${author}, le ${date}</em></p>
+                                    <p class="excerpt">${excerpt}</p>
+                                    <div class="read-more-container">
+                                        <a class="read-more" onclick="openArticle(${index})">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        
+                        blogCardsContainer.insertAdjacentHTML('beforeend', cardHTML);
+                    });
+                } catch (error) {
+                    console.error("Erreur lors de la récupération des articles :", error);
+                }
+            }
+        
+            // Fonction pour ouvrir l'article complet
+            function openArticle(index) {
+                window.location.href = `article.html?index=${index}`;
+            }
+        
+            document.addEventListener('DOMContentLoaded', fetchCSV);
+        </script>
+
+        <script>
+            // Fonction pour filtrer les articles en fonction de la recherche
+            function filterArticles() {
+                const searchInput = document.getElementById('search-input').value.toLowerCase();
+                const articlesData = JSON.parse(localStorage.getItem('articlesData'));
+                const blogCardsContainer = document.getElementById('blog-cards-container');
+                blogCardsContainer.innerHTML = '';
+
+                // Filtrer les articles qui contiennent le mot-clé dans le titre, l'auteur ou le contenu
+                const filteredArticles = articlesData.filter(article => {
+                    const title = article['Titre'].toLowerCase();
+                    const author = article["Auteur de l'article"].toLowerCase();
+                    const content = article['Contenu'].toLowerCase();
+                    return title.includes(searchInput) || author.includes(searchInput) || content.includes(searchInput);
+                });
+
+                // Afficher les articles filtrés
+                filteredArticles.forEach((entry, index) => {
+                    const title = entry['Titre'];
+                    const author = entry["Auteur de l'article"];
+                    const date = entry['Date de publication '];
+                    const imageUrl = entry['Image'];
+                    const content = entry['Contenu'];
+                    const excerpt = content.split(' ').slice(0, 20).join(' ') + '...';
+
+                    const cardHTML = `
+                        <div class="blog-card">
+                            <img id="blogImage${index}" class="blog-card-image" src="${imageUrl}" alt="${title}" onerror="this.src='../images/Nos expertises/Comptabilite╠ü/2-Vision moderne.png';">
+                            <div class="blog-card-content">
+                                <h3>${title}</h3>
+                                <p><em>Par ${author}, le ${date}</em></p>
+                                <p class="excerpt">${excerpt}</p>
+                                <div class="read-more-container">
+                                    <a class="read-more" onclick="openArticle(${index})">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    blogCardsContainer.insertAdjacentHTML('beforeend', cardHTML);
+                });
+
+                // Afficher un message si aucun article n'est trouvé
+                if (filteredArticles.length === 0) {
+                    blogCardsContainer.innerHTML = `<p>Aucun article trouvé pour votre recherche.</p>`;
+                }
+            }
+
+            // Écouter les changements dans la barre de recherche
+            document.getElementById('search-input').addEventListener('input', filterArticles);
+        </script>
+
+        <!-- Lien vers Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+    </body>
+    
+    <hr class="footer-separator">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Colonne 2: Le cabinet -->
+                <div class="footer-col">
+                    <h3>Le cabinet</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/cabinet.html">Notre équipe</a></li>
+                        <li><a href="../pages/cabinet.html#valeurs">Nos valeurs</a></li>
+                        <li><a href="../pages/outils.html">Nos outils</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                        <li><a href="../pages/iso.html">ISO 9001</a></li>
+                        <li><a href="../pages/mentions.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <!-- Colonne 3: Nous retrouver -->
+                <div class="footer-col">
+                    <h3>Nous retrouver</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/contact.html">Contact</a></li>
+                        <li><a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/placedesexperts/profilecard/?igsh=MTJ0YzkxNzA2NDBhZA==" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>
+                        <li><a href="../pages/contact.html#rdv">Prendre rendez-vous</a></li>
+                        <li><a href="../pages/contact.html#recrutement">Espace recrutement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Et si on collaborait ensemble ?</h3>
+                    <a href="https://www.pennylane.com" target="_blank">
+                        <i class="bi bi-arrow-return-right" style="color:#245360;font-size: 50px;margin-right:10px;margin-top: 10px; vertical-align: middle;"></i><img src="../images/Accueil/1-logo-pennylane.png" alt="Pennylane Logo" class="pennylane-logo">
+                    </a>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tous droits réservés | SARL Place des Experts</p>
+            </div>
+        </div>
+    </footer>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Place des Experts</title>
+        <link rel="icon" href="./images/logo.png" type="image/png">
+        <!-- Lien vers Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Lien vers Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Lien vers Google Fonts pour la police "Roboto" -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- Lien vers le fichier CSS personnalisé -->
+        <link rel="stylesheet" href="./style/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    </head>
+    <body >
+
+        <!-- Barre de navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- Logo du site -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/logo.png" alt="Logo" class="logo-site" style="width: 120px;">
+                </a>
+
+                <!-- Bouton pour mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Liens du menu -->
+                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center; padding-right: 120px;"> <!-- Ajouter padding-right -->
+                    <ul class="navbar-nav"> <!-- Supprimer mx-auto -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Accueil</a> <!-- Page active -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/cabinet.html">Le cabinet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/expertises.html">Nos expertises</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/secteurs.html">Nos secteurs d’activité</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/outils.html">Nos outils</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <section class="container">
+            <!-- Section rectangle bleu -->
+            <section>
+                <div class="container rounded text-white p-5 d-flex align-items-center position-relative">
+                    <div class="row bulles">
+                        <img src="./images/gouttes.png" alt="Décoration graphique" class="decoration-graphic">
+                        <!-- Colonne gauche : texte, titre et logos -->
+                        <div class="col-lg-6">
+                            <div class="text-container">
+                                </br><h1 class="display-4">PLACE DES EXPERTS</h1></br>
+                                <p class="lead" style="text-align: justify;">
+                                    Place des Experts est un cabinet d'expertise comptable, situé à Hazebrouck et à La Madeleine, offrant des services comptables, fiscaux, et juridiques pour les entreprises de tous les secteurs. </br></br>
+
+                                    Depuis plus de trente ans, nous accompagnons, conseillons, aidons les entreprises dans leur gestion quotidienne et leur développement. </br></br>
+
+                                    Au-delà de l’aspect traditionnel de l’expertise comptable, nous souhaitons vous apporter un conseil personnalisé à vos besoins et adapté aux valeurs de votre entreprise. 
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Colonne droite : image pleine largeur avec réduction de taille et padding -->
+                        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+                            <img src="images/Le cabinet/1-E╠üquipe cab.PNG" alt="Image d'accueil" class="img-fluid2 rounded custom-image">
+                        </div>                    
+                    </div>
+                </div>
+            </section>
+
+            <!-- Double flèche indiquant de descendre -->
+            <div class="scroll-down text-center">
+                <a href="#target-section" class="scroll-link">
+                    <i class="bi bi-chevron-double-down"></i>
+                </a>
+            </div>
+
+            <!-- Section des services avec image à gauche et texte à droite -->
+            <section class="services services-section" id="target-section">
+                <div class="container rounded text-white p-5 d-flex align-items-center">
+                    <div class="row w-100">
+                        <!-- Colonne gauche : image -->
+                        <div class="col-lg-6">
+                            <img src="images/Accueil/4-Missions comptables.png" alt="Image gauche" class="img-fluid rounded">
+                        </div>
+
+                        <!-- Colonne droite : titre et liste -->
+                        <div class="col-lg-6" data-aos="slide-left" data-aos-duration="1000"></br></br>
+                            <h2 class="section-title"><span class="circle-dot"></span>  Voici les différentes missions que nous effectuons au quotidien pour nos clients :</h2>
+
+                            <ul class="services-list">
+                                <li><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Aide à la création ou reprise d’entreprise</li>
+                                <li><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Gestion quotidienne de votre comptabilité et fiscalité</li>
+                                <li><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Assurer vos différentes obligations sociales</li>
+                                <li><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Intervenir sur différentes missions RSE</li>
+                                <li><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Assurer votre contrôle de gestion</li>
+                                <li><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Accompagnement sur les aspects juridiques</li>
+                                <li><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Analyse de vos données avec Power BI</li>
+                                <li><i class="bi bi-check" style="color:#245360;font-size: 1.7rem;"></i>Mener un audit légal et contractuel pour votre entreprise</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ligne de séparation responsive -->
+            <hr class="section-separator">
+
+            <!-- Section des bulles -->
+            <section class="container">
+                <h1 class="section-title sectionbulles">Pourquoi <span class="highlight">choisir  </span> </br>Place des Experts</h1>
+                <div class="bubbles-wrapper">
+                    <!-- Bulle 1 -->
+                    <div class="bubble">
+                        <i class="bi bi-ear" style="font-size: 3rem;"></i> <!-- Icône à l'écoute -->
+                        <div class="bubble-title">À l’écoute</div></br>
+                        <div class="bubble-text">Nos experts-comptables et les collaborateurs qui les entourent mettent un point d’honneur à l’écoute des clients et de leurs questionnements.</div>
+                    </div>
+                    <!-- Bulle 2 -->
+                    <div class="bubble">
+                        <i class="bi bi-calendar-check" style="font-size: 3rem;"></i> <!-- Icône disponibilité -->
+                        <div class="bubble-title">Disponibilité</div></br>
+                        <div class="bubble-text" style="text-align: justify;">Nous nous engageons à répondre à vos
+                            emails dans les 48 heures et vous rappeler
+                            par téléphone au plus tard le lendemain.</div>
+                        <div class="mt-4 read-more-container">
+                            <a href="./pages/contact.html#rdv" class="btn-custom-contact2">Prendre rendez-vous <i class="bi bi-arrow-right-circle-fill" style ="padding-left:10px; font-size: 1.1rem !important;"></i></a>
+                        </div>
+                    </div>
+                    <!-- Bulle 3 -->
+                    <div class="bubble">
+                        <i class="bi bi-award" style="font-size: 3rem;"></i> <!-- Icône expertise -->
+                        <div class="bubble-title">Notre expertise</div></br>
+                        <div class="bubble-text" style="text-align: justify;">Nous intervenons dans un ensemble de
+                            domaine d’activité varié tel que
+                            l’immobilier, les professions médicales et
+                            libérales, le e-commerce, etc.</div>
+                            <div class="mt-4 read-more-container">
+                                <a href="./pages/secteurs.html" class="btn-custom-contact2">Voir nos secteurs<i class="bi bi-arrow-right-circle-fill" style ="padding-left:10px; font-size: 1.1rem !important;"></i></a>
+                            </div>
+                    </div>
+                    <!-- Bulle 4 -->
+                    <div class="bubble">
+                        <i class="bi bi-mortarboard" style="font-size: 3rem;"></i> <!-- Icône formation -->
+                        <div class="bubble-title">Nos valeurs</div></br>
+                        <div class="bubble-text" style="text-align: justify;">Nos valeurs de partage et d'entraide renforcent nos compétences pour mieux servir nos clients. Notre fiabilité repose sur la confiance et l'intégrité, avec un engagement proactif et responsable dans chaque mission.
+                        </div>
+                    </div>
+                    <!-- Bulle 5 -->
+                    <div class="bubble">
+                        <i class="bi bi-heart" style="font-size: 3rem;"></i> <!-- Icône réponses adaptées -->
+                        <div class="bubble-title">Des réponses adaptées</div></br>
+                        <div class="bubble-text" > Quelle que soit la taille de votre entreprise
+                            et votre activité, nous apportons des
+                            réponses à vos problématiques. </div>
+                    </div>
+                    <!-- Bulle 6 -->
+                    <div class="bubble">
+                        <i class="bi bi-coin" style="font-size: 3rem;"></i> <!-- Icône optimisation fiscale -->
+                        <div class="bubble-title">Optimisation fiscale</div></br>
+                        <div class="bubble-text">Nous pouvons étudier votre demande de
+                            stratégies patrimoniales ou immobilières,
+                            et vous orienter vers la solution adaptée à
+                            vos besoins et attentes.</div>
+                    </div>
+                    <!-- Bulle 7 -->
+                    <div class="bubble">
+                        <i class="bi bi-people" style="font-size: 3rem;"></i> <!-- Icône équipe dédiée -->
+                        <div class="bubble-title">Une équipe dédiée</div></br>
+                        <div class="bubble-text" style="text-align: justify;">Chaque client se voit dédier un expert
+                            comptable, un collaborateur en charge du
+                            dossier et une personne en charge de la
+                            mission sociale</div>
+                            <div class="mt-4 read-more-container">
+                                <a href="./pages/cabinet.html" class="btn-custom-contact2">Notre cabinet<i class="bi bi-arrow-right-circle-fill" style ="padding-left:10px; font-size: 1.1rem !important;"></i></a>
+                            </div>
+                    </div>
+                    <!-- Bulle 8 -->
+                    <div class="bubble">
+                        <i class="bi bi-check-circle" style="font-size: 3rem;"></i> <!-- Icône qualité -->
+                        <div class="bubble-title">Qualité</div></br>
+                        <div class="bubble-text" style="text-align: justify;">Dans une optique de développement ainsi
+                            que pour répondre le mieux possible à vos
+                            exigences, nous essayons de toujours
+                            mieux vous servir. Pour appuyer cette
+                            qualité, nous sommes certifiés ISO 9001.</div>
+                    </div>
+                    <!-- Bulle 9 -->
+                    <div class="bubble">
+                        <i class="bi bi-lightbulb" style="font-size: 3rem;"></i> <!-- Icône qualité -->
+                        <div class="bubble-title">Innovation</div></br>
+                        <div class="bubble-text" style="text-align: justify;">Nous intégrons les dernières technologies
+                            et pratiques de gestion pour optimiser vos
+                            processus financiers. Notre équipe uttilise des solutions innovantes
+                            pour répondre aux défis et vous
+                            apporter un avantage concurrentiel.</div>
+                    </div>
+                    
+                </div>
+            
+                <!-- Gommettes de navigation -->
+                <div class="pagination-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </section>
+            
+            <!-- Ligne de séparation responsive -->
+            <hr class="section-separator">
+
+            <!-- ISO-->
+            <section class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="iso-bubble">
+                        <p data-aos="zoom-in" data-aos-duration="1000">
+                            Nous sommes fiers de vous présenter notre cabinet d'expertise comptable certifié ISO 9001,
+                            garantissant ainsi notre engagement envers la qualité et l'excellence dans nos services.
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="services container rounded text-white p-5 d-flex align-items-center">
+                    <div class="row w-100">
+                        <!-- Colonne gauche : texte -->
+                        <div class="col-lg-6 texteiso" data-aos="slide-right" data-aos-duration="1000">
+                            <h2 class="section-title">Place des Experts certifié ISO 9001</h2>
+                            <ul class="services-list container">
+                                Cette certification est le résultat de notre engagement
+                                permanent à placer nos clients au cœur de nos
+                                préoccupations.</br>
+                                La norme ISO 9001 incarne des valeurs
+                                auxquelles nous adhérons profondément : la qualité, la
+                                transparence et l’engagement auprès de nos clients.
+                            </ul></br>
+                            <!-- Bouton En savoir plus -->
+                            <div class="btn-container">
+                                <a href="./pages/iso.html" class="btn btn-custom">En savoir plus</a>
+                            </div>
+                        </div>
+                        <!-- Colonne droite : image -->         
+                        <div class="col-lg-6 position-relative">
+                            <img src="images/gouttes.png" alt="Décoration ISO" class="decoration-graphic2">
+                            <img src="images/Accueil/5-Logo ISO 9001.pdf.png" alt="Image gauche" class="img-fluid2 rounded justify-content-center marge" style="max-width: 350px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Ligne de séparation responsive -->
+            <hr class="section-separator">
+
+            <!-- Section Avis -->
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-8aa17c65-a468-47d8-9f51-5e2ac9485414" data-elfsight-app-lazy></div>
+
+            <!-- Ligne de séparation responsive -->
+            <hr class="section-separator">
+
+            <!-- Section blog -->
+            <section class="container">
+                <h1 class="section-title titreblog">Nos dernières publications</h1>
+                <div id="latest-articles-container" class="blog-cards-list container"></div>
+            </section>
+
+        </section>
+
+        <!-- Bouton pour remonter en haut de la page -->
+        <a href="#" class="scroll-to-top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+        </a>
+
+        <script>
+            // Afficher/Masquer le bouton selon le défilement
+            window.addEventListener('scroll', function() {
+                var scrollToTopButton = document.querySelector('.scroll-to-top');
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.add('show');
+                } else {
+                    scrollToTopButton.classList.remove('show');
+                }
+            });
+
+            // Remonter en haut de la page lorsqu'on clique sur le bouton
+            document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+        </script>
+        
+        <!-- Lien vers Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!--Script pour les bulles-->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const dots = document.querySelectorAll('.dot');
+            const bubblesWrapper = document.querySelector('.bubbles-wrapper');
+            const bubbles = document.querySelectorAll('.bubble');
+            const bubblesPerPage = 3;
+            const totalBubbles = bubbles.length;
+            const totalPages = Math.ceil(totalBubbles / bubblesPerPage);
+            let currentIndex = 0;
+
+            function updateSlide(index) {
+                if (window.innerWidth <= 1024) {
+                bubblesWrapper.style.transform = 'none';
+                bubblesWrapper.style.overflowX = 'auto';
+                return;
+            }
+
+            const offset = (index * 100) / totalPages;
+            bubblesWrapper.style.transform = `translateX(-${offset}%)`;
+
+            dots.forEach(d => d.classList.remove('active'));
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
+        }
+
+
+            // Gestion du clic sur les dots pour changer de page
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'));
+                    currentIndex = index;
+                    updateSlide(index);
+                });
+            });
+
+            // Fonction de changement automatique des bulles
+            function autoChangeDots() {
+                // Désactiver l'auto-défilement en mode responsive
+                if (window.innerWidth > 768) {
+                    currentIndex = (currentIndex + 1) % totalPages;
+                    updateSlide(currentIndex);
+                }
+            }
+
+            // Définir l'intervalle pour le changement automatique
+            setInterval(autoChangeDots, 20000);
+
+            // Initialiser l'affichage
+            updateSlide(currentIndex);
+
+            // Écouteur d'événement pour vérifier la taille de l'écran en temps réel
+            window.addEventListener('resize', () => updateSlide(currentIndex));
+        });
+
+
+        </script>
+        
+        <!-- Script spécifique pour la section des avis -->
+        <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const dotsavis = document.querySelectorAll('.pagination-dots .dotavis');
+                const avisWrapper = document.querySelector('.avis-wrapper');
+                const avisItems = document.querySelectorAll('.bubble-avis');
+                const itemsPerPage = 2;
+                const totalItems = avisItems.length;
+                const totalPages = Math.ceil(totalItems / itemsPerPage);
+                let currentIndex = 0;
+
+                function updateSlide(index) {
+                    const offset = (index * 100) / totalPages;
+                    avisWrapper.style.transform = `translateX(-${offset}%)`;
+
+                    dotsavis.forEach(d => d.classList.remove('activeavis'));
+                    if (dotsavis[index]) {
+                        dotsavis[index].classList.add('activeavis');
+                    }
+                }
+
+                dotsavis.forEach(dotavis => {
+                    dotavis.addEventListener('click', function() {
+                        const index = parseInt(this.getAttribute('data-index'));
+                        currentIndex = index;
+                        updateSlide(index);
+                    });
+                });
+
+                function autoChangeDots() {
+                    currentIndex = (currentIndex + 1) % totalPages;
+                    updateSlide(currentIndex);
+                }
+
+                setInterval(autoChangeDots, 10000);
+
+                updateSlide(currentIndex);
+            });
+
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+        <script>
+            
+            const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeYPB8TcxaqiZL2FUMsiHxLkpg6669WPPq3gzfgz16s-EYrMA8Q4NrzJODs2EFr1cuL3OsvRtMi0Nq/pub?output=csv';
+
+            async function loadLatestArticles() {
+                try {
+                    const response = await fetch(csvUrl);
+                    const data = await response.text();
+
+                    const latestArticlesContainer = document.getElementById('latest-articles-container');
+                    latestArticlesContainer.innerHTML = '';
+
+                    // Analyse du CSV avec PapaParse
+                    const parsedData = Papa.parse(data, {
+                        header: true,
+                        skipEmptyLines: true
+                    });
+
+                    function parseDate(dateString) {
+                        if (!dateString) return new Date(0);
+                        const [day, month, year] = dateString.trim().split('/');
+                        return new Date(`${year}-${month}-${day}`);
+                    }
+
+                    const articlesData = parsedData.data.sort((a, b) => {
+                        return parseDate(b['Date de publication ']) - parseDate(a['Date de publication ']);
+                    });
+
+                    // Afficher les trois derniers articles avec l'index global
+                    articlesData.slice(0, 3).forEach((entry) => {
+                        const globalIndex = parsedData.data.indexOf(entry);
+                        const title = entry['Titre'];
+                        const author = entry["Auteur de l'article"];
+                        const date = entry['Date de publication '];
+                        const imageUrl = entry['Image principale'];
+                        const content = entry["Texte d'introduction"];
+                        const excerpt = content.split(' ').slice(0, 25).join(' ') + ' ...';
+
+                        const cardHTML = `
+                            <div class="blog-card">
+                                <img id="blogImage${globalIndex}" class="blog-card-image" src="${imageUrl}" alt="${title}" onerror="this.src='../images/Nos expertises/Comptabilite╠ü/2-Vision moderne.png';">
+                                <div class="blog-card-content">
+                                    <h3>${title}</h3>
+                                    <p><em>Par ${author}, le ${date}</em></p>
+                                    <p class="excerpt">${excerpt}</p>
+                                    <div class="read-more-container">
+                                        <a class="read-more" onclick="openArticle(${globalIndex})">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+
+                        latestArticlesContainer.insertAdjacentHTML('beforeend', cardHTML);
+                    });
+                } catch (error) {
+                    console.error("Erreur lors de la récupération des articles :", error);
+                }
+            }
+
+            function openArticle(index) {
+                window.location.href = `pages/article.html?index=${index}`;
+                console.log("Index:", index);
+            }
+
+            document.addEventListener('DOMContentLoaded', loadLatestArticles);
+
+
+
+        </script>
+    
+    </body>
+
+    <hr class="footer-separator">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Colonne 2: Le cabinet -->
+                <div class="footer-col">
+                    <h3>Le cabinet</h3>
+                    <ul class="footer-links">
+                        <li><a href="./pages/cabinet.html">Notre équipe</a></li>
+                        <li><a href="./pages/cabinet.html#valeurs">Nos valeurs</a></li>
+                        <li><a href="./pages/outils.html">Nos outils</a></li>
+                        <li><a href="./pages/blog.html">Blog</a></li>
+                        <li><a href="./pages/iso.html">ISO 9001</a></li>
+                        <li><a href="./pages/mentions.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <!-- Colonne 3: Nous retrouver -->
+                <div class="footer-col">
+                    <h3>Nous retrouver</h3>
+                    <ul class="footer-links">
+                        <li><a href="./pages/contact.html">Contact</a></li>
+                        <li><a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/placedesexperts/profilecard/?igsh=MTJ0YzkxNzA2NDBhZA==" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>
+                        <li><a href="./pages/contact.html#rdv">Prendre rendez-vous</a></li>
+                        <li><a href="./pages/contact.html#recrutement">Espace recrutement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Et si on collaborait ensemble ?</h3>
+                    <a href="https://www.pennylane.com" target="_blank">
+                        <i class="bi bi-arrow-return-right" style="color:#245360;font-size: 50px;margin-right:10px;margin-top: 10px; vertical-align: middle;"></i><img src="images/Accueil/1-logo-pennylane.png" alt="Pennylane Logo" class="pennylane-logo">
+                    </a>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tous droits réservés | SARL Place des Experts</p>
+            </div>
+        </div>
+    </footer>
+    
+</html>

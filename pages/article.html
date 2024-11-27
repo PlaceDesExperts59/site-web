@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Place des Experts</title>
+        <!-- Lien vers Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="icon" href="../images/logo.png" type="image/png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../style/blog.css">
+    </head>
+    <body>
+
+        <!-- Barre de navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/logo.png" alt="Logo" class="logo-site" style="width: 120px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center; padding-right: 120px;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/cabinet.html">Le cabinet</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/expertises.html">Nos expertises</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/secteurs.html">Nos secteurs d’activité</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/outils.html">Nos outils</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Bouton de retour en arrière -->
+        <div>
+            <a href="../pages/blog.html" class="back-button">
+                <i class="bi bi-arrow-left-circle"></i> Retour
+            </a>
+        </div>
+
+        <div id="article-container" class="article-content"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+        <script>
+            const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeYPB8TcxaqiZL2FUMsiHxLkpg6669WPPq3gzfgz16s-EYrMA8Q4NrzJODs2EFr1cuL3OsvRtMi0Nq/pub?output=csv';
+
+            // Récupérer l'index de l'article depuis l'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const index = urlParams.get('index');
+
+            async function fetchAndDisplayArticle() {
+                try {
+                    const response = await fetch(csvUrl);
+                    const data = await response.text();
+
+                    // Analyse du CSV avec PapaParse
+                    const parsedData = Papa.parse(data, {
+                        header: true,
+                        skipEmptyLines: true
+                    });
+
+                    const articlesData = parsedData.data;
+
+                    // Mettre à jour le localStorage avec les nouvelles données
+                    localStorage.setItem('articlesData', JSON.stringify(articlesData));
+
+                    // Afficher l'article
+                    displayArticle(articlesData, index);
+                } catch (error) {
+                    console.error("Erreur lors de la récupération des données :", error);
+                    document.getElementById('article-container').innerHTML = '<p>Erreur lors du chargement de l\'article.</p>';
+                }
+            }
+
+
+            function displayArticle(articlesData, index) {
+                if (articlesData && index !== null) {
+                    const article = articlesData[index];
+
+                    if (article) {
+                        const titre = article['Titre'];
+                        const auteur = article["Auteur de l'article"];
+                        const date = article['Date de publication '];
+                        let image = article['Image principale'];
+
+                        const intro = article["Texte d'introduction"].replace(/\n/g, '<br>');
+
+                        const TitreH21 = article["TitreH2-1"];
+                        const ParaH21 = article["ParaH2-1"].replace(/\n/g, '<br>');
+                        let image1 = article['Image1'];
+
+                        const TitreH311 = article["TitreH3-1.1"];
+                        const ParaH311 = article["ParaH3-1.1"].replace(/\n/g, '<br>');
+                        let image2 = article['Image2'];
+
+                        const TitreH312 = article["TitreH3-1.2"];
+                        const ParaH312 = article["ParaH3-1.2"].replace(/\n/g, '<br>');
+
+                        const TitreH22 = article["TitreH2-2"];
+                        const ParaH22 = article["ParaH2-2"].replace(/\n/g, '<br>');
+                        let image3 = article['Image3'];
+
+                        const TitreH321 = article["TitreH3-2.1"];
+                        const ParaH321 = article["ParaH3-2.1"].replace(/\n/g, '<br>');
+
+                        const TitreH322 = article["TitreH3-2.2"];
+                        const ParaH322 = article["ParaH3-2.2"].replace(/\n/g, '<br>');
+                        let image4 = article['Image4'];
+
+
+                        // Vérifier et corriger le chemin de l'image
+                        if (!image || image.trim() === '') {
+                            image = '../images/Nos expertises/Comptabilite╠ü/2-Vision moderne.png';
+                        } else if (!image.startsWith('http') && !image.startsWith('/')) {
+                            image = `../images/${image}`;
+                        }
+
+                        const articleHTML = `
+                            <div class="blog-article container">
+
+                                <section>
+                                    <div class="rounded text-white d-flex position-relative article">
+                                        <div class="row bulles-article">
+                                        <img src="../images/gouttes.png" alt="Décoration graphique" class="decoration-graphic-article">
+                                            <div class="text-container-article">
+                                                </br><h1 class="display-4">${titre}</h1></br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                                <p><em>Par ${auteur}, le ${date}</em></p>
+                                <img src="${image}" alt="${titre}" class="blog-image"">
+                                <p class="introduction">${intro}</p>
+                                </br>
+                                <h2><span class="circle-dot"></span>${TitreH21}</h2>
+                                <p>${ParaH21}</p>
+                                <img src="${image1}" alt="${TitreH21}" class="blog-image">
+                                </br>
+                                <h3><span class="diamond-dot"></span>${TitreH311}</h3>
+                                <p>${ParaH311}</p>
+                                <img src="${image2}" alt="${TitreH311}" class="blog-image">
+                                </br>
+                                <h3><span class="diamond-dot"></span>${TitreH312}</h3>
+                                <p>${ParaH312}</p>
+                                </br>
+                                <h2><h2><span class="circle-dot"></span>${TitreH22}</h2>
+                                <p>${ParaH22}</p>
+                                <img src="${image3}" alt="${TitreH22}" class="blog-image">
+                                </br>
+                                <h3><span class="diamond-dot"></span>${TitreH321}</h3>
+                                <p>${ParaH321}</p>
+                                </br>
+                                <h3><span class="diamond-dot"></span>${TitreH322}</h3>
+                                <p>${ParaH322}</p>
+                                <img src="${image4}" alt="${TitreH322}" class="blog-image">
+                            </div>
+                        `;
+                        document.getElementById('article-container').innerHTML = articleHTML;
+                    } else {
+                        document.getElementById('article-container').innerHTML = '<p>Article introuvable.</p>';
+                    }
+                } else {
+                    document.getElementById('article-container').innerHTML = '<p>Les données des articles ne sont pas disponibles.</p>';
+                }
+            }
+
+            // Charger et afficher l'article
+            fetchAndDisplayArticle();
+        </script>
+
+        <!-- Bouton pour remonter en haut de la page -->
+        <a href="#" class="scroll-to-top">
+            <i class="bi bi-arrow-up-circle-fill"></i>
+        </a>
+
+        <script>
+            // Afficher/Masquer le bouton selon le défilement
+            window.addEventListener('scroll', function() {
+                const scrollToTopButton = document.querySelector('.scroll-to-top');
+                if (window.scrollY > 300) {
+                    scrollToTopButton.classList.add('show');
+                } else {
+                    scrollToTopButton.classList.remove('show');
+                }
+            });
+
+            // Remonter en haut de la page lorsqu'on clique sur le bouton
+            document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        </script>
+
+        <!-- Lien vers Bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+    <hr class="footer-separator">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h3>Le cabinet</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/cabinet.html">Notre équipe</a></li>
+                        <li><a href="../pages/cabinet.html#valeurs">Nos valeurs</a></li>
+                        <li><a href="../pages/outils.html">Nos outils</a></li>
+                        <li><a href="../pages/blog.html">Blog</a></li>
+                        <li><a href="../pages/iso.html">ISO 9001</a></li>
+                        <li><a href="../pages/mentions.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Nous retrouver</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/contact.html">Contact</a></li>
+                        <li><a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/placedesexperts/profilecard/?igsh=MTJ0YzkxNzA2NDBhZA==" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>
+                        <li><a href="../pages/contact.html#rdv">Prendre rendez-vous</a></li>
+                        <li><a href="./pages/contact.html#recrutement">Espace recrutement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Et si on collaborait ensemble ?</h3>
+                    <a href="https://www.pennylane.com" target="_blank">
+                        <i class="bi bi-arrow-return-right" style="color:#245360;font-size: 50px;margin-right:10px;margin-top: 10px; vertical-align: middle;"></i><img src="../images/Accueil/1-logo-pennylane.png" alt="Pennylane Logo" class="pennylane-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tous droits réservés | SARL Place des Experts</p>
+            </div>
+        </div>
+    </footer>
+
+</html>
