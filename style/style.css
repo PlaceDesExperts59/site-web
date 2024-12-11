@@ -516,6 +516,15 @@ width: 50px !important;
 }
 
 /* Style du bouton En savoir plus */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .btn-custom {
     background-color: white;
     color: #245360;
@@ -530,13 +539,6 @@ width: 50px !important;
     margin: 0 auto; /* Centrer le bouton */
 }
 
-.btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-}
 
 .btn-custom:hover {
     background-color: #245360; /* Couleur de fond au survol */

@@ -122,47 +122,58 @@
                         }
 
                         const articleHTML = `
-                            <div class="blog-article container">
+                        <div class="blog-article container">
 
-                                <section>
-                                    <div class="rounded text-white d-flex position-relative article">
-                                        <div class="row bulles-article">
-                                        <img src="../images/gouttes.png" alt="Décoration graphique" class="decoration-graphic-article">
-                                            <div class="text-container-article">
-                                                </br><h1 class="display-4">${titre}</h1></br>
-                                            </div>
+                            <section>
+                                <div class="rounded text-white d-flex position-relative article">
+                                    <div class="row bulles-article">
+                                    <img src="../images/gouttes.png" alt="Décoration graphique" class="decoration-graphic-article">
+                                        <div class="text-container-article">
+                                            </br><h1 class="display-4">${titre}</h1></br>
                                         </div>
                                     </div>
-                                </section>
+                                </div>
+                            </section>
+
+                            <p><em>Par ${auteur}, le ${date}</em></p>
 
 
-                                <p><em>Par ${auteur}, le ${date}</em></p>
-                                <img src="${image}" alt="${titre}" class="blog-image"">
-                                <p class="introduction">${intro}</p>
-                                </br>
-                                <h2><span class="circle-dot"></span>${TitreH21}</h2>
-                                <p>${ParaH21}</p>
-                                <img src="${image1}" alt="${TitreH21}" class="blog-image">
-                                </br>
-                                <h3><span class="diamond-dot"></span>${TitreH311}</h3>
-                                <p>${ParaH311}</p>
-                                <img src="${image2}" alt="${TitreH311}" class="blog-image">
-                                </br>
-                                <h3><span class="diamond-dot"></span>${TitreH312}</h3>
-                                <p>${ParaH312}</p>
-                                </br>
-                                <h2><h2><span class="circle-dot"></span>${TitreH22}</h2>
-                                <p>${ParaH22}</p>
-                                <img src="${image3}" alt="${TitreH22}" class="blog-image">
-                                </br>
-                                <h3><span class="diamond-dot"></span>${TitreH321}</h3>
-                                <p>${ParaH321}</p>
-                                </br>
-                                <h3><span class="diamond-dot"></span>${TitreH322}</h3>
-                                <p>${ParaH322}</p>
-                                <img src="${image4}" alt="${TitreH322}" class="blog-image">
-                            </div>
-                        `;
+                            ${image && image.trim() !== '' ? `<img src="${image}" alt="${titre}" class="blog-image">` : ''}
+                            <p class="introduction">${intro}</p>
+                            </br>
+
+                            ${TitreH21 && TitreH21.trim() !== '' ? `<h2><span class="circle-dot"></span>${TitreH21}</h2>` : ''}
+                            ${ParaH21 ? `<p>${ParaH21}</p>` : ''}
+                            ${image1 && image1.trim() !== '' ? `<img src="${image1}" alt="${TitreH21}" class="blog-image">` : ''}
+                            </br>
+
+                            ${TitreH311 && TitreH311.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH311}</h3>` : ''}
+                            ${ParaH311 ? `<p>${ParaH311}</p>` : ''}
+                            ${image2 && image2.trim() !== '' ? `<img src="${image2}" alt="${TitreH311}" class="blog-image">` : ''}
+                            </br>
+
+                            ${TitreH312 && TitreH312.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH312}</h3>` : ''}
+                            ${ParaH312 ? `<p>${ParaH312}</p>` : ''}
+                            ${image3 && image3.trim() !== '' ? `<img src="${image3}" alt="${TitreH312}" class="blog-image">` : ''}
+                            </br>
+
+                            ${TitreH22 && TitreH22.trim() !== '' ? `<h2><span class="circle-dot"></span>${TitreH22}</h2>` : ''}
+                            ${ParaH22 ? `<p>${ParaH22}</p>` : ''}
+                            </br>
+
+                            ${TitreH321 && TitreH321.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH321}</h3>` : ''}
+                            ${ParaH321 ? `<p>${ParaH321}</p>` : ''}
+                            ${image4 && image4.trim() !== '' ? `<img src="${image4}" alt="${TitreH22}" class="blog-image">` : ''}
+                            </br>
+
+                            ${TitreH322 && TitreH322.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH322}</h3>` : ''}
+                            ${ParaH322 ? `<p>${ParaH322}</p>` : ''}
+                            </br></br>
+
+                        </div>
+                    `;
+
+
                         document.getElementById('article-container').innerHTML = articleHTML;
                     } else {
                         document.getElementById('article-container').innerHTML = '<p>Article introuvable.</p>';
@@ -213,9 +224,9 @@
                     <ul class="footer-links">
                         <li><a href="../pages/cabinet.html">Notre équipe</a></li>
                         <li><a href="../pages/cabinet.html#valeurs">Nos valeurs</a></li>
-                        <li><a href="../pages/outils.html">Nos outils</a></li>
                         <li><a href="../pages/blog.html">Blog</a></li>
                         <li><a href="../pages/iso.html">ISO 9001</a></li>
+                        <li><a href="../pages/contact.html#recrutement">Espace recrutement</a></li>
                         <li><a href="../pages/mentions.html">Mentions légales</a></li>
                     </ul>
                 </div>
@@ -226,15 +237,14 @@
                         <li><a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/placedesexperts/profilecard/?igsh=MTJ0YzkxNzA2NDBhZA==" target="_blank">Instagram</a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/@PlacedesExperts" target="_blank">Youtube</a></li>
                         <li><a href="../pages/contact.html#rdv">Prendre rendez-vous</a></li>
-                        <li><a href="./pages/contact.html#recrutement">Espace recrutement</a></li>
+                        
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Et si on collaborait ensemble ?</h3>
-                    <a href="https://www.pennylane.com" target="_blank">
-                        <i class="bi bi-arrow-return-right" style="color:#245360;font-size: 50px;margin-right:10px;margin-top: 10px; vertical-align: middle;"></i><img src="../images/Accueil/1-logo-pennylane.png" alt="Pennylane Logo" class="pennylane-logo">
-                    </a>
+                    <h3>Prendre contact avec nous ?</h3>
+                        <i class="bi bi-arrow-return-right" style="color:#245360;font-size: 50px;margin-right:10px;margin-top: 10px; vertical-align: middle;"></i><a class = "btn btn-custom" style ="font-size:1.8rem; border-radius:10px;" href="../pages/contact.html">Contact</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -242,5 +252,4 @@
             </div>
         </div>
     </footer>
-
 </html>

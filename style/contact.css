@@ -438,6 +438,26 @@ textarea::placeholder {
     margin-bottom: 10px; /* Espacement entre les éléments de la liste */
 }
 
+.btn-custom {
+    background-color: white;
+    color: #245360;
+    border-radius: 30px;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Playfair Display', serif;
+    border: 2px solid #245360;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Change le display pour permettre le centrage */
+    margin: 0 auto; /* Centrer le bouton */
+}
+
+
+.btn-custom:hover {
+    background-color: #245360; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+}
+
 @media (max-width: 1024px) {
     .col-lg-6 .img-fluid2 {
         display: none;
@@ -503,6 +523,12 @@ textarea::placeholder {
 
     .text-container p {
         font-size: 1rem;
+    }
+
+    .btn-custom {
+        font-size: 0.9rem; /* Taille de texte plus petite */
+        padding: 8px 30px; /* Réduction du padding pour éviter le débordement */
+       
     }
 
 }
