@@ -50,9 +50,22 @@
         <script>
             const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeYPB8TcxaqiZL2FUMsiHxLkpg6669WPPq3gzfgz16s-EYrMA8Q4NrzJODs2EFr1cuL3OsvRtMi0Nq/pub?output=csv';
 
-            // Récupérer l'index de l'article depuis l'URL
+            // Récupérer le titre depuis l'URL
             const urlParams = new URLSearchParams(window.location.search);
-            const index = urlParams.get('index');
+            const articleTitle = decodeURIComponent(urlParams.get('title'));
+
+            // Fonction pour normaliser un titre
+            function normalizeString(str) {
+                return str
+                    .normalize("NFD") // Décompose les caractères accentués
+                    .replace(/[\u0300-\u036f]/g, "") // Supprime les accents
+                    .replace(/’/g, "'") // Remplace les apostrophes courbes par des droites
+                    .replace(/-/g, " ") // Remplace les tirets par des espaces
+                    .replace(/[^a-zA-Z0-9\s]/g, "") // Supprime les caractères non alphanumériques sauf les espaces
+                    .toLowerCase() // Transforme en minuscules
+                    .trim(); // Supprime les espaces inutiles
+            }
+
 
             async function fetchAndDisplayArticle() {
                 try {
@@ -67,11 +80,11 @@
 
                     const articlesData = parsedData.data;
 
-                    // Mettre à jour le localStorage avec les nouvelles données
-                    localStorage.setItem('articlesData', JSON.stringify(articlesData));
+                    // Affiche un log des articles disponibles pour débogage
+                    console.log("Articles disponibles :", articlesData);
 
-                    // Afficher l'article
-                    displayArticle(articlesData, index);
+                    // Afficher l'article correspondant
+                    displayArticle(articlesData, articleTitle);
                 } catch (error) {
                     console.error("Erreur lors de la récupération des données :", error);
                     document.getElementById('article-container').innerHTML = '<p>Erreur lors du chargement de l\'article.</p>';
@@ -79,9 +92,10 @@
             }
 
 
-            function displayArticle(articlesData, index) {
-                if (articlesData && index !== null) {
-                    const article = articlesData[index];
+            function displayArticle(articlesData, articleTitle) {
+                const normalizedTitle = normalizeString(articleTitle); // Normalisation du titre dans l'URL
+                const article = articlesData.find(entry => normalizeString(entry['Titre']) === normalizedTitle);
+
 
                     if (article) {
                         const titre = article['Titre'];
@@ -127,7 +141,6 @@
                             <section>
                                 <div class="rounded text-white d-flex position-relative article">
                                     <div class="row bulles-article">
-                                    <img src="../images/gouttes.png" alt="Décoration graphique" class="decoration-graphic-article">
                                         <div class="text-container-article">
                                             </br><h1 class="display-4">${titre}</h1></br>
                                         </div>
@@ -172,15 +185,10 @@
 
                         </div>
                     `;
-
-
                         document.getElementById('article-container').innerHTML = articleHTML;
                     } else {
                         document.getElementById('article-container').innerHTML = '<p>Article introuvable.</p>';
                     }
-                } else {
-                    document.getElementById('article-container').innerHTML = '<p>Les données des articles ne sont pas disponibles.</p>';
-                }
             }
 
             // Charger et afficher l'article

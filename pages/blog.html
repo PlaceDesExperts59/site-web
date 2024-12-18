@@ -150,6 +150,9 @@
                         });
                         return cleanedEntry;
                     });
+
+                    // Mettre à jour le stockage local avec les nouvelles données
+                    localStorage.setItem('articlesData', JSON.stringify(articlesData));
         
                     // Fonction pour parser les dates au format DD/MM/YYYY
                     function parseDate(dateString) {
@@ -172,7 +175,7 @@
                         const date = entry['Date de publication'];
                         const imageUrl = entry['Image principale'];
                         const content = entry["Texte d'introduction"];
-                        const excerpt = content.split(' ').slice(0, 25).join(' ') + ' ...';
+                        const excerpt = content.split(' ').slice(0, 20).join(' ') + ' ...';
         
                         const cardHTML = `
                             <div class="blog-card">
@@ -182,7 +185,7 @@
                                     <p><em>Par ${author}, le ${date}</em></p>
                                     <p class="excerpt">${excerpt}</p>
                                     <div class="read-more-container">
-                                        <a class="read-more" onclick="openArticle(${index})">En savoir plus</a>
+                                        <a class="read-more" onclick="openArticle('${title.replace(/'/g, "\\'")}')">En savoir plus</a>
                                     </div>
                                 </div>
                             </div>
@@ -195,62 +198,79 @@
                 }
             }
         
-            // Fonction pour ouvrir l'article complet
-            function openArticle(index) {
-                window.location.href = `article.html?index=${index}`;
+            function normalizeString(str) {
+                return str
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "") // Supprime les accents
+                    .replace(/’/g, "'") // Remplace les apostrophes courbes
+                    .replace(/-/g, " ") // Remplace les tirets par des espaces
+                    .replace(/[^a-zA-Z0-9\s]/g, "") // Supprime les caractères spéciaux
+                    .toLowerCase()
+                    .trim();
             }
+
+            function openArticle(articleTitle) {
+                console.log("Titre original :", articleTitle); // Log pour débogage
+                const normalizedTitle = normalizeString(articleTitle);
+                console.log("Titre normalisé :", normalizedTitle); // Log pour débogage
+                const encodedTitle = encodeURIComponent(normalizedTitle);
+                window.location.href = `article.html?title=${encodedTitle}`;
+            }
+
+
+
+
         
             document.addEventListener('DOMContentLoaded', fetchCSV);
         </script>
 
         <script>
-            // Fonction pour filtrer les articles en fonction de la recherche
             function filterArticles() {
-                const searchInput = document.getElementById('search-input').value.toLowerCase();
-                const articlesData = JSON.parse(localStorage.getItem('articlesData'));
-                const blogCardsContainer = document.getElementById('blog-cards-container');
-                blogCardsContainer.innerHTML = '';
+            const searchInput = normalizeString(document.getElementById('search-input').value);
+            const blogCardsContainer = document.getElementById('blog-cards-container');
+            blogCardsContainer.innerHTML = '';
 
-                // Filtrer les articles qui contiennent le mot-clé dans le titre, l'auteur ou le contenu
-                const filteredArticles = articlesData.filter(article => {
-                    const title = article['Titre'].toLowerCase();
-                    const author = article["Auteur de l'article"].toLowerCase();
-                    const content = article['Contenu'].toLowerCase();
-                    return title.includes(searchInput) || author.includes(searchInput) || content.includes(searchInput);
-                });
+            const articlesData = JSON.parse(localStorage.getItem('articlesData')) || []; // Récupération des données
 
-                // Afficher les articles filtrés
-                filteredArticles.forEach((entry, index) => {
-                    const title = entry['Titre'];
-                    const author = entry["Auteur de l'article"];
-                    const date = entry['Date de publication '];
-                    const imageUrl = entry['Image'];
-                    const content = entry['Contenu'];
-                    const excerpt = content.split(' ').slice(0, 20).join(' ') + '...';
+            // Filtrer les articles qui contiennent le mot-clé dans le titre, l'auteur ou le contenu
+            const filteredArticles = articlesData.filter(article => {
+                const title = normalizeString(article['Titre'] || '');
+                const author = normalizeString(article["Auteur de l'article"] || '');
+                const content = normalizeString(article["Texte d'introduction"] || '');
+                return title.includes(searchInput) || author.includes(searchInput) || content.includes(searchInput);
+            });
 
-                    const cardHTML = `
-                        <div class="blog-card">
-                            <img id="blogImage${index}" class="blog-card-image" src="${imageUrl}" alt="${title}" onerror="this.src='../images/Nos expertises/Comptabilite╠ü/2-Vision moderne.png';">
-                            <div class="blog-card-content">
-                                <h3>${title}</h3>
-                                <p><em>Par ${author}, le ${date}</em></p>
-                                <p class="excerpt">${excerpt}</p>
-                                <div class="read-more-container">
-                                    <a class="read-more" onclick="openArticle(${index})">En savoir plus</a>
-                                </div>
+            // Afficher les articles filtrés
+            filteredArticles.forEach((entry, index) => {
+                const title = entry['Titre'];
+                const author = entry["Auteur de l'article"];
+                const date = entry['Date de publication'];
+                const imageUrl = entry['Image principale'];
+                const content = entry["Texte d'introduction"];
+                const excerpt = content.split(' ').slice(0, 20).join(' ') + '...';
+
+                const cardHTML = `
+                    <div class="blog-card">
+                        <img id="blogImage${index}" class="blog-card-image" src="${imageUrl}" alt="${title}" onerror="this.src='../images/Nos expertises/Comptabilite╠ü/2-Vision moderne.png';">
+                        <div class="blog-card-content">
+                            <h3>${title}</h3>
+                            <p><em>Par ${author}, le ${date}</em></p>
+                            <p class="excerpt">${excerpt}</p>
+                            <div class="read-more-container">
+                                <a class="read-more" onclick="openArticle('${title.replace(/'/g, "\\'")}')">En savoir plus</a>
                             </div>
                         </div>
-                    `;
-                    
-                    blogCardsContainer.insertAdjacentHTML('beforeend', cardHTML);
-                });
+                    </div>
+                `;
 
-                // Afficher un message si aucun article n'est trouvé
-                if (filteredArticles.length === 0) {
-                    blogCardsContainer.innerHTML = `<p>Aucun article trouvé pour votre recherche.</p>`;
-                }
+                blogCardsContainer.insertAdjacentHTML('beforeend', cardHTML);
+            });
+
+            // Afficher un message si aucun article n'est trouvé
+            if (filteredArticles.length === 0) {
+                blogCardsContainer.innerHTML = `<p>Aucun article trouvé pour votre recherche.</p>`;
             }
-
+        }
             // Écouter les changements dans la barre de recherche
             document.getElementById('search-input').addEventListener('input', filterArticles);
         </script>

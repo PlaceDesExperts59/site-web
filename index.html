@@ -189,8 +189,7 @@
                     <div class="bubble">
                         <i class="bi bi-people" style="font-size: 3rem;"></i> <!-- Icône équipe dédiée -->
                         <div class="bubble-title">Une équipe dédiée</div></br>
-                        <div class="bubble-text" style="text-align: justify;">Chaque client se voit dédier un Expert
-                            Comptable, un collaborateur en charge du
+                        <div class="bubble-text" style="text-align: justify;">Chaque client se voit dédier un Expert-Comptable, un collaborateur en charge du
                             dossier et une personne en charge de la
                             mission sociale</div>
                             <div class="mt-4 read-more-container">
@@ -235,7 +234,7 @@
             <section class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="iso-bubble">
-                        <p data-aos="zoom-in" data-aos-duration="1000">
+                        <p class="text-center" data-aos="zoom-in" data-aos-duration="1000">
                             Nous sommes fiers de vous présenter notre cabinet d'expertise comptable certifié ISO 9001,
                             garantissant ainsi notre engagement envers la qualité et l'excellence dans nos services.
                         </p>
@@ -457,7 +456,7 @@
                         const date = entry['Date de publication '];
                         const imageUrl = entry['Image principale'];
                         const content = entry["Texte d'introduction"];
-                        const excerpt = content.split(' ').slice(0, 25).join(' ') + ' ...';
+                        const excerpt = content.split(' ').slice(0, 20).join(' ') + ' ...';
 
                         const cardHTML = `
                             <div class="blog-card">
@@ -467,7 +466,7 @@
                                     <p><em>Par ${author}, le ${date}</em></p>
                                     <p class="excerpt">${excerpt}</p>
                                     <div class="read-more-container">
-                                        <a class="read-more" onclick="openArticle(${globalIndex})">En savoir plus</a>
+                                        <a class="read-more" onclick="openArticle('${title.replace(/'/g, "\\'")}')">En savoir plus</a>
                                     </div>
                                 </div>
                             </div>
@@ -480,9 +479,21 @@
                 }
             }
 
-            function openArticle(index) {
-                window.location.href = `pages/article.html?index=${index}`;
-                console.log("Index:", index);
+            function normalizeString(str) {
+                return str
+                    .normalize("NFD") // Décompose les caractères accentués
+                    .replace(/[\u0300-\u036f]/g, "") // Supprime les accents
+                    .replace(/’/g, "'") // Remplace les apostrophes courbes
+                    .replace(/-/g, " ") // Remplace les tirets par des espaces
+                    .replace(/[^a-zA-Z0-9\s]/g, "") // Supprime les caractères non alphanumériques sauf les espaces
+                    .toLowerCase() // Transforme en minuscules
+                    .trim(); // Supprime les espaces inutiles
+            }
+
+            function openArticle(articleTitle) {
+                const normalizedTitle = normalizeString(articleTitle);
+                const encodedTitle = encodeURIComponent(normalizedTitle); // Encodage pour URL
+                window.location.href = `pages/article.html?title=${encodedTitle}`;
             }
 
             document.addEventListener('DOMContentLoaded', loadLatestArticles);
