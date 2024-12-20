@@ -57,8 +57,8 @@ body {
 }
 
 /************************************************************************************************/
-
 /* Section avec bord arrondi et couleur personnalisée */
+
 section {
     position: relative; /* Pour positionner la flèche */
     padding: 20px 0; /* Espacement interne */
@@ -908,10 +908,7 @@ body
         padding: 15px;
         width: 100%; /* S’assure que le texte utilise toute la largeur */
     }
-}
 
-
-@media (max-width: 1024px) {
     /* 1. Retirer le padding du sous-menu */
     .sticky-menu {
         position: static !important; /* Remplace sticky par static */

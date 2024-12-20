@@ -38,10 +38,11 @@
 
         <!-- Bouton de retour en arrière -->
         <div>
-            <a href="../pages/blog.html" class="back-button">
+            <a href="#" class="back-button" onclick="goBackToBlog()">
                 <i class="bi bi-arrow-left-circle"></i> Retour
             </a>
         </div>
+        
 
         <div id="article-container" class="article-content"></div>
 
@@ -201,6 +202,12 @@
         </a>
 
         <script>
+
+            function goBackToBlog() {
+                // Simplement rediriger vers la page blog
+                window.location.href = 'blog.html';
+            }
+
             // Afficher/Masquer le bouton selon le défilement
             window.addEventListener('scroll', function() {
                 const scrollToTopButton = document.querySelector('.scroll-to-top');
@@ -224,6 +231,7 @@
     </body>
 
     <hr class="footer-separator">
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -260,4 +268,5 @@
             </div>
         </div>
     </footer>
+    
 </html>

@@ -1,4 +1,3 @@
-/* Importer la nouvelle police depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 body {
@@ -30,7 +29,6 @@ body {
         background-size: cover; /* Toujours couvrir l'écran */
     }
 }
-
 
 /* Style pour le logo */
 .logo-site {
@@ -87,8 +85,8 @@ body {
 
 
 /************************************************************************************************/
-
 /* Section avec bord arrondi et couleur personnalisée */
+
 .decoration-graphic {
     position: absolute;
     top: 0px; /* Ajustez selon vos besoins */
@@ -138,23 +136,6 @@ section {
 
 .text-container p {
     font-size: 1.2rem; /* Texte de description */
-}
-
-/* Style pour l'image Pennylane */
-.pennylane-logo {
-    max-width: 200px; /* Taille de l'image */
-   
-    border: 2px solid #245360; /* Bordure bleue */
-    padding:10px;
-    border-radius: 10px; /* Coins arrondis */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet de survol */
-   
-}
-
-/* Animation au survol */
-.pennylane-logo:hover {
-    transform: scale(1.05); /* Légère augmentation de taille */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
 }
 
 /* Style personnalisé pour l'accordion */
@@ -228,6 +209,7 @@ section {
     color: #292626;
     animation: bounce 2s infinite; /* Animation de rebond */
 }
+
 /* Responsive pour écrans plus petits */
 @media (max-width: 1024px) {
     .scroll-down {
@@ -405,7 +387,6 @@ width: 50px !important;
 }
 
 /***************************************************************************/
-
 /* Section des bulles défilantes */
 
 .highlight{
@@ -494,7 +475,6 @@ width: 50px !important;
 
 
 /****************************************************************************************/
-
 /* Styles pour la section ISO 9001 */
 
 .iso-bubble {
@@ -548,6 +528,7 @@ width: 50px !important;
 
 /*************************************************************************************/
 /* Style général pour la section d'avis */
+
 .avis-section {
     position: relative;
     overflow: hidden;
@@ -737,8 +718,97 @@ html {
     text-align: justify;
 }
 
+/**************************************************************************************************/
+/* --- Blog- */
 
-/* --- Responsive pour les tablettes (1024px) et mobiles (576px) --- */
+/* Conteneur des cartes */
+.blog-cards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Style des cartes */
+.blog-card {
+    width: 100%;
+    max-width: 320px;
+    height: 420px;
+    background-color: #E0E9EB; /* Fond de la carte */
+    color: #333; /* Texte en noir */
+    border: 3px solid #245360; /* Bordure bleue */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Effet au survol */
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image de la carte */
+.blog-card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 3px solid #245360; /* Bordure bleue */
+}
+
+/* Contenu de la carte */
+.blog-card-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.blog-card-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #245360; /* Titre en bleu */
+}
+
+.blog-card-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333; /* Texte en noir */
+}
+
+.blog-card-content .excerpt {
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+/* Style du bouton En savoir plus */
+.read-more {
+    padding: 10px 20px;
+    background-color: #245360;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Police du titre */
+}
+
+.read-more:hover {
+    background-color: #163841;
+    cursor: pointer;
+}
+
+
+/**************************************************************************************************/
+/* --- Responsive- */
 @media (max-width: 1024px) {
     /* Ajustements de la barre de navigation */
     .navbar-brand img {
@@ -958,12 +1028,6 @@ html {
         margin-bottom: 0px !important;
     }
 
-    
-}
-
-
-@media (max-width: 1024px) {
-
     /* 1. Masquer l'image dans le rectangle bleu */
     .col-lg-6 .img-fluid2 {
         display: none;
@@ -1050,91 +1114,4 @@ html {
         font-size: 1.6rem !important;
     }
 
-}
-
-
-
-/* Conteneur des cartes */
-.blog-cards-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
-}
-
-/* Style des cartes */
-.blog-card {
-    width: 100%;
-    max-width: 320px;
-    height: 420px;
-    background-color: #E0E9EB; /* Fond de la carte */
-    color: #333; /* Texte en noir */
-    border: 3px solid #245360; /* Bordure bleue */
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    margin-bottom: 30px;
-    position: relative;
-}
-
-/* Effet au survol */
-.blog-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Image de la carte */
-.blog-card-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom: 3px solid #245360; /* Bordure bleue */
-}
-
-/* Contenu de la carte */
-.blog-card-content {
-    padding: 20px;
-    flex: 1;
-}
-
-.blog-card-content h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #245360; /* Titre en bleu */
-}
-
-.blog-card-content p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #333; /* Texte en noir */
-}
-
-.blog-card-content .excerpt {
-    margin-bottom: 15px;
-    opacity: 0.8;
-}
-
-/* Style du bouton En savoir plus */
-.read-more {
-    padding: 10px 20px;
-    background-color: #245360;
-    color: #fff;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    font-family: 'Playfair Display', serif; /* Police du titre */
-}
-
-.read-more:hover {
-    background-color: #163841;
-    cursor: pointer;
 }

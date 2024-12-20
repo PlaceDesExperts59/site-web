@@ -1,4 +1,3 @@
-/* Importer la nouvelle police depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 /* Style pour le logo */
@@ -15,45 +14,27 @@
 
 /* Appliquer un background à tout le site */
 body {
-    background-image: url('../images/background/3.png'); /* Mettre ici le chemin de l'image */
-    background-color: #f0f0f0; /* Couleur de fond (facultatif si vous avez une image) */
-    background-size: cover; /* Ajuste l'image pour couvrir toute la page */
-    background-repeat: repeat; /* Empêche la répétition de l'image */
-    background-attachment: fixed;  /*Garde l'image fixe pendant le défilement */
-    background-position: center; /* Centre l'image */
+    background-image: url('../images/background/3.png');
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .img-fluid2 {
-    border-radius: 20px; /* Bords arrondis pour l'image */
-    width: 400px; /* Largeur de l'image ajustée */
-    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
 }
-
-/* Style pour l'image Pennylane */
-.pennylane-logo {
-    max-width: 200px; /* Taille de l'image */
-   
-    border: 2px solid #245360; /* Bordure bleue */
-    padding:10px;
-    border-radius: 10px; /* Coins arrondis */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet de survol */
-   
-}
-
-/* Animation au survol */
-.pennylane-logo:hover {
-    transform: scale(1.05); /* Légère augmentation de taille */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile */
-}
-
 
 /* Style pour les liens du menu */
 .nav-link {
     font-size: 18px;
-    color: #333; /* Texte en gris foncé */
-    padding: 10px 20px; /* Espacement ajusté */
+    color: #333;
+    padding: 10px 20px;
     text-transform: uppercase;
-    letter-spacing: 1px; /* Espacement entre les lettres */
+    letter-spacing: 1px;
 }
 
 .nav-link.active {
@@ -69,12 +50,12 @@ body {
 /* Style pour la loupe */
 .bi-search {
     font-size: 20px;
-    color: #333; /* Gris foncé pour la loupe */
-    cursor: pointer; /* Curseur en forme de main */
+    color: #333; 
+    cursor: pointer;
 }
 
 .bi-search:hover {
-    color: #245360; /* Bleu au survol */
+    color: #245360;
 }
 
 /*************************************************************************************/
@@ -82,9 +63,9 @@ body {
 /* Style pour le footer */
 
 .footer {
-    background-color: #fff; /* Couleur de fond du footer */
-    padding: 30px 0; /* Espacement interne */
-    color: #333; /* Couleur du texte */
+    background-color: #fff;
+    padding: 30px 0; 
+    color: #333; 
 }
 
 .footer .container {
@@ -144,8 +125,8 @@ body {
 }
 
 /************************************************************************************************/
-
 /* Section avec bord arrondi et couleur personnalisée */
+
 section {
     position: relative; /* Pour positionner la flèche */
     padding: 20px 0; /* Espacement interne */
@@ -260,105 +241,7 @@ section {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-
-/* --- Responsive pour les tablettes (1024px) et mobiles (576px) --- */
-@media (max-width: 1024px) {
-    /* Ajustements de la barre de navigation */
-    .navbar-brand img {
-        width: 90px;
-    }
-    .nav-link {
-        font-size: 16px;
-        padding: 5px 15px;
-    }
-
-    /* Rectangle bleu et image */
-    .text-container h1 {
-        font-size: 2rem;
-    }
-    .text-container p {
-        font-size: 1rem;
-    }
-    .col-lg-6, .custom-image, .img-fluid2 {
-        max-width: 100%;
-        padding: 15px;
-    }
-
-    .services .section-title {
-        font-size: 1.31rem; /* Reduce the title size */
-        margin-bottom: 10px;
-        margin-left:none;
-        text-align: left;
-    }
-    
-    .services .services-list {
-        font-size: 0.9rem; /* Adjust the font size for better readability */
-        padding-left: 0px; /* Bring text closer to the left edge */
-    }
-
-    .services .col-lg-6 {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-    
-    .services .col-lg-6:nth-child(2) {
-        width: 100%; /* Expand the text container */
-        text-align: justify; /* Align text to make it cleaner */
-    }
-
-    .container {
-        padding: 5px; /* Minimal padding for smaller screens */
-        background-color: transparent;
-    }
-
-    .img-fluid2 {
-        margin-top: -10px;
-        border-radius: 40px !important;
-        display: block;
-        margin: 0 auto; /* Centre l'image */
-    }
-    body {
-        background-color: #ffffff !important;
-        background-image: none !important; /* Supprime toute image de fond */
-    }
-
-    
-    /* Footer */
-    .footer-col {
-        margin-bottom: 20px;
-    }
-    .footer-col h3 {
-        font-size: 1.2rem;
-    }
-
-    /* 6. Centrer la troisième colonne du footer */
-    .footer .footer-col:nth-child(3) {
-        order: 3;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .footer-bottom {
-        text-align: left;
-        width: 100%;
-    }
-
-    .text-container{
-        padding : 20px !important;
-    }
-
-    .text-container h1,
-    .text-container2 h1,
-    .section-title {
-        text-align: left !important;
-    }
-
-    .blog-card{
-        height : 450px !important;
-    }
-}
-
-
-
+/*****************************************************************************************************/
 
 /* Conteneur des cartes */
 .blog-cards-list {
@@ -509,20 +392,7 @@ section {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*********************************************************************************************************/
 /* Styles pour la page article.html */
 
 
@@ -679,6 +549,41 @@ section {
 }
 
 
+/***********************************************************************************************/
+/*Pagination*/
+
+.pagination {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.page-item.active .page-link {
+    background-color: #245360;
+    border-color: #245360;
+    color: white;
+}
+
+.page-link {
+    color: #245360;
+    border-radius: 10%;
+    padding: 0.5rem 0.75rem;
+    margin: 0 5px;
+}
+
+.page-link:hover {
+    background-color: #eeeeee;
+    color: #245360;
+    text-decoration: none;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
 /* Responsive */
 @media (max-width: 1024px) {
     .blog-article {
@@ -719,5 +624,97 @@ section {
 
     .blog-article h1 {
         font-size: 2rem;
+    }
+
+    /* Ajustements de la barre de navigation */
+    .navbar-brand img {
+        width: 90px;
+    }
+    .nav-link {
+        font-size: 16px;
+        padding: 5px 15px;
+    }
+
+    /* Rectangle bleu et image */
+    .text-container h1 {
+        font-size: 2rem;
+    }
+    .text-container p {
+        font-size: 1rem;
+    }
+    .col-lg-6, .custom-image, .img-fluid2 {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .services .section-title {
+        font-size: 1.31rem; /* Reduce the title size */
+        margin-bottom: 10px;
+        margin-left:none;
+        text-align: left;
+    }
+    
+    .services .services-list {
+        font-size: 0.9rem; /* Adjust the font size for better readability */
+        padding-left: 0px; /* Bring text closer to the left edge */
+    }
+
+    .services .col-lg-6 {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    
+    .services .col-lg-6:nth-child(2) {
+        width: 100%; /* Expand the text container */
+        text-align: justify; /* Align text to make it cleaner */
+    }
+
+    .container {
+        padding: 5px; /* Minimal padding for smaller screens */
+        background-color: transparent;
+    }
+
+    .img-fluid2 {
+        margin-top: -10px;
+        border-radius: 40px !important;
+        display: block;
+        margin: 0 auto; /* Centre l'image */
+    }
+    body {
+        background-color: #ffffff !important;
+        background-image: none !important; /* Supprime toute image de fond */
+    }
+
+    /* Footer */
+    .footer-col {
+        margin-bottom: 20px;
+    }
+    .footer-col h3 {
+        font-size: 1.2rem;
+    }
+
+    /* 6. Centrer la troisième colonne du footer */
+    .footer .footer-col:nth-child(3) {
+        order: 3;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .footer-bottom {
+        text-align: left;
+        width: 100%;
+    }
+
+    .text-container{
+        padding : 20px !important;
+    }
+
+    .text-container h1,
+    .text-container2 h1,
+    .section-title {
+        text-align: left !important;
+    }
+
+    .blog-card{
+        height : 450px !important;
     }
 }

@@ -425,6 +425,8 @@ h2 {
     color: #292626;
     animation: bounce 2s infinite; /* Animation de rebond */
 }
+
+/**********************************************************************************************************/
 /* Responsive pour écrans plus petits */
 @media (max-width: 1024px) {
     .scroll-down {
@@ -434,10 +436,6 @@ h2 {
     .scroll-down i {
         font-size: 2.5rem; /* Taille légèrement réduite pour petits écrans */
     }
-}
-
-/* --- Responsive pour les tablettes (1024px) et mobiles (576px) --- */
-@media (max-width: 1024px) {
 
     .bubble-row {
         flex-direction: column;

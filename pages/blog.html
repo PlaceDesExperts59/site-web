@@ -95,6 +95,8 @@
 
 
         <div id="blog-cards-container" class="blog-cards-list container"></div>
+        <div id="pagination-container" class="pagination-container d-flex justify-content-center mt-4"></div>
+
 
 
         <!-- Bouton pour remonter en haut de la page -->
@@ -153,6 +155,21 @@
 
                     // Mettre à jour le stockage local avec les nouvelles données
                     localStorage.setItem('articlesData', JSON.stringify(articlesData));
+
+                    // Restaurer la pagination et le défilement
+                    const savedState = JSON.parse(localStorage.getItem('blogState'));
+                    if (savedState) {
+                        currentPage = savedState.currentPage || 1;
+                        displayArticles(articlesData, currentPage);
+
+                        // Restaurer la position de défilement après un délai pour permettre le rendu
+                        setTimeout(() => {
+                            window.scrollTo(0, savedState.scrollPosition || 0);
+                        }, 100);
+                    } else {
+                        displayArticles(articlesData, 1);
+                    }
+
         
                     // Fonction pour parser les dates au format DD/MM/YYYY
                     function parseDate(dateString) {
@@ -168,36 +185,112 @@
                         return dateB - dateA;
                     });
         
-                    // Afficher les articles triés
-                    articlesData.forEach((entry, index) => {
-                        const title = entry['Titre'];
-                        const author = entry["Auteur de l'article"];
-                        const date = entry['Date de publication'];
-                        const imageUrl = entry['Image principale'];
-                        const content = entry["Texte d'introduction"];
-                        const excerpt = content.split(' ').slice(0, 20).join(' ') + ' ...';
-        
-                        const cardHTML = `
-                            <div class="blog-card">
-                                <img id="blogImage${index}" class="blog-card-image" src="${imageUrl}" alt="${title}" onerror="this.src='../images/Nos expertises/Comptabilite╠ü/2-Vision moderne.png';">
-                                <div class="blog-card-content">
-                                    <h3>${title}</h3>
-                                    <p><em>Par ${author}, le ${date}</em></p>
-                                    <p class="excerpt">${excerpt}</p>
-                                    <div class="read-more-container">
-                                        <a class="read-more" onclick="openArticle('${title.replace(/'/g, "\\'")}')">En savoir plus</a>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                        
-                        blogCardsContainer.insertAdjacentHTML('beforeend', cardHTML);
-                    });
+                    displayArticles(articlesData, currentPage);
+
                 } catch (error) {
                     console.error("Erreur lors de la récupération des articles :", error);
                 }
             }
-        
+
+            let currentPage = 1;
+            const articlesPerPage = 9;
+
+            function displayArticles(articles, page) {
+                const startIndex = (page - 1) * articlesPerPage;
+                const endIndex = startIndex + articlesPerPage;
+
+                const paginatedArticles = articles.slice(startIndex, endIndex);
+                const blogCardsContainer = document.getElementById('blog-cards-container');
+                blogCardsContainer.innerHTML = '';
+
+                paginatedArticles.forEach((entry, index) => {
+                    const title = entry['Titre'];
+                    const author = entry["Auteur de l'article"];
+                    const date = entry['Date de publication'];
+                    const imageUrl = entry['Image principale'];
+                    const content = entry["Texte d'introduction"];
+                    const excerpt = content.split(' ').slice(0, 20).join(' ') + ' ...';
+
+                    const cardHTML = `
+                        <div class="blog-card">
+                            <img id="blogImage${index}" class="blog-card-image" src="${imageUrl}" alt="${title}">
+                            <div class="blog-card-content">
+                                <h3>${title}</h3>
+                                <p><em>Par ${author}, le ${date}</em></p>
+                                <p class="excerpt">${excerpt}</p>
+                                <div class="read-more-container">
+                                    <a class="read-more" onclick="openArticle('${title.replace(/'/g, "\\'")}')">En savoir plus</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    blogCardsContainer.insertAdjacentHTML('beforeend', cardHTML);
+                });
+
+                createPagination(articles);
+            }
+
+            function createPagination(articles) {
+                const paginationContainer = document.getElementById('pagination-container');
+                paginationContainer.innerHTML = '';
+                const totalPages = Math.ceil(articles.length / articlesPerPage);
+
+                const paginationList = document.createElement('ul');
+                paginationList.className = 'pagination justify-content-center flex-wrap';
+
+                const addPageButton = (label, page, isActive = false, isDisabled = false) => {
+                    const li = document.createElement('li');
+                    li.className = `page-item ${isActive ? 'active' : ''} ${isDisabled ? 'disabled' : ''}`;
+
+                    const button = document.createElement('button');
+                    button.className = 'page-link';
+                    button.innerText = label;
+                    button.disabled = isDisabled;
+                    if (!isDisabled) {
+                        button.addEventListener('click', () => {
+                            currentPage = page;
+                            displayArticles(articles, currentPage);
+                        });
+                    }
+
+                    li.appendChild(button);
+                    paginationList.appendChild(li);
+                };
+
+                // Bouton "Première page"
+                addPageButton('<<', 1, false, currentPage === 1);
+
+                // Pages précédentes avec ellipses
+                if (currentPage > 3) {
+                    addPageButton('1', 1);
+                    const li = document.createElement('li');
+                    li.className = 'page-item disabled';
+                    li.innerHTML = '<span class="page-link">...</span>';
+                    paginationList.appendChild(li);
+                }
+
+                // Pages autour de la page actuelle
+                for (let i = Math.max(1, currentPage - 2); i <= Math.min(totalPages, currentPage + 2); i++) {
+                    addPageButton(i, i, currentPage === i);
+                }
+
+                // Pages suivantes avec ellipses
+                if (currentPage < totalPages - 2) {
+                    const li = document.createElement('li');
+                    li.className = 'page-item disabled';
+                    li.innerHTML = '<span class="page-link">...</span>';
+                    paginationList.appendChild(li);
+                    addPageButton(totalPages, totalPages);
+                }
+
+                // Bouton "Dernière page"
+                addPageButton('>>', totalPages, false, currentPage === totalPages);
+
+                paginationContainer.appendChild(paginationList);
+            }
+
+
+
             function normalizeString(str) {
                 return str
                     .normalize("NFD")
@@ -210,12 +303,20 @@
             }
 
             function openArticle(articleTitle) {
-                console.log("Titre original :", articleTitle); // Log pour débogage
                 const normalizedTitle = normalizeString(articleTitle);
-                console.log("Titre normalisé :", normalizedTitle); // Log pour débogage
                 const encodedTitle = encodeURIComponent(normalizedTitle);
+
+                // Sauvegarde de l'état de pagination et de défilement
+                const state = {
+                    currentPage: currentPage,
+                    scrollPosition: window.scrollY
+                };
+                localStorage.setItem('blogState', JSON.stringify(state));
+
+                // Redirection vers la page de l'article
                 window.location.href = `article.html?title=${encodedTitle}`;
             }
+
 
 
 
@@ -227,12 +328,7 @@
         <script>
             function filterArticles() {
             const searchInput = normalizeString(document.getElementById('search-input').value);
-            const blogCardsContainer = document.getElementById('blog-cards-container');
-            blogCardsContainer.innerHTML = '';
-
-            const articlesData = JSON.parse(localStorage.getItem('articlesData')) || []; // Récupération des données
-
-            // Filtrer les articles qui contiennent le mot-clé dans le titre, l'auteur ou le contenu
+            const articlesData = JSON.parse(localStorage.getItem('articlesData')) || [];
             const filteredArticles = articlesData.filter(article => {
                 const title = normalizeString(article['Titre'] || '');
                 const author = normalizeString(article["Auteur de l'article"] || '');
@@ -240,6 +336,14 @@
                 return title.includes(searchInput) || author.includes(searchInput) || content.includes(searchInput);
             });
 
+            currentPage = 1; // Réinitialise à la première page
+            displayArticles(filteredArticles, currentPage);
+
+            // Affiche un message si aucun article trouvé
+            if (filteredArticles.length === 0) {
+                document.getElementById('blog-cards-container').innerHTML = `<p>Aucun article trouvé pour votre recherche.</p>`;
+            }
+         
             // Afficher les articles filtrés
             filteredArticles.forEach((entry, index) => {
                 const title = entry['Titre'];
@@ -317,4 +421,5 @@
             </div>
         </div>
     </footer>
+    
 </html>
