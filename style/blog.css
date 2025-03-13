@@ -21,6 +21,18 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+.services-list {
+    list-style: none; /* Enlever les puces par défaut */
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem; /* Taille du texte de la liste */
+    line-height: 1.6; /* Hauteur de ligne pour lisibilité */
+    color:#333
+}
+
+.services-list li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
 
 .img-fluid2 {
     border-radius: 20px;

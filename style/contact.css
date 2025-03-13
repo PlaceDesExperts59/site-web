@@ -364,6 +364,18 @@ textarea::placeholder {
     transition: transform 0.3s ease;
 }
 
+.services-list2 {
+    list-style: none; /* Enlever les puces par défaut */
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem; /* Taille du texte de la liste */
+    line-height: 1.6; /* Hauteur de ligne pour lisibilité */
+    color:#333
+}
+
+.services-list2 li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+}
 .map-link:hover .map-icon {
     transform: translateX(5px); /* Animation de déplacement au survol */
 }
