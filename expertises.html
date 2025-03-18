@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
+
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Place des Experts</title>
-        <!-- Lien vers Bootstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Place des Experts est un cabinet d'expertise comptable situé à Hazebrouck et La Madeleine. Nous accompagnons les entreprises en comptabilité, fiscalité et gestion. Découvrez nos services !">
+        
+        <title>Place des Experts - Nos Expertises</title>
+        <link rel="icon" href="./images/Logo_fond_blanc.webp" type="image/png">
+        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Lien vers Bootstrap Icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-        <link rel="icon" href="./images/logo.png" type="image/png">
 
-        <!-- Lien vers Google Fonts pour la police "Roboto" -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <!-- Lien vers le fichier CSS personnalisé -->
-        <link rel="stylesheet" href="./style/expertises.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+        <link rel="preload" href="./style/expertises.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+        <meta property="og:title" content="Place des Experts - Cabinet d'expertise comptable">
+        <meta property="og:description" content="Cabinet comptable à Hazebrouck et La Madeleine, spécialisé en comptabilité, fiscalité et gestion d'entreprise.">
+        <meta property="og:image" content="https://www.placedesexperts.fr/images/Logo_fond_blanc.webp">
+        <meta property="og:url" content="https://www.placedesexperts.fr">
+        <meta property="og:type" content="website">
     </head>
+
     <body>
 
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
+
                 <!-- Logo du site -->
                 <a class="navbar-brand" href="./index.html">
-                    <img src="./images/logo.png" alt="Logo" class="logo-site" style="width: 120px;">
+                    <img src="./images/Logo_fond_blanc.webp" 
+                    width="120" height="100"
+                    alt="Logo"
+                    class="logo-site"
+                    style="width: 120px; height: auto;"
+                    loading="eager"
+                    decoding="async">
+               
                 </a>
 
                 <!-- Bouton pour mobile -->
@@ -33,7 +48,7 @@
                 </button>
 
                 <!-- Liens du menu -->
-                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center; padding-right: 120px;"> <!-- Ajuster la position du menu -->
+                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center; padding-right: 120px;">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="./index.html">Accueil</a>
@@ -65,11 +80,18 @@
          <section>
             <div class="container rounded text-white d-flex align-items-center position-relative p-5">
                 <div class="row bulles">
-                    <img src="./images/gouttes.png" alt="Décoration graphique" class="decoration-graphic">
+
+                    <img src="./images/gouttes.png" 
+                    width="80" height="60"
+                    alt="Décoration graphique"
+                    class="decoration-graphic"
+                    loading="lazy"
+                    decoding="async">
+
                     <div class="col-lg-6">
                         <div class="text-container">
                         </br><h1 class="display-4">NOS EXPERTISES</h1></br>
-                            <p class="lead" style="text-align: justify;">
+                            <p class="lead">
                                 Nous proposons une gamme complète de services pour répondre à vos besoins variés. Notre équipe d’experts est là pour vous accompagner et conseiller dans tous les aspects de votre activité. </br></br>
  
                                 De plus, chaque client étant unique, nous nous adaptons à vos besoins afin de répondre à vos attentes. </br></br>
@@ -80,7 +102,13 @@
                     </div>
                     <!-- Colonne droite : image pleine largeur avec réduction de taille et padding -->
                     <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                        <img src="./images/Nos expertises/IRPP/3-Erreurs.png" alt="Image d'accueil" class="img-fluid2 rounded custom-image">
+                        <img src="./images/Nos secteurs d'activité.webp" 
+                        width="280" height="350"
+                        alt="Image d'accueil"
+                        class="img-fluid rounded custom-image responsive_img"
+                        style="width: 70%; height: auto;"
+                        loading="eager"
+                        decoding="async">
                     </div> 
                 
                 </div>
@@ -136,7 +164,7 @@
                                     <div class="row bulles2" style="margin: 0 !important;">
                                         <div class="text-container2">
                                             <br><h1 class="display-4" style="font-size: 2rem;">La <span class="highlight2">comptabilité</span></h1><br>
-                                            <p class="lead" style="text-align: justify;">
+                                            <p class="lead">
                                                 Chez Place des Experts, nous vous accompagnons dans la gestion
                                                 quotidienne de votre comptabilité avec une approche moderne et
                                                 innovante. Forts de notre expertise et de notre engagement envers
@@ -158,7 +186,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Les missions comptables : un accompagnement sur mesure</h2></br>
+                                                <h2 class="section-title" style ="font-size: 1.5rem; margin-top: 20px;">Les missions comptables : un accompagnement sur mesure</h2></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     Suite à la numérisation et à la transmission de vos pièces comptables via une application sécurisée, nous pouvons intervenir
                                                     efficacement et de manière réactive sur différentes missions comptables.</br></br>
@@ -166,7 +194,7 @@
 
                                                     <ul style ="color: #333;">
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem;">Mise à jour mensuelle de la comptabilité</h2>
+                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Mise à jour mensuelle de la comptabilité</h2>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 Nous effectuons un suivi régulier de vos comptes afin d’identifier d’éventuelles anomalies et de vous aider à maintenir une
                                                                 comptabilité à jour. Ce contrôle continu vous permet d’avoir une visibilité précise sur la santé financière de votre entreprise tout
@@ -175,7 +203,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem;">Déclarations de TVA</h2>
+                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Déclarations de TVA</h2>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 Nous nous chargeons de l’établissement de vos déclarations de TVA, en veillant à ce que celles-ci soient conformes aux
                                                                 exigences légales et déposées dans les délais impartis, évitant ainsi toute pénalité de retard. 
@@ -183,7 +211,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem;">Clôture de l’exercice comptable et établissement des comptes annuels</h2>
+                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Clôture de l’exercice comptable et établissement des comptes annuels</h2>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 À la clôture de l’exercice, nous réalisons vos comptes annuels, véritable reflet de l’activité et de la performance financière de votre
                                                                 entreprise. Ce document est essentiel pour les parties prenantes internes et externes (banques, investisseurs, etc.).
@@ -191,7 +219,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem;">Gestion des relances & facturation clients</h2>
+                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Gestion des relances & facturation clients</h2>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 Nous vous assistons dans la gestion des relances clients et dans l’émission de vos factures, afin de garantir que vos créances
                                                                 soient recouvrées rapidement et que votre trésorerie soit optimisée.
@@ -199,7 +227,7 @@
                                                         </li>
 
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem;">Tableau de bord & indicateurs clés</h2>
+                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Tableau de bord & indicateurs clés</h2>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 Nous mettons en place des tableaux de bord personnalisés qui vous permettent de suivre en temps réel les indicateurs financiers
                                                                 essentiels à la gestion de votre activité. Ces outils vous donnent une visibilité claire et immédiate sur vos performances et
@@ -213,7 +241,7 @@
                                                 <h2 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour la gestion de votre comptabilité ?</h2></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     En optant pour Place des Experts, vous choisissez bien plus qu’un simple prestataire comptable. Nous sommes votre partenaire
-                                                    de confiance, alliant proximité, expertise et technologie pour vous offrir un accompagnement sur mesure.</br> Voici pourquoi nos
+                                                    de confiance, alliant proximité, expertise et technologie pour vous offrir un accompagnement sur mesure.</br></br> Voici pourquoi nos
                                                     clients nous font confiance pour la gestion de leurs missions comptables :
                                                 </p>
 
@@ -225,15 +253,20 @@
                                 <!-- Section images -->
                                 <section>
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
-                                            <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Comptabilite╠ü/1-Accompagnement personnalise╠ü.png" alt="Image gauche" class="img-fluid rounded justify-content-center">
+                                        <div class="row d-flex align-items-stretch w-100">
+                                            <!-- Colonne gauche : image -->
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Comptabilité/1-Accompagnement personnalisé.webp" 
+                                                width="450" height="360"
+                                                alt="Accompagnement personnalisé"
+                                                class="img-fluid rounded"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
-                                            <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title" >Accompagnement personnalisé</h2></br>
-                                                <p class="services-list" style="color:#333;" style="text-align: justify;">
+                                            <!-- Colonne droite : texte -->
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Accompagnement personnalisé</h2>
+                                                <p class="services-list">
                                                     Nous adaptons nos services en fonction des spécificités
                                                     de votre activité et de vos objectifs. Chaque entreprise
                                                     est unique, c’est pourquoi nous proposons des solutions
@@ -245,10 +278,10 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Vision moderne et innovante</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Vision moderne et innovante</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous mettons un point d’honneur à utiliser les dernières
                                                     technologies pour vous offrir une gestion comptable
@@ -258,21 +291,33 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Comptabilite╠ü/2-Vision moderne.png" alt="Image gauche" class="img-fluid rounded justify-content-center  move-image" >
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Comptabilité/02_Vision_moderne.webp" 
+                                                width="450" height="360"
+                                                alt="Vision moderne et innovante"
+                                                class="img-fluid rounded"
+                                                loading="lazy"
+                                                decoding="async">
+
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row ">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Comptabilite╠ü/3-Rigueur.png" alt="Image gauche" class="img-fluid rounded justify-content-center">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Comptabilité/3-Rigueur.webp" 
+                                                width="450" height="360"
+                                                alt="Rigueur et expertise"
+                                                class="img-fluid rounded"
+                                                loading="lazy"
+                                                decoding="async">
+
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Rigueur et expertise</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Rigueur et expertise</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Avec Place des Experts, vous avez la certitude que votre
                                                     comptabilité est entre de bonnes mains. Nos Experts-Comptables veillent à ce que vos comptes soient
@@ -285,10 +330,10 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Réactivité et proximité</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Réactivité et proximité</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous sommes disponibles pour répondre à toutes vos
                                                     questions et vous apporter des conseils tout au long de
@@ -299,8 +344,14 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Comptabilite╠ü/4-Re╠üactivite╠ü.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Comptabilité/4-Réactivité.webp" 
+                                                width="450" height="360"
+                                                alt="Réactivité et proximité"
+                                                class="img-fluid rounded"
+                                                loading="lazy"
+                                                decoding="async">
+
                                             </div>
                                         </div>
                                     </div>
@@ -439,10 +490,10 @@
                                 <!-- Section sous le menu avec le rectangle bleu -->
                                 <div class="container rounded text-white d-flex align-items-center">
                                         <div class="row bulles2" style ="margin: 0 !important;">
-                                            <!-- Colonne gauche : texte, titre et logos -->
+                                        
                                             <div class="text-container2">
                                             </br><h1 class="display-4" style="font-size: 2rem;">La <span class="highlight2">fiscalité</span></h1></br>
-                                                <p class="lead" style="text-align: justify;">
+                                                <p class="lead">
                                                     La fiscalité est un domaine complexe et en constante évolution.
                                                     Chez Place des Experts, nous vous accompagnons dans toutes les
                                                     dimensions de la fiscalité. Notre équipe de spécialistes veille à ce
@@ -471,8 +522,8 @@
                                                     respect des délais impartis.</br></br>
                                                     Voici les principales missions que nous réalisons pour vous :
 
-                                                    <ul style ="color: #333;">
-                                                        <li style="text-align: justify;"><h2 class="section-title" style ="font-size: 1.2rem;">Gestion des déclarations fiscales</h2>
+                                                    <ul style ="color: #333;"></br>
+                                                        <li style="text-align: justify;"><h2 class="section-title" style ="font-size: 1.2rem;" >Gestion des déclarations fiscales</h2>
                                                         Nous prenons en charge l’ensemble de vos déclarations fiscales, qu’il s’agisse de la TVA, de l’Impôt sur les Sociétés (IS), des
                                                         Cotisations sur la Valeur Ajoutée des Entreprises (CVAE), de la taxe sur les véhicules de tourisme, ou encore d’autres taxes
                                                         spécifiques à votre activité. Nous veillons à ce que toutes vos déclarations soient correctement remplies, déposées dans les
@@ -497,7 +548,7 @@
                                                     En choisissant Place des Experts pour les missions fiscales, vous bénéficierez de l’accompagnement d’un cabinet d’expertise
                                                     comptable reconnu pour sa rigueur, son expertise et son approche personnalisée. Nous mettons un point d’honneur à vous offrir
                                                     un service sur mesure, en prenant en compte les spécificités de votre activité, vos objectifs et votre situation fiscale. 
-                                                </br>Voici pourquoi nos clients nous font confiance pour leurs missions fiscales :
+                                                </br></br>Voici pourquoi nos clients nous font confiance pour leurs missions fiscales :
                                                 </p>
 
                                             </div>
@@ -508,14 +559,20 @@
                                 <!-- Section images -->
                                 <section>
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Fiscalite╠ü/1-Conformite╠ü.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Fiscalité/1-Conformité.webp"
+                                                width="450" height="360"
+                                                alt="Conformité avec la législation fiscale"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title" >Conformité avec la législation fiscale</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Conformité avec la législation fiscale</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous veillons à ce que toutes vos déclarations fiscales
                                                     respectent strictement les exigences légales. La fiscalité
@@ -530,10 +587,10 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Suivi rigoureux et gestion des délais</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Suivi rigoureux et gestion des délais</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     La gestion fiscale implique des respecter des échéances
                                                     précises pour éviter des amendes ou des majorations.
@@ -546,21 +603,33 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Fiscalite╠ü/2-Suivi.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Fiscalité/2-Suivi.webp"
+                                                width="450" height="360"
+                                                alt="Suivi rigoureux et gestion des délais"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Fiscalite╠ü/3-Optimisation.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Fiscalité/3-Optimisation.webp"
+                                                width="450" height="360"
+                                                alt="Optimisation fiscale"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Optimisation fiscale</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Optimisation fiscale</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Notre mission ne se limite pas à la simple gestion
                                                     administrative. Nous analysons votre situation pour
@@ -576,10 +645,10 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Accompagnement personnalisé</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Accompagnement personnalisé</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Chaque entreprise est unique et ses besoins fiscaux le
                                                     sont aussi. Chez Place des Experts, nous vous offrons
@@ -592,8 +661,14 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Fiscalite╠ü/4-Accompagnement personnalise╠ü.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 60px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Fiscalité/4-Accompagnement personnalisé.webp"
+                                                width="450" height="360"
+                                                alt="Accompagnement personnalisé"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 60px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
@@ -700,7 +775,7 @@
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
                                         </br><h1 class="display-4" style="font-size: 2rem;">Le <span class="highlight2">social</span></h1></br>
-                                            <p class="lead" style="text-align: justify;">
+                                            <p class="lead">
                                                 Chez Place des Experts, nous comprenons l’importance de la gestion
                                                 des ressources humaines pour le succès de votre entreprise. Nous
                                                 vous accompagnons tout au long du parcours professionnel de vos
@@ -733,14 +808,20 @@
                                 <!-- Section images -->
                                 <section>
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Social/1-Gestion paie.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Social/01_Gestion paie.webp"
+                                                width="450" height="360"
+                                                alt="Gestion de la paie"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title" >Gestion de la paie</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;" >Gestion de la paie</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous réalisons l’ensemble des fiches de paie de vos
                                                     collaborateurs, en nous assurant que chaque élément
@@ -752,10 +833,10 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title"> Déclarations sociales via la DSN</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;"> Déclarations sociales via la DSN</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous prenons en charge l’ensemble des déclarations
                                                     sociales via la DSN (Déclaration Sociale Nominative),
@@ -764,21 +845,33 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Social/2-De╠üclarations sociales.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Social/2-Déclarations sociales.webp"
+                                                width="450" height="360"
+                                                alt="Déclarations sociales via la DSN"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Social/3-Gestion de╠üparts.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Social/3-Gestion départs.webp"
+                                                width="450" height="360"
+                                                alt="Gestion des départs de collaborateurs"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Gestion des départs de collaborateurs</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Gestion des départs de collaborateurs</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     En cas de fin de contrat, nous réalisons tous les
                                                     documents de sortie nécessaire (solde de tout compte,
@@ -916,7 +1009,7 @@
                                                 <div class="title-large font-weight-300 text-white-2 alt-font">
                                                     <span class="counter" data-to="400" data-speed="3000">0</span>
                                                 </div>
-                                                <span class="text-white-2 text-large">entreprises suivis</span>
+                                                <span class="text-white-2 text-large">entreprises suivies</span>
                                             </div>
                                         </div>
                                     </div>
@@ -942,7 +1035,7 @@
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
                                         </br><h1 class="display-4" style="font-size: 2rem;">Le <span class="highlight2">juridique</span></h1></br>
-                                            <p class="lead" style="text-align: justify;">
+                                            <p class="lead">
                                                 Le cadre juridique dans lequel évoluent les entreprises est en
                                                 constante évolution. Pour rester en conformité et éviter les risques
                                                 juridiques, il est essentiel de bénéficier d’un accompagnement
@@ -977,14 +1070,20 @@
                                 <!-- Section images -->
                                 <section>
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Juridique/1-Conseil.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Juridique/01_Conseil-forme-juridique.webp"
+                                                width="450" height="360"
+                                                alt="Conseil sur la forme juridique"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Conseil sur la forme juridique</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Conseil sur la forme juridique</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Choisir la forme juridique la plus adaptée à votre activité
                                                     est une décision fondamentale lors de la création de
@@ -999,10 +1098,10 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Approbation des comptes annuels et suivi juridique</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Approbation des comptes annuels et suivi juridique</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous prenons en charge l’approbation de vos comptes
                                                     annuels, une étape cruciale pour assurer la conformité
@@ -1015,21 +1114,33 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Juridique/2-Comptes annuels.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Juridique/2-Comptes annuels.webp"
+                                                width="450" height="360"
+                                                alt="Approbation des comptes annuels"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Juridique/3-Formalite╠üs juridiques.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Juridique/3-Formalités juridiques.webp"
+                                                width="450" height="360"
+                                                alt="Gestion des formalités exceptionnelles"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Gestion des formalités exceptionnelles</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Gestion des formalités exceptionnelles</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Notre équipe peut également effectuer des formalités
                                                     dites “exceptionnelles”. Cela représente diverses
@@ -1059,14 +1170,14 @@
                                                     comprenons que chaque entreprise est unique, c’est pourquoi nous proposons un service personnalisé, ajusté à la taille et aux
                                                     objectifs de votre structure. En travaillant avec notre cabinet, vous êtes certains d’être accompagné par des professionnels
                                                     capables de vous guider dans vos décisions stratégiques et de gérer l’ensemble de vos obligations légales.</br></br>
-                                                    Nous garantissons : 
+                                                    Nous garantissons : </br></br>
                                                     <ul style="color:#333;" style="text-align: justify;">
-                                                        <li style="color:#333;"><strong>Une expertise pluridisciplinaire</strong></br>
+                                                        <li  class="services-list" style="color:#333;"><strong>Une expertise pluridisciplinaire</strong></br>
                                                             Notre équipe est composée d’experts dans plusieurs domaines, vous offrant ainsi un accompagnement complet et une vision
                                                             globale de votre entreprise. Qu’il s’agisse de questions juridiques, comptables, fiscales, ou sociales, nous veillons à ce que vous
                                                             preniez les meilleures décisions pour la santé financière et juridique de votre entreprise.
                                                         </li></br>
-                                                        <li style="color:#333;"><strong>La conformité de vos démarches juridiques</strong></br>
+                                                        <li  class="services-list" style="color:#333;"><strong>La conformité de vos démarches juridiques</strong></br>
                                                             Nos experts s’assurent que chaque action entreprise respecte les normes juridiques en vigueur. Que ce soit pour des
                                                             modifications statutaires, la gestion des assemblées générales ou le dépôt des comptes annuels, nous garantissons que toutes
                                                             vos démarches sont réalisées conformément aux exigences légales.
@@ -1219,7 +1330,7 @@
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
                                         </br><h1 class="display-4" style="font-size: 2rem;">La <span class="highlight2">DATA</span></h1></br>
-                                            <p class="lead" style="text-align: justify;">
+                                            <p class="lead">
                                                 Dans un environnement où la prise de décision rapide est cruciale
                                                 pour la compétitivité, les données deviennent un levier stratégique
                                                 majeur pour les entreprises. Qu’il s’agisse de données financières,
@@ -1256,15 +1367,21 @@
                                 <!-- Section images -->
                                 <section>
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/DATA/3-Retraitement donne╠ües.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                               
+                                                    <img src="./images/Nos expertises/DATA/1-Nettoyage données.webp"
+                                                    width="450" height="360"
+                                                    alt="Nettoyage des données"
+                                                    class="img-fluid rounded image-centered"
+                                                    loading="lazy"
+                                                    decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Nettoyage des données</h2></br>
-                                                <p class="services-list" style="color:#333;" style="text-align: justify;">
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style="font-size: 1.5rem;">Nettoyage des données</h2>
+                                                <p class="services-list" style="color:#333; text-align: justify;">
                                                     Les données brutes ne suffisent pas à prendre des
                                                     décisions stratégiques. C’est pourquoi nous vous
                                                     accompagnons dans le nettoyage et l’analyse de vos
@@ -1283,11 +1400,11 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Tableaux de bord personnalisés</h2></br>
-                                                <p class="services-list" style="color:#333;" style="text-align: justify;">
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style="font-size: 1.5rem;">Tableaux de bord personnalisés</h2>
+                                                <p class="services-list" style="color:#333; text-align: justify;">
                                                     Power BI nous permet de concevoir des tableaux de bord
                                                     interactifs et complètement sur mesure qui regroupent
                                                     toutes vos données clés selon vos besoins et attentes.
@@ -1305,13 +1422,18 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/DATA/1-Tableaux de bord.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                                                <img src="./images/Nos expertises/DATA/1-Tableaux de bord.png"
+                                                width="450" height="360"
+                                                alt="Tableaux de bord personnalisés"
+                                                class="img-fluid rounded image-centered"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
-
                                 </section>
+
 
                                 <!-- Section textes -->
                                 <div class="services">
@@ -1324,11 +1446,11 @@
                                                     l’analyse de vos informations financières et opérationnelles. Nous vous offrons des solutions sur mesure, adaptées à vos
                                                     besoins spécifiques, et nous utilisons les technologies les plus avancées pour optimiser la performance de votre entreprise.</br> </br>
                                                     <ul style="color:#333;" style="text-align: justify;">
-                                                        <li style="color:#333;"><strong>Analyse de performance et rentabilité</strong></br>
+                                                        <li  class="services-list" style="color:#333;"><strong>Analyse de performance et rentabilité</strong></br>
                                                             Notre analyse de données se concentre sur deux axes : la performance et la rentabilité. Avec notre aide, vous disposerez
                                                             d’indicateurs clés indispensables pour diriger votre activité avec succès et assurance.
                                                         </li></br>
-                                                        <li style="color:#333;"><strong>La conformité de vos démarches juridiques</strong></br>
+                                                        <li  class="services-list" style="color:#333;"><strong>La conformité de vos démarches juridiques</strong></br>
                                                             Grâce à notre maîtrise des outils technologiques tels que Power BI, nous vous offrons des solutions innovantes qui facilitent la
                                                             visualisation de vos résultats. Nos experts maîtrisent également les meilleurs pratiques pour assurer que vos systèmes
                                                             d’information soient sécurisés et optimisés.
@@ -1435,7 +1557,7 @@
                                         <div class="text-container2">
                                         </br><h1 class="display-4" style="font-size: 2rem;">L’ <span class="highlight2">audit</span> légal 
                                             et contractuel</h1></br>
-                                            <p class="lead" style="text-align: justify;">
+                                            <p class="lead">
                                                 Dans un environnement économique de plus en plus réglementé, la transparence et la fiabilité des états financiers
                                                 sont essentielles pour inspirer confiance à vos partenaires, investisseurs et clients. L’audit légal et contractuel joue
                                                 un rôle clé dans la validation de la conformité de vos comptes, ainsi que dans l’identification des risques et des
@@ -1465,7 +1587,7 @@
                                                 <div class="bubblee" onclick="flipBubble(this)" style ="height: 300px;">
                                                     <div class="bubble-front">
                                                         <p class="bubble-title" style="color:white;">Vérification des comptes</p>
-                                                        <i class="fas fa-sync-alt click-icon"></i> <!-- Icône rotation -->
+                                                        <i class="fas fa-sync-alt click-icon"></i> 
                                                     </div>
                                                     <div class="bubble-back">
                                                         <p class="bubble-text" style="color:#333;" style="text-align: justify;">Nous procédons à l’examen de
@@ -1478,7 +1600,7 @@
                                                     <div class="bubble-front">
                                                         <p class="bubble-title" style="color:white;">Analyse des
                                                             données</p>
-                                                        <i class="fas fa-sync-alt click-icon"></i> <!-- Icône rotation -->
+                                                        <i class="fas fa-sync-alt click-icon"></i> 
                                                     </div>
                                                     <div class="bubble-back">
                                                         <p class="bubble-text" style="color:#333;" style="text-align: justify;">Nous vérifions la conformité
@@ -1491,7 +1613,7 @@
                                                     <div class="bubble-front">
                                                         <p class="bubble-title" style="color:white;">Évaluation des
                                                             risques financiers</p>
-                                                        <i class="fas fa-sync-alt click-icon"></i> <!-- Icône rotation -->
+                                                        <i class="fas fa-sync-alt click-icon"></i> 
                                                     </div>
                                                     <div class="bubble-back">
                                                         <p class="bubble-text" style="color:#333;" style="text-align: justify;">Nous identifions les risques
@@ -1532,14 +1654,20 @@
                                 <!-- Section images -->
                                 <section>
                                     <div class="services rounded text-white d-flex align-items-center">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Audit comptable et financier/1-Analyse.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Audit légal et contractuel/1-Analyse.webp"
+                                                width="450" height="360"
+                                                alt="Analyse fiable et transparente"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Analyse fiable et transparente</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Analyse fiable et transparente</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous garantissons une analyse indépendante et
                                                     objective de vos comptes, essentielle pour assurer la
@@ -1554,11 +1682,11 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title"> Conformité aux normes comptables
-                                                    et légales</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;"> Conformité aux normes comptables
+                                                    et légales</h2></br> 
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Grâce à notre expertise, nous assurons la conformité de
                                                     vos comptes et états financiers avec les normes
@@ -1570,21 +1698,33 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Audit comptable et financier/2-Conformite╠ü.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Audit légal et contractuel/02_Conformité.webp"
+                                                width="450" height="360"
+                                                alt="Conformité aux normes comptables"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Audit comptable et financier/3-Se╠ücurisation donne╠ües.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Audit légal et contractuel/3-Sécurisation données.webp"
+                                                width="450" height="360"
+                                                alt="Sécurisation des données financières"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Sécurisation des données financières</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Sécurisation des données financières</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     L’une des priorités de l’audit légal et contractuel est de
                                                     vérifier la fiabilité de vos données comptables et
@@ -1599,10 +1739,10 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Optimisation des processus internes</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Optimisation des processus internes</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nos auditeurs vont au-delà de la simple vérification des
                                                     comptes. Nous analysons également vos processus
@@ -1614,21 +1754,33 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Audit comptable et financier/4-Optimisation processus.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Audit légal et contractuel/4-Optimisation processus.webp"
+                                                width="450" height="360"
+                                                alt="Optimisation des processus internes"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Audit comptable et financier/5-Expertise.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Audit légal et contractuel/05_Expertise-pluridisciplinaire.webp"
+                                                width="450" height="360"
+                                                alt="Expertise pluridisciplinaire"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Expertise pluridisciplinaire</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Expertise pluridisciplinaire</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Chez Place des Experts, nous mettons à votre
                                                     disposition une équipe d’auditeurs et de consultants
@@ -1643,10 +1795,10 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Accompagnement personnalisé</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Accompagnement personnalisé</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous comprenons que chaque entreprise est unique, et
                                                     nous proposons des solutions sur mesure, parfaitement
@@ -1658,8 +1810,14 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/Audit comptable et financier/6-Accompagnement.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/Audit légal et contractuel/6-Accompagnement personnalisé.webp"
+                                                width="450" height="360"
+                                                alt="Accompagnement personnalisé"
+                                                class="img-fluid rounded"
+                                                style="margin-top: 40px;"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
@@ -1791,7 +1949,7 @@
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
                                         </br><h1 class="display-4" style="font-size: 2rem;">L’<span class="highlight2">impôt</span> sur le revenu</h1></br>
-                                            <p class="lead" style="text-align: justify;">
+                                            <p class="lead">
                                                 La gestion de l’Impôt sur le Revenu peut rapidement devenir
                                                 complexe en raison de la diversité des revenus, des déductions
                                                 possibles et des réglementations en constante évolution. Que vous
@@ -1827,8 +1985,13 @@
                                             </div>
                                             <div></br></br>
                                                 <h2 class="section-title" style ="font-size: 1.5rem;">La déclaration d’impôt sur le revenu : comment ça fonctionne ?</h2>
-                                                <img src="./images/Nos expertises/IRPP/SchémaIRPP.webp" alt="Image d'accueil" class="img-fluid2 rounded custom-image schema"> </br></br>
-                                                    <p style ="color: #333;" style="text-align: justify;">Une déclaration erronée ou incomplète peut entraîner des redressements fiscaux coûteux, des pénalités, ou la perte d’avantages
+                                                <img src="./images/Nos expertises/SchémaIRPP.webp"
+                                                width="900" height="600"
+                                                alt="Schéma de la déclaration IRPP"
+                                                class="img-fluid rounded custom-image"
+                                                loading="lazy"
+                                                decoding="async"> </br></br>
+                                                    <p  class="services-list" style="text-align: justify; color: #333;">Une déclaration erronée ou incomplète peut entraîner des redressements fiscaux coûteux, des pénalités, ou la perte d’avantages
                                                         fiscaux précieux. </br>
                                                        En externalisant cette mission complexe à Place des Experts, vous vous assurez que toutes les opportunités fiscales sont
                                                         exploitées et que votre déclaration est parfaitement conforme aux réglementations en vigueur.</p>
@@ -1935,6 +2098,7 @@
 
                                     </div>
                                 </section></br>
+
                             </div>
 
                             <!-- Contenu Examen de Conformité Fiscale -->
@@ -1946,7 +2110,7 @@
                                         <div class="text-container2">
                                         </br><h1 class="display-4" style="font-size: 2rem;">L’examen de
                                             conformité fiscale - <span class="highlight2">ECF</span></h1></br>
-                                            <p class="lead" style="text-align: justify;">
+                                            <p class="lead">
                                                 Dans un contexte où la législation fiscale évolue constamment, il est
                                                 crucial pour les entreprises de s’assurer qu’elles respectent l’ensemble
                                                 de leurs obligations fiscales. Le moindre manquement ou la moindre
@@ -1982,9 +2146,9 @@
                                         <div></br></br>
                                             <h2 class="section-title" style ="font-size: 1.5rem;">Mettre en œuvre un ECF</h2></br>
                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
-                                                L’ECF est une analyse de 10 points fiscaux spécifiquement définis par l’administration fiscale.</br></br>
-                                                Ces points couvrent différents aspects des obligations fiscales, tels que :
-                                                <ul style="color:#333;">
+                                                L’ECF est une analyse de 10 points fiscaux spécifiquement définis par l’administration fiscale.</br>
+                                                Ces points couvrent différents aspects des obligations fiscales, tels que :</br></br>
+                                                <ul class="services-list" style="color:#333; list-style:circle">
                                                     <li style="color:#333;">
                                                         La correcte déclaration de la TVA
                                                     </li>
@@ -2001,7 +2165,7 @@
                                                         L’application correcte des règles de déduction des charges
                                                     </li>
                                                 </ul></br>
-                                                <p style ="color: #333;" style="text-align: justify;">Lors de l’audit, notre équipe d’experts analysera ces 10 points avec minutie, en s’appuyant sur vos documents comptables, vos déclarations fiscales, et votre organisation interne.</br>
+                                                <p class="services-list" style ="color: #333;" style="text-align: justify;">Lors de l’audit, notre équipe d’experts analysera ces 10 points avec minutie, en s’appuyant sur vos documents comptables, vos déclarations fiscales, et votre organisation interne.</br>
                                                     À l’issue de cet examen, nous vous remettons un Compte Rendu de Mission. Ce document détaillé récapitule les travaux réalisés, et présente les éventuelles non-conformités relevées ainsi que les points à améliorer.</br></br>
                                                     Grâce à notre connaissance approfondie de votre entreprise et de vos documents comptables, nous sommes en mesure d’identifier rapidement les éventuels écarts et de vous proposer des solutions pour les corriger avant qu’ils ne deviennent problématiques lors d’un éventuel contrôle fiscal.
                                                 </p>
@@ -2023,14 +2187,19 @@
                                 <!-- Section images -->
                                 <section>
                                     <div class="services rounded text-white d-flex align-items-center">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/ECF/1-Risques fiscaux.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/ECF/01_Eviter-risques-fiscaux.webp"
+                                                width="450" height="360"
+                                                alt="Éviter les risques fiscaux"
+                                                class="img-fluid rounded"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Éviter les risques fiscaux</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Éviter les risques fiscaux</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Grâce à un ECF, vous anticipez et corrigez les erreurs
                                                     potentielles avant qu’elles ne soient découvertes par
@@ -2044,11 +2213,11 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Limiter les risques de contrôle fiscal</h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Limiter les risques de contrôle fiscal</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Les entreprises qui font l’objet d’un ECF présentent un
                                                     profil de transparence accrue aux yeux de
@@ -2061,21 +2230,31 @@
                                             </div>
 
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/ECF/3-Risques contro╠éle.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/ECF/02_Limiter-risques-controle-fiscal.webp"
+                                                width="450" height="360"
+                                                alt="Limiter les risques de contrôle fiscal"
+                                                class="img-fluid rounded"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100" >
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/ECF/4-Transparence gest.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/ECF/3-Transparence gest.webp"
+                                                width="450" height="360"
+                                                alt="Transparence de la gestion"
+                                                class="img-fluid rounded"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Renforcer la transparence de votre
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Renforcer la transparence de votre
                                                     gestion</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Un ECF renforce la crédibilité et la transparence de votre
@@ -2090,11 +2269,11 @@
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row image-below-text">
+                                        <div class="row image-below-text d-flex align-items-stretch w-100">
                                             
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title">Pas de pénalité ni d’intérêt de retard </h2></br>
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;">Pas de pénalité ni d’intérêt de retard </h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     L’un des avantages majeurs de l’ECF est qu’en cas de
                                                     redressement limité après l’audit, l’administration fiscale
@@ -2105,21 +2284,31 @@
                                                 </p>
                                             </div>
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/ECF/5-Pe╠ünalite╠ü.png" alt="Image gauche" class="img-fluid rounded justify-content-center move-image" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/ECF/4-Pénalités.webp"
+                                                width="450" height="360"
+                                                alt="Pas de pénalité ni d’intérêt de retard"
+                                                class="img-fluid rounded"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
-                                        <div class="row">
+                                        <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
-                                            <div class="col-lg-6">
-                                                <img src="./images/Nos expertises/ECF/6-Honoraires.png" alt="Image gauche" class="img-fluid rounded justify-content-center" style="margin-top: 40px;">
+                                            <div class="col-lg-6 d-flex align-items-stretch">
+                                                <img src="./images/Nos expertises/ECF/5-Honoraires.webp"
+                                                width="450" height="360"
+                                                alt="Remboursement des honoraires en cas de rehaussement"
+                                                class="img-fluid rounded"
+                                                loading="lazy"
+                                                decoding="async">
                                             </div>
                                             <!-- Colonne gauche : texte -->
-                                            <div class="col-lg-6">
-                                                <h2 class="section-title"> Remboursement des honoraires en
+                                            <div class="col-lg-6 d-flex flex-column justify-content-center">
+                                                <h2 class="section-title" style ="font-size: 1.5rem;"> Remboursement des honoraires en
                                                     cas de rehaussement</h2></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     En cas de rehaussement fiscal, c’est-à-dire si

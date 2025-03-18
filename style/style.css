@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 body {
-    background-image: url('../images/background/3.png'); /* Vérifiez le chemin vers l'image */
+    background-image: url('../images/background/3.webp'); /* Vérifiez le chemin vers l'image */
     background-size: cover; /* Adapte l'image pour couvrir tout l'écran */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-attachment: fixed; /* Fixe l'image pour un effet de défilement */
@@ -74,7 +74,6 @@ body {
 
 .custom-image {
     border-radius: 20px; /* Bords arrondis */
-    max-width: 80%; /* Ajustez si nécessaire pour que l'image ne prenne pas toute la largeur */
 }
 
 .col-lg-6.d-flex {
@@ -810,6 +809,20 @@ html {
 /**************************************************************************************************/
 /* --- Responsive- */
 @media (max-width: 1024px) {
+    /* Aligner tout le texte à gauche sur mobile */
+    .text-container p, 
+    .services-list, 
+    .bubble-text, 
+    .iso-bubble p, 
+    .footer-bottom, 
+    .footer-links, 
+    .services .col-lg-6:nth-child(2),
+    .blog-card-content p {
+        text-align: left !important;
+    }
+    .responsive_img{
+        width: 100% !important;
+    }
     /* Ajustements de la barre de navigation */
     .navbar-brand img {
         width: 90px;
@@ -842,7 +855,6 @@ html {
     }
     
     .services .services-list {
-        font-size: 0.9rem; /* Adjust the font size for better readability */
         padding-left: 0px; /* Bring text closer to the left edge */
     }
 
@@ -852,7 +864,6 @@ html {
     
     .services .col-lg-6:nth-child(2) {
         width: 100%; /* Expand the text container */
-        text-align: justify; /* Align text to make it cleaner */
     }
 
     .container {
@@ -1037,7 +1048,6 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         gap: 20px;
         width: 100%;
     }
@@ -1048,7 +1058,6 @@ html {
         min-height: 200px; /* Hauteur minimale pour éviter qu'elles soient plates */
         margin: 10px auto;
         display: flex;
-        justify-content: center;
         align-items: center;
         position: relative;
     }
@@ -1058,7 +1067,6 @@ html {
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
     }
 
@@ -1085,7 +1093,6 @@ html {
     .iso-bubble {
         margin: 0 auto;
         padding: 15px; /* Padding réduit pour compacter la section */
-        text-align: justify; /* Alignement pour lisibilité */
     }
 
     .iso-bubble p {

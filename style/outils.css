@@ -26,7 +26,7 @@
 }
 /* Appliquer un background à tout le site */
 body {
-    background-image: url('../images/background/3.png'); /* Mettre ici le chemin de l'image */
+    background-image: url('../images/background/3.webp'); /* Mettre ici le chemin de l'image */
     background-color: #f0f0f0; /* Couleur de fond (facultatif si vous avez une image) */
     background-size: cover; /* Ajuste l'image pour couvrir toute la page */
     background-repeat: repeat; /* Empêche la répétition de l'image */
@@ -346,15 +346,15 @@ h2 {
 }
 
 .sur-green {
-    background-color: #C9ECEF;
+    background-color: #15ec88;
 }
 
 .sur-orange {
-    background-color: #D9E0E1;
+    background-color: #f79e38;
 }
 
 .sur-red {
-    background-color: #ACBBC9;
+    background-color: #822ed1;
 }
 
 .sur-purple {
@@ -362,15 +362,15 @@ h2 {
 }
 
 .bubble-green {
-    border-color: #C9ECEF;
+    border-color: #15ec88;
 }
 
 .bubble-orange {
-    border-color: #D9E0E1;
+    border-color: #f79e38;
 }
 
 .bubble-red {
-    border-color: #ACBBC9;
+    border-color: #822ed1;
 }
 
 .bubble-purple {
@@ -436,10 +436,19 @@ h2 {
     color: #292626;
     animation: bounce 2s infinite; /* Animation de rebond */
 }
+.lead{
+    text-align: justify;
+}
 
-/**********************************************************************************************************/
-/* Responsive pour écrans plus petits */
+
 @media (max-width: 1024px) {
+
+     p, h1, h2, h3, h4, h5, h6, .text-container, .bulle-text, .services-list, .lead, .decouverte-text {
+        text-align: left ;
+    }
+    .responsive_img{
+        width: 100% !important;
+    }
     .scroll-down {
         top: 6vh; /* Ajuste l’espace sous le rectangle bleu sur écrans plus petits */
     }

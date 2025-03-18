@@ -14,7 +14,7 @@
 
 /* Appliquer un background à tout le site */
 body {
-    background-image: url('../images/background/3.png');
+    background-image: url('../images/background/3.webp');
     background-color: #f0f0f0;
     background-size: cover;
     background-repeat: repeat;
@@ -595,9 +595,19 @@ section {
 }
 
 
+.lead{
+    text-align: justify;
+}
 
-/* Responsive */
+
 @media (max-width: 1024px) {
+
+     p, h1, h2, h3, h4, h5, h6, .text-container, .bulle-text, .services-list, .lead, .decouverte-text {
+        text-align: left ;
+    }
+    .responsive_img{
+        width: 100% !important;
+    }
     .blog-article {
         padding: 15px;
     }
@@ -612,6 +622,13 @@ section {
 
     .blog-article h3 {
         font-size: 1.4rem;
+    }
+
+    .blog-article p {
+        margin: 10px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal; /* Permettre le retour à la ligne */
     }
 
     .btn-custom {

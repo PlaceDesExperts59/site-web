@@ -11,7 +11,7 @@
 
 /* Appliquer un background à tout le site */
 body {
-    background-image: url('../images/background/3.png'); /* Mettre ici le chemin de l'image */
+    background-image: url('../images/background/3.webp'); /* Mettre ici le chemin de l'image */
     background-color: #f0f0f0; /* Couleur de fond (facultatif si vous avez une image) */
     background-size: cover; /* Ajuste l'image pour couvrir toute la page */
     background-repeat: repeat; /* Empêche la répétition de l'image */
@@ -400,7 +400,7 @@ h2 {
 .decouverte-text {
     font-size: 1rem; /* Taille du texte */
     color: #000000; 
-    text-align: left;
+    text-align: justify;
 }
 
 /*******************************************************************************************************/
@@ -626,6 +626,13 @@ body
     margin-top: 20px;
 }
 
+.bubble-text {
+    font-size: 1rem; /* Taille du texte */
+    color: #333; /* Couleur du texte (gris moyen) */
+    text-align: left;
+    margin-top:10px;
+}
+
 .bubblee {
     position: relative;
     width: 300px;
@@ -806,8 +813,23 @@ body
     color: white; /* Couleur du texte au survol */
 }
 
+.lead{
+    text-align: justify;
+}
+
 
 @media (max-width: 1024px) {
+
+     p, h1, h2, h3, h4, h5, h6, .text-container, .bulle-text, .services-list, .lead, .decouverte-text {
+        text-align: left ;
+    }
+    
+    .footer-text {
+        text-align: center !important;
+    }
+    .responsive_img{
+        width: 100% !important;
+    }
 
     .img-fluid2 {
         width: 100%;
@@ -890,7 +912,6 @@ body
 
     .decouverte-text {
         font-size: 0.95rem; /* Texte légèrement plus petit */
-        text-align: justify; /* Justifie le texte pour une meilleure lisibilité */
     }
 
     /* 2. Amélioration de l'affichage du rectangle bleu */
@@ -911,7 +932,6 @@ body
 
     .text-container p {
         font-size: 1rem; /* Taille de texte réduite pour s'adapter aux petits écrans */
-        text-align: justify; /* Justifie le texte pour une lisibilité optimale */
     }
 
     .textecabinet {
@@ -986,7 +1006,6 @@ body
     }
 
     .lead {
-        text-align: justify !important; /* Aligner le texte à gauche */
         padding: 0px;
     }
 
@@ -1013,8 +1032,8 @@ body
     }
 
     .services .col-lg-6 img{
-        margin-bottom: 50px !important; /* Ajoute un espacement entre le texte et l'image */
-        margin-top:0px !important;
+        margin-bottom: 20px !important; /* Ajoute un espacement entre le texte et l'image */
+        margin-top:15px !important;
         padding-top: 0px !important;
     }
 

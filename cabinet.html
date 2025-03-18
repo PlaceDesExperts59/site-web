@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
+
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Place des Experts</title>
-        <!-- Lien vers Bootstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Place des Experts est un cabinet d'expertise comptable situé à Hazebrouck et La Madeleine. Nous accompagnons les entreprises en comptabilité, fiscalité et gestion. Découvrez nos services !">
+        
+        <title>Place des Experts - Le Cabinet</title>
+        <link rel="icon" href="./images/Logo_fond_blanc.webp" type="image/png">
+        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Lien vers Bootstrap Icons -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-        <link rel="icon" href="./images/logo.png" type="image/png">
 
-        <!-- Lien vers Google Fonts pour la police "Roboto" -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-        <!-- Lien vers le fichier CSS personnalisé -->
-        <link rel="stylesheet" href="./style/expertises.css">
+
+        <link rel="preload" href="./style/expertises.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+        <meta property="og:title" content="Place des Experts - Cabinet d'expertise comptable">
+        <meta property="og:description" content="Cabinet comptable à Hazebrouck et La Madeleine, spécialisé en comptabilité, fiscalité et gestion d'entreprise.">
+        <meta property="og:image" content="https://www.placedesexperts.fr/images/Logo_fond_blanc.webp">
+        <meta property="og:url" content="https://www.placedesexperts.fr">
+        <meta property="og:type" content="website">
     </head>
+
     <body>
 
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
+
                 <!-- Logo du site -->
                 <a class="navbar-brand" href="./index.html">
-                    <img src="./images/logo.png" alt="Logo" class="logo-site" style="width: 120px;">
+                    <img src="./images/Logo_fond_blanc.webp" 
+                    width="120" height="60" 
+                    alt="Logo" 
+                    class="logo-site" 
+                    style="width: 120px; height: auto;" 
+                    loading="eager" 
+                    decoding="async">
                 </a>
 
                 <!-- Bouton pour mobile -->
@@ -32,7 +47,7 @@
                 </button>
 
                 <!-- Liens du menu -->
-                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center; padding-right: 120px;"> <!-- Ajuster la position du menu -->
+                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center; padding-right: 120px;">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="./index.html">Accueil</a>
@@ -61,18 +76,24 @@
         </nav>
 
         <section class="container">
+
             <!-- Section sous le menu avec le rectangle bleu -->
             <section>
                 <div class="container rounded text-white p-5 d-flex align-items-center position-relative">
                     <div class="row bulles">
                         <!-- Image de décoration en positionnement absolu pour un placement précis -->
-                        <img src="./images/gouttes.png" alt="Décoration graphique" class="decoration-graphic-cabinet">
-                        
+                        <img src="./images/gouttes.png" 
+                        width="80" height="80" 
+                        alt="Décoration graphique" 
+                        class="decoration-graphic-cabinet" 
+                        loading="lazy" 
+                        decoding="async">
+                                
                         <!-- Colonne gauche : texte, titre et logos -->
                         <div class="col-12 col-md-6">
                             <div class="text-container">
                                 </br><h1 class="display-4">L’ÉQUIPE DU CABINET</h1></br>
-                                <p class="lead textecabinet" style="text-align: justify;">
+                                <p class="lead textecabinet">
                                     Créé en 1987, notre cabinet accompagne ses clients dans leur réussite depuis plus de 30 ans avec de nombreux services de qualité. </br></br>
  
                                     Dirigée par les Experts-Comptables Charles LETIERS à La Madeleine, et Matthieu BOURTEEL à Hazebrouck, notre équipe se compose de 31 collaborateurs répartis en pôles spécialisés : </br>
@@ -84,7 +105,14 @@
 
                         <!-- Colonne droite : image pleine largeur -->
                         <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-                            <img src="./images/Le cabinet/1-E╠üquipe cab.PNG" alt="Image d'accueil" class="img-fluid2 rounded custom-image">
+                            <img src="./images/Le cabinet/01_L-equipe.webp" 
+                            width="1200" height="800" 
+                            alt="Image d'accueil" 
+                            class="img-fluid rounded custom-image responsive_img" 
+                            style="width: 70%; height: auto;" 
+                            loading="eager" 
+                            decoding="async">
+
                         </div>
                     </div>
                 </div>
@@ -92,6 +120,7 @@
 
                     
             <section class="container tab-pane" style="padding-top: 0px !important;">
+
                 <!-- Section textes -->
                 <div class="services" id="valeurs">
                     <div class="container rounded text-white d-flex align-items-center">
@@ -115,7 +144,7 @@
                         <div class="bulle">
                             <div class="bulle-title">01</div></br>
                             <div class="bulle-title">À notre sujet</div></br>
-                            <div class="bulle-text" style="text-align: justify;">Nous sommes deux Experts-Comptables / Commissaires
+                            <div class="bulle-text">Nous sommes deux Experts-Comptables / Commissaires
                                 Aux Comptes entourés d’une
                                 trentaine de collaborateurs.
                                 <a href="https://www.agerex.fr" target="_blank" rel="noopener noreferrer" class="text-link">Agerex</a> est notre branche
@@ -166,7 +195,7 @@
                         <div class="bulle">
                             <div class="bulle-title">05</div></br>
                             <div class="bulle-title">Notre engagement</div></br>
-                            <div class="bulle-text" style="text-align: justify;"> Pour chaque mission qui
+                            <div class="bulle-text"> Pour chaque mission qui
                                 nous est confiée, nous
                                 établissons un budget
                                 d’honoraires préalable.
@@ -204,7 +233,12 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-8">
                             <div class="ratio ratio-16x9 video-frame">
-                                <video src="./images/Vidéo Place des Experts.mp4" title="Présentation Place des Experts" muted loop playsinline controls></video>
+                                <video src="./images/Vidéo Place des Experts.mp4" 
+                                    title="Présentation Place des Experts" 
+                                    muted loop playsinline controls 
+                                    preload="metadata" >
+                                </video>
+
                             </div>
                         </div>
                     </div>
@@ -216,19 +250,19 @@
 
 
                     <div class="decouverte-title" style="color:#245360;">Accompagner les créateurs :</div>
-                    <div class="decouverte-text" style="text-align: justify;"> 
+                    <div class="decouverte-text"> 
                         Nous vous proposons de vous assister dans l’élaboration de votre business plan, recherche de
                         financement bancaire, prêts participatifs ou demande de subventions.
                     </div></br>
 
                     <div class="decouverte-title" style="color:#245360;">Être aux côtés des chefs d’entreprise :</div>
-                    <div class="decouverte-text" style="text-align: justify;"> 
+                    <div class="decouverte-text"> 
                         Nous vous accompagnons dans la gestion de votre entreprise sur la mise en place de comptabilité
                         analytique, tableau de bord, indicateurs clés, coût de revient.
                     </div></br>
 
                     <div class="decouverte-title" style="color:#245360;">Innovation :</div>
-                    <div class="decouverte-text" style="text-align: justify;"> 
+                    <div class="decouverte-text"> 
                         Nous vous permettons avec nos outils informatiques en ligne et application mobile de suivre en temps
                         réel l’évolution de l’activité de votre entreprise.
                     </div></br>
@@ -249,9 +283,8 @@
             <i class="bi bi-arrow-up-circle-fill"></i>
         </a>
 
-
+        <!-- Script du Bouton pour remonter en haut de la page -->
         <script>
-            // Afficher/Masquer le bouton selon le défilement
             window.addEventListener('scroll', function() {
                 var scrollToTopButton = document.querySelector('.scroll-to-top');
                 if (window.scrollY > 300) {
@@ -278,28 +311,26 @@
             AOS.init();
         </script>
 
+        <!-- Script Vidéo -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 const video = document.querySelector(".video-frame video");
 
-                // Fonction pour vérifier si la vidéo est visible
                 function checkVisibility() {
                     const rect = video.getBoundingClientRect();
                     const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
 
                     if (isVisible) {
-                        video.play(); // Lance la vidéo
+                        video.play(); 
                     } else {
-                        video.pause(); // Met la vidéo en pause
+                        video.pause(); 
                     }
                 }
-
-                // Vérifie la visibilité lors du défilement et du chargement initial
+           
                 window.addEventListener("scroll", checkVisibility);
-                checkVisibility(); // Vérifie au chargement de la page
+                checkVisibility(); 
             });
         </script>
-
 
     </body>
     

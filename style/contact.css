@@ -13,7 +13,7 @@
 }
 
 body {
-    background-image: url('../images/background/3.png'); /* Mettre ici le chemin de l'image */
+    background-image: url('../images/background/3.webp'); /* Mettre ici le chemin de l'image */
     background-color: #f0f0f0; /* Couleur de fond (facultatif si vous avez une image) */
     background-size: cover; /* Ajuste l'image pour couvrir toute la page */
     background-repeat: repeat; /* Empêche la répétition de l'image */
@@ -410,8 +410,8 @@ textarea::placeholder {
 
 .decoration-graphic {
     position: absolute;
-    top: 0%; /* Utilisez % pour un positionnement relatif */
     right: -1%; /* Utilisez % pour un positionnement adaptable */
+    top: 0%;
     width: 80px;
     height: auto;
     z-index: 1;
@@ -452,6 +452,13 @@ textarea::placeholder {
 }
 
 @media (max-width: 1024px) {
+     p, a {
+        text-align: left !important;
+        margin-left: 10px;
+    }
+    .responsive_img{
+        width: 100% !important;
+    }
     .col-lg-6 .img-fluid2 {
         display: none;
     }
