@@ -106,13 +106,13 @@
 
                         <!-- Colonne droite -->
                         <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                            <img src="./images/Le cabinet/01_L-equipe.webp"
+                            <img src="./images/Accueil/accueil.webp"
                             width="1600" height="900" 
                             sizes="(max-width: 600px) 600px, 
                                     (max-width: 1024px) 1000px, 
                                     1600px"
                             alt="Image d'accueil"
-                            class="custom-image responsive_img"
+                            class="custom-image responsive_img rounded"
                             style="width: 70%; height: auto; max-width: 100%;"
                             fetchpriority="high"
                             loading="eager"
@@ -573,7 +573,7 @@
             function openArticle(articleTitle) {
                 const normalizedTitle = normalizeString(articleTitle);
                 const encodedTitle = encodeURIComponent(normalizedTitle);
-                window.location.href = `pages/article.html?title=${encodedTitle}`;
+                window.location.href = `article.html?title=${encodedTitle}`;
             }
 
             document.addEventListener('DOMContentLoaded', loadLatestArticles);
@@ -607,7 +607,6 @@
                 <div class="footer-col">
                     <h3>Nous retrouver</h3>
                     <ul class="footer-links">
-                        <li><a href="./contact.html">Contact</a></li>
                         <li><a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/placedesexperts/profilecard/?igsh=MTJ0YzkxNzA2NDBhZA==" target="_blank">Instagram</a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>

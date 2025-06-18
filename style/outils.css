@@ -443,8 +443,8 @@ h2 {
 
 @media (max-width: 1024px) {
 
-     p, h1, h2, h3, h4, h5, h6, .text-container, .bulle-text, .services-list, .lead, .decouverte-text {
-        text-align: left ;
+     p, h1, h2, h3, h4, h5, h6, .text-container, .bulle-text, .services-list, .lead, .decouverte-text, .accordion-body {
+        text-align: left !important;
     }
     .responsive_img{
         width: 100% !important;

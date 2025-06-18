@@ -129,23 +129,29 @@
                         const auteur = article["Auteur de l'article"];
                         const date = article['Date de publication '];
                         let image = article['Image principale'];
+                        const SourceP = article["Source principale"];
 
                         const intro = article["Texte d'introduction"].replace(/\n/g, '<br>');
+
 
                         const TitreH21 = article["TitreH2-1"];
                         const ParaH21 = article["ParaH2-1"].replace(/\n/g, '<br>');
                         let image1 = article['Image1'];
+                        const Source1 = article["Source1"];
 
                         const TitreH311 = article["TitreH3-1.1"];
                         const ParaH311 = article["ParaH3-1.1"].replace(/\n/g, '<br>');
                         let image2 = article['Image2'];
+                        const Source2 = article["Source2"];
 
                         const TitreH312 = article["TitreH3-1.2"];
                         const ParaH312 = article["ParaH3-1.2"].replace(/\n/g, '<br>');
 
+
                         const TitreH22 = article["TitreH2-2"];
                         const ParaH22 = article["ParaH2-2"].replace(/\n/g, '<br>');
                         let image3 = article['Image3'];
+                        const Source3 = article["Source3"];
 
                         const TitreH321 = article["TitreH3-2.1"];
                         const ParaH321 = article["ParaH3-2.1"].replace(/\n/g, '<br>');
@@ -153,11 +159,25 @@
                         const TitreH322 = article["TitreH3-2.2"];
                         const ParaH322 = article["ParaH3-2.2"].replace(/\n/g, '<br>');
                         let image4 = article['Image4'];
+                        const Source4 = article["Source4"];
 
+
+                        const TitreH23 = article["TitreH2-3"];
+                        const ParaH23 = article["ParaH2-3"].replace(/\n/g, '<br>');
+                        let image5 = article['Image5'];
+                        const Source5 = article["Source5"];
+
+                        const TitreH331 = article["TitreH3-3.1"];
+                        const ParaH331 = article["ParaH3-3.1"].replace(/\n/g, '<br>');
+
+                        const TitreH332 = article["TitreH3-3.2"];
+                        const ParaH332 = article["ParaH3-3.2"].replace(/\n/g, '<br>');
+                        let image6 = article['Image6'];
+                        const Source6 = article["Source6"];
 
                         // Vérifier et corriger le chemin de l'image
                         if (!image || image.trim() === '') {
-                            image = './images/Nos expertises/Comptabilite╠ü/2-Vision moderne.png';
+                            image = './images/Nos expertises/Comptabilité/02_Vision_moderne.webp';
                         } else if (!image.startsWith('http') && !image.startsWith('/')) {
                             image = `./images/${image}`;
                         }
@@ -179,35 +199,62 @@
 
 
                             ${image && image.trim() !== '' ? `<img src="${image}" alt="${titre}" class="blog-image">` : ''}
+                            ${SourceP ? `<p class = "source">${SourceP}</p>` : ''}
                             <p class="introduction">${intro}</p>
                             </br>
+
+
 
                             ${TitreH21 && TitreH21.trim() !== '' ? `<h2><span class="circle-dot"></span>${TitreH21}</h2>` : ''}
                             ${ParaH21 ? `<p>${ParaH21}</p>` : ''}
                             ${image1 && image1.trim() !== '' ? `<img src="${image1}" alt="${TitreH21}" class="blog-image">` : ''}
+                            ${Source1 ? `<p class = "source">${Source1}</p>` : ''}
                             </br>
 
                             ${TitreH311 && TitreH311.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH311}</h3>` : ''}
                             ${ParaH311 ? `<p>${ParaH311}</p>` : ''}
                             ${image2 && image2.trim() !== '' ? `<img src="${image2}" alt="${TitreH311}" class="blog-image">` : ''}
+                            ${Source2 ? `<p class = "source">${Source2}</p>` : ''}
                             </br>
 
                             ${TitreH312 && TitreH312.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH312}</h3>` : ''}
                             ${ParaH312 ? `<p>${ParaH312}</p>` : ''}
-                            ${image3 && image3.trim() !== '' ? `<img src="${image3}" alt="${TitreH312}" class="blog-image">` : ''}
                             </br>
+
+
 
                             ${TitreH22 && TitreH22.trim() !== '' ? `<h2><span class="circle-dot"></span>${TitreH22}</h2>` : ''}
                             ${ParaH22 ? `<p>${ParaH22}</p>` : ''}
+                            ${image3 && image3.trim() !== '' ? `<img src="${image3}" alt="${TitreH22}" class="blog-image">` : ''}
+                            ${Source3 ? `<p class = "source">${Source3}</p>` : ''}
                             </br>
 
                             ${TitreH321 && TitreH321.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH321}</h3>` : ''}
                             ${ParaH321 ? `<p>${ParaH321}</p>` : ''}
-                            ${image4 && image4.trim() !== '' ? `<img src="${image4}" alt="${TitreH22}" class="blog-image">` : ''}
                             </br>
 
                             ${TitreH322 && TitreH322.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH322}</h3>` : ''}
                             ${ParaH322 ? `<p>${ParaH322}</p>` : ''}
+                            ${image4 && image4.trim() !== '' ? `<img src="${image4}" alt="${TitreH322}" class="blog-image">` : ''}
+                            ${Source4 ? `<p class = "source">${Source4}</p>` : ''}
+                            </br>
+
+
+
+                            ${TitreH23 && TitreH23.trim() !== '' ? `<h2><span class="circle-dot"></span>${TitreH23}</h2>` : ''}
+                            ${ParaH23 ? `<p>${ParaH23}</p>` : ''}
+                            ${image5 && image5.trim() !== '' ? `<img src="${image5}" alt="${TitreH23}" class="blog-image">` : ''}
+                            ${Source5 ? `<p class = "source">${Source5}</p>` : ''}
+                            </br>
+
+                            ${TitreH331 && TitreH331.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH331}</h3>` : ''}
+                            ${ParaH331 ? `<p>${ParaH331}</p>` : ''}
+                            </br>
+
+                            ${TitreH332 && TitreH332.trim() !== '' ? `<h3><span class="diamond-dot"></span>${TitreH332}</h3>` : ''}
+                            ${ParaH332 ? `<p>${ParaH332}</p>` : ''}
+                            ${image6 && image6.trim() !== '' ? `<img src="${image6}" alt="${TitreH23}" class="blog-image">` : ''}
+                            ${Source6 ? `<p class = "source">${Source6}</p>` : ''}
                             </br></br>
 
                         </div>
@@ -279,7 +326,6 @@
                 <div class="footer-col">
                     <h3>Nous retrouver</h3>
                     <ul class="footer-links">
-                        <li><a href="./contact.html">Contact</a></li>
                         <li><a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/placedesexperts/profilecard/?igsh=MTJ0YzkxNzA2NDBhZA==" target="_blank">Instagram</a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>

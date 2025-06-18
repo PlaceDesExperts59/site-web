@@ -807,11 +807,20 @@ html {
 
 
 /**************************************************************************************************/
+
+@media (min-width: 1024px) {
+    .no-padding-left {
+      padding-left: 0 !important;
+    }
+}
+
 /* --- Responsive- */
 @media (max-width: 1024px) {
     /* Aligner tout le texte à gauche sur mobile */
     .text-container p, 
-    .services-list, 
+    .services-list,
+    .services-list li, 
+    .accordion-body,
     .bubble-text, 
     .iso-bubble p, 
     .footer-bottom, 
