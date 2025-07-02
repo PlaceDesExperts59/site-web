@@ -38,12 +38,14 @@ exports.handler = async function () {
       body: sitemapXml,
     };
 
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: "Erreur lors de la génération du sitemap.",
-    };
-  }
+    } catch (error) {
+      console.error("Erreur détaillée :", error);
+      return {
+        statusCode: 500,
+        body: "Erreur lors de la génération du sitemap.",
+      };
+    }
+
 };
 
 function normalizeTitle(str = "") {
