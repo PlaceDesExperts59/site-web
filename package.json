@@ -1,0 +1,7 @@
+{
+  "name": "placedesexperts",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

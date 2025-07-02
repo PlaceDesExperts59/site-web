@@ -1,6 +1,6 @@
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
-exports.handler = async function () {
+export async function handler() {
   const staticUrls = [
     "index.html", "cabinet.html", "expertises.html", "secteurs.html",
     "blog.html", "outils.html", "contact.html", "iso.html", "mentions.html"
@@ -44,7 +44,7 @@ exports.handler = async function () {
       body: "Erreur lors de la génération du sitemap.",
     };
   }
-};
+}
 
 function normalizeTitle(str = "") {
   return str.normalize("NFD")
