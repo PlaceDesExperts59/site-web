@@ -1,0 +1,15 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/.netlify/functions/generate-sitemap"
+  status = 200
+
+[[scheduled.functions]]
+  name = "generate-sitemap"
+  schedule = "0 * * * *" # toutes les heures

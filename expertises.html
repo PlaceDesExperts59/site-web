@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-    <head>
+     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Place des Experts est un cabinet d'expertise comptable situé à Hazebrouck et La Madeleine. Nous accompagnons les entreprises en comptabilité, fiscalité et gestion. Découvrez nos services !">
+        <title>Place des Experts - Notre Expertises</title>
+        <meta name="description" content="Découvrez l’équipe du cabinet d’expertise comptable Place des Experts à Hazebrouck et La Madeleine. Des pôles spécialisés à votre service.">
+        <meta name="keywords" content="expert comptable Hazebrouck, cabinet comptable La Madeleine, comptabilité, conseil fiscal, Place des Experts,expert comptable, cabinet comptable, comptable Lille, comptable Hazebrouck,comptabilité PME, gestion comptable externalisée, cabinet comptable certifié ISO, fiscalité entreprise, audit comptable, expert-comptable La Madeleine">
+        <meta name="author" content="Place des Experts">
         
-        <title>Place des Experts - Nos Expertises</title>
-        <link rel="icon" href="./images/Logo_fond_blanc.webp" type="image/png">
-        
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-        <link rel="preload" href="./style/expertises.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
         <meta property="og:title" content="Place des Experts - Cabinet d'expertise comptable">
         <meta property="og:description" content="Cabinet comptable à Hazebrouck et La Madeleine, spécialisé en comptabilité, fiscalité et gestion d'entreprise.">
         <meta property="og:image" content="https://www.placedesexperts.fr/images/Logo_fond_blanc.webp">
         <meta property="og:url" content="https://www.placedesexperts.fr">
         <meta property="og:type" content="website">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="canonical" href="https://www.placedesexperts.fr/expertises.html">
+
+        <link rel="preload" as="image" href="./images/Nos expertises/expertises.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="./images/gouttes.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="./images/Logo_fond_blanc.webp" fetchpriority="high">
+
+
+        <link rel="icon" href="./images/Logo_fond_blanc.webp" type="image/png">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        
+
+        <link rel="preload" href="./style/expertises.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link href="./style/expertises.css" rel="stylesheet">
+
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "AccountingService",
+            "name": "Place des Experts",
+            "url": "https://www.placedesexperts.fr",
+            "image": "https://www.placedesexperts.fr/images/Logo_fond_blanc.webp",
+            "description": "Cabinet d'expertise comptable à Hazebrouck et La Madeleine.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hazebrouck",
+                "addressRegion": "Hauts-de-France",
+                "postalCode": "59190",
+                "addressCountry": "FR"
+            }
+            }
+        </script>
     </head>
-
     <body>
-
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
@@ -78,16 +104,16 @@
             </div>
         </nav>
 
-         <!-- Section sous le menu avec le rectangle bleu -->
-         <section>
+        <!-- Section sous le menu avec le rectangle bleu -->
+        <section>
             <div class="container rounded text-white d-flex align-items-center position-relative p-5">
                 <div class="row bulles">
 
-                    <img src="./images/gouttes.png" 
+                    <img src="./images/gouttes.webp" 
                     width="80" height="60"
                     alt="Décoration graphique"
                     class="decoration-graphic"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async">
 
                     <div class="col-lg-6">
@@ -117,7 +143,6 @@
             </div>
             
         </section>
-
 
         <!-- Section expertises avec onglets -->
         <section>
@@ -160,12 +185,11 @@
 
                             <!-- Contenu Comptabilité -->
                             <div class="tab-pane fade show active" id="comptabilite">
-
                                 <!-- Section sous le menu avec le rectangle bleu -->
                                 <div class="container rounded d-flex align-items-center">
                                     <div class="row bulles2" style="margin: 0 !important;">
                                         <div class="text-container2">
-                                            <br><h1 class="display-4" style="font-size: 2rem;">La <span class="highlight2">comptabilité</span></h1><br>
+                                            <br><h2 class="display-4" style="font-size: 2rem;">La <span class="highlight2">comptabilité</span></h2><br>
                                             <p class="lead">
                                                 Chez Place des Experts, nous vous accompagnons dans la gestion
                                                 quotidienne de votre comptabilité avec une approche moderne et
@@ -188,59 +212,53 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem; margin-top: 20px;">Les missions comptables : un accompagnement sur mesure</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem; margin-top: 20px;">Les missions comptables : un accompagnement sur mesure</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     Suite à la numérisation et à la transmission de vos pièces comptables via une application sécurisée, nous pouvons intervenir
                                                     efficacement et de manière réactive sur différentes missions comptables.</br></br>
                                                     Voici un aperçu des principales missions que nous réalisons pour nos clients :</br>
-
                                                     <ul style ="color: #333;">
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Mise à jour mensuelle de la comptabilité</h2>
+                                                            <h3 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Mise à jour mensuelle de la comptabilité</h3>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 Nous effectuons un suivi régulier de vos comptes afin d’identifier d’éventuelles anomalies et de vous aider à maintenir une
                                                                 comptabilité à jour. Ce contrôle continu vous permet d’avoir une visibilité précise sur la santé financière de votre entreprise tout
                                                                 au long de l’année.
                                                             </p>
                                                         </li>
-
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Déclarations de TVA</h2>
+                                                            <h3 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Déclarations de TVA</h3>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 Nous nous chargeons de l’établissement de vos déclarations de TVA, en veillant à ce que celles-ci soient conformes aux
                                                                 exigences légales et déposées dans les délais impartis, évitant ainsi toute pénalité de retard. 
                                                             </p>
                                                         </li>
-
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Clôture de l’exercice comptable et établissement des comptes annuels</h2>
+                                                            <h3 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Clôture de l’exercice comptable et établissement des comptes annuels</h3>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 À la clôture de l’exercice, nous réalisons vos comptes annuels, véritable reflet de l’activité et de la performance financière de votre
                                                                 entreprise. Ce document est essentiel pour les parties prenantes internes et externes (banques, investisseurs, etc.).
                                                             </p>
                                                         </li>
-
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Gestion des relances & facturation clients</h2>
+                                                            <h3 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Gestion des relances & facturation clients</h3>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 Nous vous assistons dans la gestion des relances clients et dans l’émission de vos factures, afin de garantir que vos créances
                                                                 soient recouvrées rapidement et que votre trésorerie soit optimisée.
                                                             </p>
                                                         </li>
-
                                                         <li>
-                                                            <h2 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Tableau de bord & indicateurs clés</h2>
+                                                            <h3 class="section-title" style ="font-size: 1.2rem; margin-top: 20px;">Tableau de bord & indicateurs clés</h3>
                                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                                 Nous mettons en place des tableaux de bord personnalisés qui vous permettent de suivre en temps réel les indicateurs financiers
                                                                 essentiels à la gestion de votre activité. Ces outils vous donnent une visibilité claire et immédiate sur vos performances et
                                                                 facilitent votre prise de décision. 
                                                             </p>
                                                         </li>
-
                                                     </ul>
                                                 </p></br></br>
 
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour la gestion de votre comptabilité ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour la gestion de votre comptabilité ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     En optant pour Place des Experts, vous choisissez bien plus qu’un simple prestataire comptable. Nous sommes votre partenaire
                                                     de confiance, alliant proximité, expertise et technologie pour vous offrir un accompagnement sur mesure.</br></br> Voici pourquoi nos
@@ -254,12 +272,11 @@
 
                                 <!-- Section images -->
                                 <section>
-
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Vision moderne et innovante</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Vision moderne et innovante</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous mettons un point d’honneur à utiliser les dernières
                                                     technologies pour vous offrir une gestion comptable
@@ -276,11 +293,9 @@
                                                 class="img-fluid rounded"
                                                 loading="lazy"
                                                 decoding="async">
-
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
@@ -291,11 +306,10 @@
                                                 class="img-fluid rounded"
                                                 loading="lazy"
                                                 decoding="async">
-
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Rigueur et expertise</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Rigueur et expertise</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Avec Place des Experts, vous avez la certitude que votre
                                                     comptabilité est entre de bonnes mains. Nos Experts-Comptables veillent à ce que vos comptes soient
@@ -306,12 +320,11 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Réactivité et proximité</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Réactivité et proximité</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous sommes disponibles pour répondre à toutes vos
                                                     questions et vous apporter des conseils tout au long de
@@ -338,91 +351,72 @@
                                 <!-- Section menu déroulant (Accordion) -->
                                 <section class="container">
                                     <div class="accordion" id="accordionExample">
-                                        <h2 class="section-title" style="font-size:1.4rem;">Les différentes questions que vous pouvez vous poser</h2></br>
+                                        <h3 class="section-title" style="font-size:1.4rem;">Les différentes questions que vous pouvez vous poser</h3></br>
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
+                                            <h3 class="accordion-header" id="headingOne">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                                     Pourquoi externaliser la comptabilité ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     La comptabilité est une tâche chronophage qui peut détourner votre attention du développement de votre entreprise. En confiant cette mission à des experts, vous libérez du temps précieux pour vous concentrer sur des activités à forte valeur ajoutée, telles que le développement commercial ou l’innovation.
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
+                                            <h3 class="accordion-header" id="headingTwo">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                     Comment éviter les erreurs fiscales ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Les obligations comptables et fiscales évoluent constamment, et il peut être difficile de rester à jour. En travaillant avec un cabinet d’expertise comptable, vous vous assurez que vos déclarations et documents sont conformes à la législation en vigueur, évitant ainsi des erreurs coûteuses.
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingThree">
+                                            <h3 class="accordion-header" id="headingThree">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                     Pourquoi un suivi financier régulier est-il important ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous vous fournissons un suivi financier continu qui vous permet d’avoir une vision claire et actualisée de vos finances. Ce suivi régulier est essentiel pour anticiper les besoins de trésorerie, éviter les mauvaises surprises et prendre des décisions statégiques.
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingFour">
+                                            <h3 class="accordion-header" id="headingFour">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                                     Comment aidons-nous à maintenir un flux de trésorerie stable ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Grâce à nos services de facturation et de relance clients, vous êtes assuré de maintenir un flux de trésorerie fluide et stable. Une gestion proactive de la trésorerie est indispensable pour la pérennité de votre entreprise et pour assurer son bon développement.
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- Question 5 
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingFive">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                                    Quels indicateurs sur mesure mettons-nous à disposition pour piloter l'entreprise ?
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body" style="text-align: justify;">
-                                                    Nous mettons à votre disposition des indicateurs sur mesure, adaptés à votre secteur d’activité et à vos objectifs. Ces outils vous permettent de piloter votre entreprise en temps réel et de prendre des décisions stratégiques fondées sur des données fiables.
-                                                </div>
-                                            </div>
-                                        </div> -->
-
                                         <!-- Question 6 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingSix">
+                                            <h3 class="accordion-header" id="headingSix">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                                     Comment garantissons-nous un accompagnement personnalisé ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous vous offrons un accompagnement personnalisé, adapté à vos besoins spécifiques. Vous bénéficiez d’un service sur mesure, avec un interlocuteur dédié qui vous accompagne et vous conseille tout au long de l’année. 
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </section></br>
 
@@ -459,18 +453,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                
                             </div>
 
                             <!-- Contenu Fiscalité -->
                             <div class="tab-pane fade" id="fiscalite">
-
                                 <!-- Section sous le menu avec le rectangle bleu -->
                                 <div class="container rounded text-white d-flex align-items-center">
                                         <div class="row bulles2" style ="margin: 0 !important;">
-                                        
                                             <div class="text-container2">
-                                            </br><h1 class="display-4" style="font-size: 2rem;">La <span class="highlight2">fiscalité</span></h1></br>
+                                            </br><h2 class="display-4" style="font-size: 2rem;">La <span class="highlight2">fiscalité</span></h2></br>
                                                 <p class="lead">
                                                     La fiscalité est un domaine complexe et en constante évolution.
                                                     Chez Place des Experts, nous vous accompagnons dans toutes les
@@ -493,42 +484,36 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Nos missions fiscales : un service complet et sur mesure</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Nos missions fiscales : un service complet et sur mesure</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     Nous intervenons sur un large éventail de missions fiscales, couvrant l’ensemble des obligations auxquelles votre entreprise doit
                                                     faire face. Notre objectif est de garantir que toutes vos démarches fiscales soient effectuées de manière rigoureuse et dans le
                                                     respect des délais impartis.</br></br>
                                                     Voici les principales missions que nous réalisons pour vous :
-
                                                     <ul style ="color: #333;"></br>
-                                                        <li style="text-align: justify;"><h2 class="section-title" style ="font-size: 1.2rem;" >Gestion des déclarations fiscales</h2>
-                                                        Nous prenons en charge l’ensemble de vos déclarations fiscales, qu’il s’agisse de la TVA, de l’Impôt sur les Sociétés (IS), des
+                                                        <li style="text-align: justify;"><h3 class="section-title" style ="font-size: 1.2rem;" >Gestion des déclarations fiscales</h3>
+                                                        <p class="services-list" style ="color: #333;" style="text-align: justify;">Nous prenons en charge l’ensemble de vos déclarations fiscales, qu’il s’agisse de la TVA, de l’Impôt sur les Sociétés (IS), des
                                                         Cotisations sur la Valeur Ajoutée des Entreprises (CVAE), de la taxe sur les véhicules de tourisme, ou encore d’autres taxes
                                                         spécifiques à votre activité. Nous veillons à ce que toutes vos déclarations soient correctement remplies, déposées dans les
-                                                        délais, et conformes aux exigences réglementaires.</li></br>
-                                                        
-                                                        <li style="text-align: justify;"><h2 class="section-title" style ="font-size: 1.2rem;">Réalisation des documents et imprimés fiscaux à la clôture de l’exercice comptable</h2>
-                                                        À la fin de chaque exercice comptable, nous réalisons les documents fiscaux nécessaires, y compris la liasse fiscale. Ce
+                                                        délais, et conformes aux exigences réglementaires.</p></li></br>
+                                                        <li style="text-align: justify;"><h3 class="section-title" style ="font-size: 1.2rem;">Réalisation des documents et imprimés fiscaux à la clôture de l’exercice comptable</h3>
+                                                        <p class="services-list" style ="color: #333;" style="text-align: justify;">À la fin de chaque exercice comptable, nous réalisons les documents fiscaux nécessaires, y compris la liasse fiscale. Ce
                                                         document est crucial, car il synthétise l’ensemble des résultats comptables et fiscaux de votre entreprise pour l’administration.
                                                         Grâce à notre accompagnement, vous pouvez être sûr que vos obligations fiscales de fin d’année sont remplies avec précision et
-                                                        rigueur.</li></br>
-                                                        
-                                                        <li style="text-align: justify;"><h2 class="section-title" style ="font-size: 1.2rem;">Optimisation et planification fiscale</h2>
-                                                        Au-delà des obligations fiscales, nous travaillons également sur l’optimisation fiscale de votre entreprise. En analysant vos
+                                                        rigueur.</p></li></br>
+                                                        <li style="text-align: justify;"><h3 class="section-title" style ="font-size: 1.2rem;">Optimisation et planification fiscale</h3>
+                                                        <p class="services-list" style ="color: #333;" style="text-align: justify;">Au-delà des obligations fiscales, nous travaillons également sur l’optimisation fiscale de votre entreprise. En analysant vos
                                                         résultats financiers et en tenant compte des dernières lois fiscales, nous identifions des leviers d’optimisation qui peuvent vous
-                                                        permettre de réduire votre charge fiscale tout en restant conforme aux législations en vigueur.</li>
-
+                                                        permettre de réduire votre charge fiscale tout en restant conforme aux législations en vigueur.</p></li>
                                                     </ul>
                                                 </p></br></br>
-
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour vos missions fiscales ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour vos missions fiscales ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     En choisissant Place des Experts pour les missions fiscales, vous bénéficierez de l’accompagnement d’un cabinet d’expertise
                                                     comptable reconnu pour sa rigueur, son expertise et son approche personnalisée. Nous mettons un point d’honneur à vous offrir
                                                     un service sur mesure, en prenant en compte les spécificités de votre activité, vos objectifs et votre situation fiscale. 
                                                 </br></br>Voici pourquoi nos clients nous font confiance pour leurs missions fiscales :
                                                 </p>
-
                                             </div>
                                         </div>
                                     </div>
@@ -550,7 +535,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Conformité avec la législation fiscale</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Conformité avec la législation fiscale</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous veillons à ce que toutes vos déclarations fiscales
                                                     respectent strictement les exigences légales. La fiscalité
@@ -563,12 +548,11 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Suivi rigoureux et gestion des délais</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Suivi rigoureux et gestion des délais</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     La gestion fiscale implique de respecter des échéances
                                                     précises pour éviter des amendes ou des majorations.
@@ -592,7 +576,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row d-flex align-items-stretch w-100">
                                             <!-- Colonne droite : image -->
@@ -607,7 +590,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Optimisation fiscale</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Optimisation fiscale</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Notre mission ne se limite pas à la simple gestion
                                                     administrative. Nous analysons votre situation pour
@@ -621,12 +604,11 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="services rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Accompagnement personnalisé</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Accompagnement personnalisé</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Chaque entreprise est unique et ses besoins fiscaux le
                                                     sont aussi. Chez Place des Experts, nous vous offrons
@@ -655,94 +637,87 @@
                                 <!-- Section menu déroulant (Accordion) -->
                                 <section class="container">
                                     <div class="accordion" id="accordionFiscalite">
-                                        <h2 class="section-title" style="font-size:1.4rem;">Les avantages de confier vos missions fiscales à un cabinet d’expertise comptable</h2></br>
+                                        <h3 class="section-title" style="font-size:1.4rem;">Les avantages de confier vos missions fiscales à un cabinet d’expertise comptable</h3></br>
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading7">
+                                            <h3 class="accordion-header" id="heading7">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
                                                     Pourquoi externaliser la gestion de la fiscalité ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionFiscalite">
                                                 <div class="accordion-body" style="text-align: justify;">La fiscalité peut être chronophage, surtout si vous n’êtes pas un spécialiste du domaine. En externalisant cette fonction, vous libérez du temps que vous pouvez
                                                      consacrer à des tâches plus stratégiques et au développement de votre entreprise.
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading8">
+                                            <h3 class="accordion-header" id="heading8">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
                                                     Comment garantissons-nous la conformité de vos déclarations fiscales ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionFiscalite">
                                                 <div class="accordion-body" style="text-align: justify;">Avec nous, vous avez la garantie que vos déclarations fiscales sont conformes aux règlementations en vigueur, vous protégeant ainsi contre les sanctions fiscales. Nos
                                                     experts suivent de près l’évolution des lois et s’assurent que vous êtes toujours à jour.
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading9">
+                                            <h3 class="accordion-header" id="heading9">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
                                                     Comment évitons-nous les erreurs dans les déclarations fiscales ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionFiscalite">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Les erreurs dans les déclarations fiscales peuvent coûter cher, tant en termes financiers qu’en termes de réputation. Nous gérons vos déclarations de manière rigoureuse, en vérifiant chaque donnée pour éviter les erreurs coûteuses.
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading10">
+                                            <h3 class="accordion-header" id="heading10">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
                                                     Comment aidons-nous à optimiser vos charges fiscales ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionFiscalite">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous ne nous contentons pas de respecter les obligations fiscales, nous identifions également des leviers d’optimisation qui peuvent vous permettre de réduire légalement vos charges fiscales, maximisant ainsi vos économies.
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Question 5 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading11">
+                                            <h3 class="accordion-header" id="heading11">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
                                                     Comment gérons-nous vos échéances fiscales ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionFiscalite">
                                                 <div class="accordion-body" style="text-align: justify;">Nous prenons en charge la gestion de vos échéances fiscales pour garantir qu’il n’y ait aucun retard dans vos paiements ou dans l’envoi de vos documents. Vous n’avez plus à vous soucier des dates
                                                     limites, nous nous occupons de tout pour que vous soyez toujours en règle.
                                                 </div>
                                             </div>
                                         </div>
-
                                         <!-- Question 6 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading12">
+                                            <h3 class="accordion-header" id="heading12">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
                                                     Comment adaptons-nous nos services aux besoins spécifiques de chaque entreprise ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12" data-bs-parent="#accordionFiscalite">
                                                 <div class="accordion-body" style="text-align: justify;">Chaque entreprise a des besoins spécifiques, et nous adaptons nos services en fonction de votre situation particulière. Vous bénéficiez d’un interlocuteur dédié qui connaît votre activité et vous accompagne tout au long de l’année, que ce soit pour des
                                                  conseils fiscaux ponctuels ou pour la gestion globale de vos obligations.
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </section>
-
                             </div>
 
                             <!-- Contenu Social -->
@@ -752,7 +727,7 @@
                                 <div class="container rounded text-white d-flex align-items-center">
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
-                                        </br><h1 class="display-4" style="font-size: 2rem;">Le <span class="highlight2">social</span></h1></br>
+                                        </br><h2 class="display-4" style="font-size: 2rem;">Le <span class="highlight2">social</span></h2></br>
                                             <p class="lead">
                                                 Chez Place des Experts, nous comprenons l’importance de la gestion
                                                 des ressources humaines pour le succès de votre entreprise. Nous
@@ -772,7 +747,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">En quoi consistent les missions sociales ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">En quoi consistent les missions sociales ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     Nos missions sociales couvrent un large éventail de services pour répondre à vos besoins spécifiques en matière de gestion de
                                                     ressources humaines. Chaque mois, nous vous accompagnons dans des tâches essentielles au bon fonctionnement de votre
@@ -799,7 +774,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;" >Gestion de la paie</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;" >Gestion de la paie</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous réalisons l’ensemble des fiches de paie de vos
                                                     collaborateurs, en nous assurant que chaque élément
@@ -814,7 +789,7 @@
                                         <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;"> Déclarations sociales via la DSN</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;"> Déclarations sociales via la DSN</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous prenons en charge l’ensemble des déclarations
                                                     sociales via la DSN (Déclaration Sociale Nominative),
@@ -849,7 +824,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Gestion des départs de collaborateurs</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Gestion des départs de collaborateurs</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     En cas de fin de contrat, nous réalisons tous les
                                                     documents de sortie nécessaire (solde de tout compte,
@@ -867,7 +842,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour vos missions sociales ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour vos missions sociales ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     En choisissant Place des Experts pour la gestion sociale de votre entreprise, vous bénéficiez d’un accompagnement sur mesure,
                                                     adapté aux particularités de votre secteur et aux besoins de vos collaborateurs. Nous vous soutenons à chaque étape du
@@ -886,15 +861,15 @@
                                 <section class="container">
                                     <div class="accordion" id="accordionSocial">
 
-                                        <h2 class="section-title" style="font-size:1.4rem;">Les avantages de confier vos missions sociales à un cabinet d’expertise comptable</h2></br>
+                                        <h3 class="section-title" style="font-size:1.4rem;">Les avantages de confier vos missions sociales à un cabinet d’expertise comptable</h3></br>
 
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading13">
+                                            <h3 class="accordion-header" id="heading13">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
                                                     Pourquoi externaliser la gestion des fiches de paie et des déclarations sociales ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13" data-bs-parent="#accordionSocial">
                                                 <div class="accordion-body" style="text-align: justify;">La gestion des fiches de paie, des déclarations sociales et des aspects RH requièrent une connaissance approfondie du droit social. En faisant appel à un cabinet d’expertise comptable, vous êtes assuré que vos processus sont conformes et sécurisés, minimisant ainsi les risques d’erreurs et de pénalités.
                                                 </div>
@@ -903,11 +878,11 @@
 
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading14">
+                                            <h3 class="accordion-header" id="heading14">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
                                                     Quels sont les avantages d'externaliser la gestion sociale ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14" data-bs-parent="#accordionSocial">
                                                 <div class="accordion-body" style="text-align: justify;">Externaliser la gestion sociale permet de libérer du temps pour vous concentrer sur des aspects plus stratégiques de votre activité. Vous n’avez plus à vous soucier des échéances sociales ou de la complexité des législations, nous nous occupons de tout.
                                                 </div>
@@ -916,11 +891,11 @@
 
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading15">
+                                            <h3 class="accordion-header" id="heading15">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
                                                     Comment aidons-nous à optimiser les politiques de rémunération et les charges sociales ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15" data-bs-parent="#accordionSocial">
                                                 <div class="accordion-body" style="text-align: justify;">Nous vous aidons à identifier des leviers d’optimisation en matière de politique de rémunération et de charges sociales, permettant ainsi de réduire les coûts liés à la gestion des ressources humaines.
                                                 </div>
@@ -929,11 +904,11 @@
 
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading16">
+                                            <h3 class="accordion-header" id="heading16">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
                                                     Comment assurons-nous un accompagnement personnalisé pour chaque entreprise ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16" data-bs-parent="#accordionSocial">
                                                 <div class="accordion-body" style="text-align: justify;">Chaque entreprise a des besoins spécifiques. En faisant appel à un cabinet d’expertise comptable, vous bénéficiez d’un accompagnement personnalisé, avec un interlocuteur unique qui connait bien votre entreprise et ses particularités.
                                                 </div>
@@ -942,11 +917,11 @@
 
                                         <!-- Question 5 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading17">
+                                            <h3 class="accordion-header" id="heading17">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
                                                     Comment garantissons-nous la conformité avec les évolutions du droit social ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17" data-bs-parent="#accordionSocial">
                                                 <div class="accordion-body" style="text-align: justify;">Les règles en matière de droit social évoluent constamment. Nos experts restent informés des dernières évolutions légales et vous assurent une parfaite conformité avec les réglementations en vigueur, ce qui vous permet d’éviter les sanctions.
                                                 </div>
@@ -955,11 +930,11 @@
 
                                         <!-- Question 6 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading18">
+                                            <h3 class="accordion-header" id="heading18">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
                                                     Comment assurons-nous la transparence dans la gestion des ressources humaines ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18" data-bs-parent="#accordionSocial">
                                                 <div class="accordion-body" style="text-align: justify;">La gestion des ressources humaines est un domaine sensible. Nous vous garantissons une transparence totale sur les processus et les décisions prises tout en vous offrant des outils de suivi clairs et précis, tels que des tableaux de bord et des indicateurs RH personnalisés.
                                                 </div>
@@ -1012,7 +987,7 @@
                                 <div class="container rounded text-white d-flex align-items-center">
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
-                                        </br><h1 class="display-4" style="font-size: 2rem;">Le <span class="highlight2">juridique</span></h1></br>
+                                        </br><h2 class="display-4" style="font-size: 2rem;">Le <span class="highlight2">juridique</span></h2></br>
                                             <p class="lead">
                                                 Le cadre juridique dans lequel évoluent les entreprises est en perpétuel mouvement.
                                                 Pour rester en conformité et éviter les risques rédactionnels et/ou de formalisme, 
@@ -1031,7 +1006,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">En quoi consistent les missions juridiques ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">En quoi consistent les missions juridiques ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     Nous intervenons tout au long de l’existence de votre entreprise pour vous offrir un service juridique sur mesure.
                                                     Nos missions juridiques couvrent un large éventail de services pour vous garantir le respect de la législation et pour
@@ -1059,7 +1034,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Conseil sur la forme juridique</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Conseil sur la forme juridique</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Choisir la forme juridique la plus adaptée à votre activité
                                                     est une décision fondamentale lors de la création de
@@ -1077,7 +1052,7 @@
                                         <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Approbation des comptes annuels et suivi juridique</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Approbation des comptes annuels et suivi juridique</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Nous prenons en charge l’approbation de vos comptes
                                                     annuels, une étape importante pour assurer la conformité
@@ -1116,7 +1091,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Gestion des formalités exceptionnelles</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Gestion des formalités exceptionnelles</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Notre équipe peut également effectuer des formalités
                                                     dites “exceptionnelles”. Cela représente diverses
@@ -1139,7 +1114,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour vos missions juridiques ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour vos missions juridiques ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     Opter pour Place des Experts, c’est choisir un accompagnement pluridisciplinaire qui combine des compétences en matière de
                                                     comptabilité, de fiscalité, de social, et de juridique pour répondre à tous vos besoins juridiques et administratifs. Nous
@@ -1163,7 +1138,7 @@
                                                 </p>
                                             </div>
                                             <div></br>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Les avantages de faire appel à Place des Experts pour vos missions juridiques</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Les avantages de faire appel à Place des Experts pour vos missions juridiques</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     En confiant la gestion de vos obligations juridiques à Place des Experts, vous bénéficiez d’un service de qualité, pensé pour
                                                     simplifier votre gestion administrative tout en garantissant la sécurité juridique de votre entreprise.</br></br>
@@ -1180,11 +1155,11 @@
 
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading19">
+                                            <h3 class="accordion-header" id="heading19">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
                                                     Pourquoi confier la gestion juridique de votre entreprise à notre équipe ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19" data-bs-parent="#accordionJuridique">
                                                 <div class="accordion-body" style="text-align: justify;">Le cadre juridique des entreprises est complexe et nécessite du temps et une attention constante. En confiant ces tâches à notre équipe, vous libérez du temps précieux que vous pouvez consacrer à la croissance et à la gestion de votre activité. Nous nous occupons de tout, des formalités légales aux mises à jour juridiques vous permettant de vous concentrer sur l’essentiel.
                                                 </div>
@@ -1193,11 +1168,11 @@
 
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading20">
+                                            <h3 class="accordion-header" id="heading20">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
                                                     Comment notre approche pluridisciplinaire vous garantit-elle un accompagnement complet ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20" data-bs-parent="#accordionJuridique">
                                                 <div class="accordion-body" style="text-align: justify;">En tant que cabinet d’expertise comptable, Place des Experts combine plusieurs domaines d’expertise : comptabilité, fiscalité, social et juridique. Cette approche pluridisciplinaire vous garantit un accompagnement complet et cohérent, vous assurant ainsi que tous les aspects de votre entreprise sont pris en charge de manière intégrée.
                                                 </div>
@@ -1206,11 +1181,11 @@
 
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading21">
+                                            <h3 class="accordion-header" id="heading21">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
                                                     Comment nos juristes vous aident-ils à rester en conformité avec les évolutions du droit des affaires ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21" data-bs-parent="#accordionJuridique">
                                                 <div class="accordion-body" style="text-align: justify;">Les lois et réglementations évoluent rapidement. Nos juristes sont constamment à jour avec les dernières évolutions du droit des affaires et s’assurent que votre entreprise respecte scrupuleusement les exigences légales. Cela réduit les risques de contentieux et de sanctions, tout en sécurisant vos décisions importantes.
                                                 </div>
@@ -1219,11 +1194,11 @@
 
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading22">
+                                            <h3 class="accordion-header" id="heading22">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
                                                     Comment sécurisons-nous vos décisions clés en matière juridique ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22" data-bs-parent="#accordionJuridique">
                                                 <div class="accordion-body" style="text-align: justify;">Lorsqu’il s’agit de prendre des décisions clés, qu’il s’agisse de transformer la forme juridique de votre entreprise, de  procéder  à  des modifications statutaires, ou de gérer une opération de fusion ou d’acquisition ; nous vous 
                                                 apportons notre expertise pour sécuriser et valider chacune de vos actions. En anticipant les risques et en vous conseillant sur les meilleures pratiques, nous simplifions vos prises de décisions et garantissons leur conformité.
@@ -1233,11 +1208,11 @@
 
                                         <!-- Question 5 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading23">
+                                            <h3 class="accordion-header" id="heading23">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
                                                     Comment assurons-nous la mise à jour régulière de vos obligations juridiques ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23" data-bs-parent="#accordionJuridique">
                                                 <div class="accordion-body" style="text-align: justify;">Nous veillons à la mise à jour régulière de vos obligations juridiques et anticipons vos besoins en matière de suivi et de
                                                     formalités. Nous vous tenons informé des changements réglementaires qui pourraient impacter votre activité, tout en
@@ -1248,11 +1223,11 @@
 
                                         <!-- Question 6 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading24">
+                                            <h3 class="accordion-header" id="heading24">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
                                                     Comment adaptons-nous notre accompagnement aux besoins spécifiques de chaque entreprise ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24" data-bs-parent="#accordionJuridique">
                                                 <div class="accordion-body" style="text-align: justify;">Chez Place des Experts, nous comprenons que chaque entreprise a des besoins spécifiques. C’est pourquoi nous offrons un accompagnement sur mesure, totalement adapté à la taille de votre entreprise, à votre secteur d’activité et à vos objectifs de croissance. Que vous soyez une petite entreprise ou un grand groupe, nous vous apportons des solutions personnalisées et un service de qualité, taillé sur mesure pour répondre à vos attentes.
                                                 </div>
@@ -1305,7 +1280,7 @@
                                  <div class="container rounded text-white d-flex align-items-center">
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
-                                        </br><h1 class="display-4" style="font-size: 2rem;">La <span class="highlight2">DATA</span></h1></br>
+                                        </br><h2 class="display-4" style="font-size: 2rem;">La <span class="highlight2">DATA</span></h2></br>
                                             <p class="lead">
                                                 Dans un environnement où la prise de décision rapide est primordial
                                                 pour la compétitivité, les données deviennent un levier stratégique
@@ -1329,7 +1304,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">En quoi consiste la DATA ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">En quoi consiste la DATA ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     La gestion des données ne se limite plus à leur simple collecte. Pour créer de la valeur, elles doivent être traitées, analysées et
                                                     restituées sous forme d’informations pertinentes. Chez Place des Experts, nous effectuons différentes missions avec vos
@@ -1356,7 +1331,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style="font-size: 1.5rem;">Nettoyage des données</h2>
+                                                <h3 class="section-title" style="font-size: 1.5rem;">Nettoyage des données</h3>
                                                 <p class="services-list" style="color:#333; text-align: justify;">
                                                     Les données brutes ne suffisent pas à prendre des
                                                     décisions stratégiques. C’est pourquoi nous vous
@@ -1379,7 +1354,7 @@
                                         <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style="font-size: 1.5rem;">Tableaux de bord personnalisés</h2>
+                                                <h3 class="section-title" style="font-size: 1.5rem;">Tableaux de bord personnalisés</h3>
                                                 <p class="services-list" style="color:#333; text-align: justify;">
                                                     Power BI nous permet de concevoir des tableaux de bord
                                                     interactifs et complètement sur mesure qui regroupent
@@ -1399,7 +1374,7 @@
                                             </div>
                                             <!-- Colonne droite : image -->
                                             <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                                                <img src="./images/Nos expertises/DATA/1-Tableaux de bord.png"
+                                                <img src="./images/Nos expertises/DATA/1-Tableaux de bord.webp"
                                                 width="450" height="360"
                                                 alt="Tableaux de bord personnalisés"
                                                 class="img-fluid rounded image-centered"
@@ -1416,7 +1391,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour la gestion de vos données ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour la gestion de vos données ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;" >
                                                     Faire appel à Place des Experts pour la gestion de vos données, c’est bénéficier d’un accompagnement complet, de la collecte à
                                                     l’analyse de vos informations financières et opérationnelles. Nous vous offrons des solutions sur mesure, adaptées à vos
@@ -1437,7 +1412,7 @@
                                                 </p>
                                             </div>
                                             <div></br>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Les avantages de faire appel à Place des Experts pour vos données</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Les avantages de faire appel à Place des Experts pour l'analyse de vos données</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     En nous confiant la gestion et l’analyse de vos données, vous bénéficiez de plusieurs avantages significatifs qui améliorent la
                                                     gestion de votre entreprise : la pertinence et la sécurité des outils utilisés 
@@ -1453,11 +1428,11 @@
 
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading26">
+                                            <h3 class="accordion-header" id="heading26">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
                                                     Comment nos tableaux de bord interactifs vous aident-ils à piloter votre stratégie ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26" data-bs-parent="#accordionData">
                                                 <div class="accordion-body" style="text-align: justify;">Nos tableaux de bord interactifs vous fournissent une visibilité complète sur vos activités. Grâce à des indicateurs clés sur mesure, vous  maîtrisez  vos performances et pouvez piloter votre stratégie en toute sérénité. Vous identifiez rapidement les leviers de croissance et ajustez vos actions en fonction des résultats obtenus.
                                                 </div>
@@ -1466,11 +1441,11 @@
 
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading28">
+                                            <h3 class="accordion-header" id="heading28">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
                                                     Comment garantissons-nous la qualité et la fiabilité de vos données pour des analyses précises ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28" data-bs-parent="#accordionData">
                                                 <div class="accordion-body" style="text-align: justify;">Une analyse précise des données repose sur leur qualité. Nous vous aidons à retraiter vos données pour qu’elles soient fiables, pertinentes et exploitables. Cela vous permet d’obtenir des analyses plus précises et d’améliorer vos processus décisionnels.
                                                 </div>
@@ -1479,11 +1454,11 @@
 
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading29">
+                                            <h3 class="accordion-header" id="heading29">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
                                                     Comment nos analyses de données vous aident-elles à prendre des décisions plus rapidement ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="heading29" data-bs-parent="#accordionData">
                                                 <div class="accordion-body" style="text-align: justify;">Grâce à des données structurées et des analyses détaillées, nous vous aidons à réduire le temps nécessaire à la prise de décision. En simplifiant l’accès à des informations pertinentes et en fournissant des rapports clairs, vous pouvez vous concentrer sur l’essentiel : piloter votre entreprise de manière efficace.
                                                 </div>
@@ -1492,11 +1467,11 @@
 
                                         <!-- Question 5 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading30">
+                                            <h3 class="accordion-header" id="heading30">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
                                                     Comment assurons-nous la sécurité de vos données ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="heading30" data-bs-parent="#accordionData">
                                                 <div class="accordion-body" style="text-align: justify;">Nous plaçons la sécurité et la protection de vos données personnelles au centre de nos préoccupations. Nous nous
                                                     engageons à garder vos données confidentielles, vous permettant de vous concentrer sur votre activité en toute sérénité.
@@ -1516,8 +1491,8 @@
                                 <div class="container rounded text-white d-flex align-items-center">
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
-                                        </br><h1 class="display-4" style="font-size: 2rem;">L’ <span class="highlight2">audit</span> légal 
-                                            et contractuel</h1></br>
+                                        </br><h2 class="display-4" style="font-size: 2rem;">L’ <span class="highlight2">audit</span> légal 
+                                            et contractuel</h2></br>
                                             <p class="lead">
                                                 Dans un environnement économique de plus en plus réglementé, la transparence et la fiabilité des états financiers
                                                 sont essentielles pour inspirer confiance à vos partenaires, investisseurs et clients. L’audit légal et contractuel joue
@@ -1535,7 +1510,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">En quoi consiste l’audit légal et contractuel ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">En quoi consiste l’audit légal et contractuel ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     L’audit légal et contractuel est une analyse approfondie des états financiers de votre organisation. Il vise à vérifier l’exactitude des
                                                     comptes, à assurer leur conformité avec les standards comptables et légaux, et à identifier les éventuelles anomalies ou risques.</br></br>
@@ -1587,7 +1562,7 @@
                                             </div>
 
                                             <div></br></br>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">La désignation d’un Commissaire Aux Comptes (CAC)</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">La désignation d’un Commissaire Aux Comptes (CAC)</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     L’intervention d’un Commissaire Aux Comptes (CAC) peut être facultative ou obligatoire, selon plusieurs critères : le total du bilan,
                                                     le chiffre d’affaires hors taxe, ou le nombre de salariés de l’entreprise.</br>
@@ -1637,7 +1612,7 @@
                                                 </p>
                                             </div>
                                             <div></br></br>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour votre audit légal et contractuel ?</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour votre audit légal et contractuel ?</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     En choisissant Place des Experts pour vos missions d’audit, vous bénéficiez d’une analyse complète et approfondie de vos états
                                                     financiers. Nos auditeurs vous accompagnent tout au long du processus, avec une approche
@@ -1665,7 +1640,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Analyse fiable et transparente</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Analyse fiable et transparente</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     La réalisation d’un audit vous garantit une analyse
                                                     indépendante et objective de vos comptes. Notre
@@ -1687,8 +1662,8 @@
                                         <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;"> Conformité aux normes comptables
-                                                    et légales</h2></br> 
+                                                <h3 class="section-title" style ="font-size: 1.5rem;"> Conformité aux normes comptables
+                                                    et légales</h3></br> 
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Grâce à notre expertise, nous assurons la conformité de
                                                     vos comptes et états financiers avec les normes
@@ -1728,7 +1703,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Sécurisation des données financières</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Sécurisation des données financières</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     L’une des priorités de l’audit légal et contractuel est de
                                                     vérifier la fiabilité de vos données comptables et
@@ -1746,9 +1721,9 @@
                                         <div class="row image-below-text d-flex align-items-stretch w-100">
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Optimisation des processus internes</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Optimisation des processus internes</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
-                                                    Nos auditeurs vont au-delà de la simple vérification des
+                                                    Nous allons au-delà de la simple vérification des
                                                     comptes. Nous analysons également vos processus
                                                     internes pour identifier d’éventuels dysfonctionnements
                                                     et vous proposer des améliorations. Cela vous permet
@@ -1784,7 +1759,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Expertise pluridisciplinaire</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Expertise pluridisciplinaire</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Chez Place des Experts, nous pouvons vous
                                                     accompagner sur des missions d’audit contractuel sur
@@ -1809,7 +1784,7 @@
                                 <div class="container rounded text-white d-flex align-items-center">
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
-                                        </br><h1 class="display-4" style="font-size: 2rem;">L’<span class="highlight2">impôt</span> sur le revenu</h1></br>
+                                        </br><h2 class="display-4" style="font-size: 2rem;">L’<span class="highlight2">impôt</span> sur le revenu</h2></br>
                                             <p class="lead">
                                                 La gestion de l’Impôt sur le Revenu peut rapidement devenir
                                                 complexe en raison de la diversité des revenus, des déductions
@@ -1830,7 +1805,7 @@
                                     <div class="container rounded text-white d-flex align-items-center">
                                         <div class="row">
                                             <div></br>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Un service d’accompagnement sur mesure pour votre déclaration d’impôt</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Un service d’accompagnement sur mesure pour votre déclaration d’impôt</h3></br>
                                                 <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                     Chaque année, les contribuables doivent déclarer leurs revenus à l’administration fiscale. Cette déclaration prend en compte
                                                     l’ensemble des revenus perçus (salaires, pensions, revenus fonciers, revenus d’investissement, etc.) ainsi que les charges
@@ -1845,7 +1820,7 @@
                                                 </p>
                                             </div>
                                             <div></br></br>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">La déclaration d’impôt sur le revenu : comment ça fonctionne ?</h2>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">La déclaration d’impôt sur le revenu : comment ça fonctionne ?</h3>
                                                 <img src="./images/Nos expertises/SchémaIRPP.webp"
                                                 width="900" height="600"
                                                 alt="Schéma de la déclaration IRPP"
@@ -1859,7 +1834,7 @@
 
                                                 </p>
                                             </div>
-                                            <h2 class="section-title" style ="font-size: 1.5rem; padding-top: 50px;" style="text-align: justify;">Pourquoi choisir Place des Experts pour gérer votre Impôt sur le Revenu ?</h2></br>
+                                            <h3 class="section-title" style ="font-size: 1.5rem; padding-top: 50px;" style="text-align: justify;">Pourquoi choisir Place des Experts pour gérer votre Impôt sur le Revenu ?</h3></br>
                                            
                                         </div>
                                     </div>
@@ -1871,11 +1846,11 @@
 
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading37">
+                                            <h3 class="accordion-header" id="heading37">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37">
                                                     Comment simplifier la gestion de vos impôts ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="heading37" data-bs-parent="#accordionImpot">
                                                 <div class="accordion-body" style="text-align: justify;">La gestion des impôts peut être longue et fastidieuse. En faisant appel à notre cabinet, vous gagnez un temps précieux que vous pouvez consacrer à d’autres aspects de votre entreprise. Nous prenons en charge toutes les étapes de la déclaration, du recueil des informations jusqu’à la soumission finale, en veillant à ce que chaque détail soit pris en compte. 
                                                 </div>
@@ -1884,11 +1859,11 @@
 
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading38">
+                                            <h3 class="accordion-header" id="heading38">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38">
                                                     Comment éviter les erreurs liées aux évolutions des lois fiscales ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="heading38" data-bs-parent="#accordionImpot">
                                                 <div class="accordion-body" style="text-align: justify;">Les lois fiscales évoluent régulièrement, et il peut être difficile de se tenir à jour des dernières réformes. Notre équipe d’experts est constamment informée des nouvelles dispositions fiscales pour garantir que votre déclaration respecte toutes les obligations légales et éviter les erreurs susceptibles d’entraîner les pénalités.
                                                 </div>
@@ -1897,11 +1872,11 @@
 
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading39">
+                                            <h3 class="accordion-header" id="heading39">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse39" aria-expanded="false" aria-controls="collapse39">
                                                     Comment prévenir les erreurs fiscales et protéger votre santé financière ainsi que celle de votre entreprise ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse39" class="accordion-collapse collapse" aria-labelledby="heading39" data-bs-parent="#accordionImpot">
                                                 <div class="accordion-body"style="text-align: justify;">Nous offrons un service d’audit patrimonial qui permet d’évaluer votre situation financière globale. Cet audit nous aide
                                                     à optimiser vos impôts en prenant en compte vos placements, vos investissements, et vos biens immobiliers. L’objectif
@@ -1913,11 +1888,11 @@
 
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading40">
+                                            <h3 class="accordion-header" id="heading40">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse40" aria-expanded="false" aria-controls="collapse40">
                                                     Comment maximiser les avantages fiscaux liés à vos biens immobiliers ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="heading40" data-bs-parent="#accordionImpot">
                                                 <div class="accordion-body" style="text-align: justify;">La gestion des biens immobiliers implique souvent des règles fiscales spécifiques, comme les déductions liées aux travaux de rénovation, aux intérêts d’emprunt, ou encore aux dispositifs d’investissement locatif. Nos experts sont là pour vous aider à naviguer dans ces dispositifs et à maximiser les avantages fiscaux liés à vos biens immobiliers.
                                                 </div>
@@ -1926,11 +1901,11 @@
 
                                         <!-- Question 5 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading41">
+                                            <h3 class="accordion-header" id="heading41">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse41" aria-expanded="false" aria-controls="collapse41">
                                                     Comment maximiser vos déductions et crédits d'impôts ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse41" class="accordion-collapse collapse" aria-labelledby="heading41" data-bs-parent="#accordionImpot">
                                                 <div class="accordion-body" style="text-align: justify;">Chaque situation est unique, et il est important de savoir quelles déductions et crédits d’impôts vous sont applicables. Que ce soit pour des dons, des investissements, ou des travaux éligibles à des crédits d’impôts, nous vous accompagnons pour identifier et maximiser ces avantages. Notre expertise vous permet de bénéficier des meilleures optimisations fiscales en toute conformité.
                                                 </div>
@@ -1939,11 +1914,11 @@
 
                                         <!-- Question 6 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading42">
+                                            <h3 class="accordion-header" id="heading42">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse42" aria-expanded="false" aria-controls="collapse42">
                                                     Comment bénéficier d'un service fiscal sur mesure et adapté à vos besoins ?
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse42" class="accordion-collapse collapse" aria-labelledby="heading42" data-bs-parent="#accordionImpot">
                                                 <div class="accordion-body" style="text-align: justify;">Chez Place des Experts, nous mettons un point d’honneur à proposer un service sur mesure. Tout commence par un
                                                     rendez-vous en physique, au cours duquel nous échangeons sur votre situation. Vous remplissez ensuite un
@@ -1969,8 +1944,8 @@
                                 <div class="container rounded text-white d-flex align-items-center">
                                     <div class="row bulles2" style ="margin: 0 !important;">
                                         <div class="text-container2">
-                                        </br><h1 class="display-4" style="font-size: 2rem;">L’examen de
-                                            conformité fiscale - <span class="highlight2">ECF</span></h1></br>
+                                        </br><h2 class="display-4" style="font-size: 2rem;">L’examen de
+                                            conformité fiscale - <span class="highlight2">ECF</span></h2></br>
                                             <p class="lead">
                                                 Dans un contexte où la législation fiscale évolue constamment, il est
                                                 primordial pour les entreprises de s’assurer qu’elles respectent l’ensemble
@@ -1992,7 +1967,7 @@
                                 <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                     <div class="row">
                                         <div>
-                                            <h2 class="section-title" style ="font-size: 1.5rem;">Qu’est-ce que l’Examen de Conformité Fiscale (ECF) ?</h2></br>
+                                            <h3 class="section-title" style ="font-size: 1.5rem;">Qu’est-ce que l’Examen de Conformité Fiscale (ECF) ?</h3></br>
                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                 L’Examen de Conformité Fiscale est un audit fiscal volontaire qui permet de vérifier que votre entreprise est en conformité avec
                                                 les principales obligations fiscales. Cet examen, effectué après la clôture de votre exercice, se concentre sur des points clés
@@ -2005,7 +1980,7 @@
                                         </div>
 
                                         <div></br></br>
-                                            <h2 class="section-title" style ="font-size: 1.5rem;">Mettre en œuvre un ECF</h2></br>
+                                            <h3 class="section-title" style ="font-size: 1.5rem;">Mettre en œuvre un ECF</h3></br>
                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                 L’ECF est une analyse de 10 points fiscaux spécifiquement définis par l’administration fiscale.</br>
                                                 Ces points couvrent différents aspects des obligations fiscales, tels que :</br></br>
@@ -2034,7 +2009,7 @@
                                         </div>
 
                                         <div></br>
-                                            <h2 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour un ECF ?</h2></br>
+                                            <h3 class="section-title" style ="font-size: 1.5rem;">Pourquoi choisir Place des Experts pour un ECF ?</h3></br>
                                             <p class="services-list" style ="color: #333;" style="text-align: justify;">
                                                 Faire appel à un cabinet d’expertise comptable comme Place des Experts pour la réalisation de votre Examen de Conformité
                                                 Fiscale présente plusieurs avantages. Nous mettons à votre disposition notre expertise en matière fiscale et notre connaissance
@@ -2060,7 +2035,7 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Éviter les risques fiscaux</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Éviter les risques fiscaux</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Grâce à un ECF, vous anticipez et corrigez les erreurs
                                                     potentielles avant qu’elles ne soient découvertes par
@@ -2078,7 +2053,7 @@
                                             
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Limiter les risques de contrôle fiscal</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Limiter les risques de contrôle fiscal</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Les entreprises qui font l’objet d’un ECF présentent un
                                                     profil de transparence accrue aux yeux de
@@ -2115,8 +2090,8 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Renforcer la transparence de votre
-                                                    gestion</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Renforcer la transparence de votre
+                                                    gestion</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     Un ECF renforce la crédibilité et la transparence de votre
                                                     gestion auprès de vos partenaires financiers,
@@ -2134,7 +2109,7 @@
                                             
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Pas de pénalité ni d’intérêt de retard </h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Pas de pénalité ni d’intérêt de retard </h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     L’un des avantages majeurs de l’ECF est qu’en cas de correction 
                                                     fiscale à l’issue de l’audit, l’administration fiscale n’appliquera ni pénalités
@@ -2168,8 +2143,8 @@
                                             </div>
                                             <!-- Colonne gauche : texte -->
                                             <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                                <h2 class="section-title" style ="font-size: 1.5rem;"> Remboursement des honoraires en
-                                                    cas de rehaussement</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;"> Remboursement des honoraires en
+                                                    cas de rehaussement</h3></br>
                                                 <p class="services-list" style="color:#333;" style="text-align: justify;">
                                                     En cas de rehaussement fiscal, c’est-à-dire si
                                                     l’administration identifie un manquement après l’ECF,
@@ -2190,7 +2165,7 @@
                                     <div class="container rounded text-white d-flex align-items-center">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style ="font-size: 1.5rem;">Les avantages de l’ECF pour votre entreprise</h2></br>
+                                                <h3 class="section-title" style ="font-size: 1.5rem;">Les avantages de l’ECF pour votre entreprise</h3></br>
                                                 <p class="services-list" style ="color: #333;">
                                                     L’Examen de Conformité Fiscale est plus qu’un simple audit, c’est un outil de gestion proactive pour améliorer la qualité de votre
                                                     organisation comptable et fiscale. En plus de réduire les risques fiscaux, cet examen permet d’optimiser vos processus internes,
@@ -2251,7 +2226,7 @@
         </script>
     
         <!-- Lien vers Bootstrap JavaScript -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"> defer</script>
 
         <script>
             // Fonction pour animer le compteur
@@ -2315,33 +2290,34 @@
     <footer class="footer">
         <div class="container">
             <ul class="services-list">
-                <li style ="text-align: center;">Notre cabinet est inscrit à l’Ordre des experts-comptables Nord Pas de Calais et à la Compagnie des commissaires aux comptes de Douai.</li>
+                <li>Notre cabinet est inscrit à l’Ordre des experts-comptables Nord Pas de Calais et à la Compagnie des commissaires aux comptes de Douai.</li>
             </ul></br>
             <div class="row">
                 <div class="footer-col">
-                    <h3>Le cabinet</h3>
+                    <h4>Le cabinet</h4>
                     <ul class="footer-links">
                         <li><a href="./cabinet.html">Notre équipe</a></li>
                         <li><a href="./cabinet.html#valeurs">Nos valeurs</a></li>
+                        <li><a href="./outils.html">Nos outils</a></li>
                         <li><a href="./blog.html">Blog</a></li>
                         <li><a href="./iso.html">ISO 9001</a></li>
-                        <li><a href="./contact.html#recrutement">Espace recrutement</a></li>
                         <li><a href="./mentions.html">Mentions légales</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Nous retrouver</h3>
+                    <h4>Nous retrouver</h4>
                     <ul class="footer-links">
                         <li><a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/placedesexperts/profilecard/?igsh=MTJ0YzkxNzA2NDBhZA==" target="_blank">Instagram</a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>
                         <li><a href="https://www.youtube.com/@PlacedesExperts" target="_blank">Youtube</a></li>
                         <li><a href="./contact.html#rdv">Prendre rendez-vous</a></li>
+                        <li><a href="./contact.html#recrutement">Espace recrutement</a></li>
                         
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Prendre contact avec nous ?</h3>
+                    <h4>Prendre contact avec nous ?</h4>
                         <i class="bi bi-arrow-return-right" style="color:#245360;font-size: 50px;margin-right:10px;margin-top: 10px; vertical-align: middle;"></i><a class = "btn btn-custom" style ="font-size:1.8rem; border-radius:10px;" href="./contact.html">Contact</a>
                 </div>
             </div>

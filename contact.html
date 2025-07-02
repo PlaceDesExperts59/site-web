@@ -2,28 +2,63 @@
 <html lang="fr">
 
     <head>
-        
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Place des Experts est un cabinet d'expertise comptable situé à Hazebrouck et La Madeleine. Nous accompagnons les entreprises en comptabilité, fiscalité et gestion. Découvrez nos services !">
-        
         <title>Place des Experts - Contact</title>
-        <link rel="icon" href="./images/Logo_fond_blanc.webp" type="image/png">
+        <meta name="description" content="Contactez le cabinet d’expertise comptable Place des Experts à Hazebrouck et La Madeleine. Formulaire, coordonnées, horaires et prise de rendez-vous en ligne.">
+        <meta name="keywords" content="contact expert comptable, contact Place des Experts, cabinet comptable Hazebrouck, prise de rendez-vous, contact comptable Lille">
+
+        <meta name="author" content="Place des Experts">
         
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-        <link rel="preload" href="./style/contact.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
         <meta property="og:title" content="Place des Experts - Cabinet d'expertise comptable">
         <meta property="og:description" content="Cabinet comptable à Hazebrouck et La Madeleine, spécialisé en comptabilité, fiscalité et gestion d'entreprise.">
         <meta property="og:image" content="https://www.placedesexperts.fr/images/Logo_fond_blanc.webp">
         <meta property="og:url" content="https://www.placedesexperts.fr">
         <meta property="og:type" content="website">
+        <link rel="canonical" href="https://www.placedesexperts.fr/contact.html">
+        
 
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+
+        <link rel="preload" as="image" href="./images/Contact.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="./images/gouttes.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="./images/Logo_fond_blanc.webp" fetchpriority="high">
+
+
+        <link rel="icon" href="./images/Logo_fond_blanc.webp" type="image/png">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        
+
+        <link rel="preload" href="./style/contact.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link href="./style/contact.css" rel="stylesheet">
+
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "AccountingService",
+            "name": "Place des Experts",
+            "url": "https://www.placedesexperts.fr",
+            "image": "https://www.placedesexperts.fr/images/Logo_fond_blanc.webp",
+            "description": "Cabinet d'expertise comptable à Hazebrouck et La Madeleine.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hazebrouck",
+                "addressRegion": "Hauts-de-France",
+                "postalCode": "59190",
+                "addressCountry": "FR"
+            }
+            }
+        </script>
+        
     </head>
 
     <body>
@@ -84,12 +119,12 @@
                 <div class="container rounded text-white p-5 d-flex align-items-center position-relative">
                     <div class="row bulles">
 
-                        <img src="./images/gouttes.png"
+                        <img src="./images/gouttes.webp"
                         width="80" height="80"
                         sizes="80px"
                         alt="Décoration graphique"
                         class="decoration-graphic"
-                        loading="lazy"
+                        loading="eager"
                         decoding="async">
                     
                         <!-- Colonne gauche : texte, titre et logos -->
@@ -154,12 +189,7 @@
                             <p>HAZEBROUCK : 03.28.41.85.69</p>
                             <p>LA MADELEINE : 03.20.51.86.17</p>
                         </div>
-                
-                        <div class="mb-4">
-                            <h3 style="font-family: 'Playfair Display', serif;"><i class="bi bi-envelope"></i> E-mails</h3>
-                            <hr>
-                            <p>contact@placedesexperts.fr</p>
-                        </div>
+    
                 
                         <div class="mb-4">
                             <h3 style="font-family: 'Playfair Display', serif;"><i class="bi bi-clock"></i> Horaires</h3>
@@ -200,7 +230,29 @@
                                 <button type="submit" class="btn btn-custom2">Envoyer</button>
                             </div>
                         </form>
-                        
+                        <div id="confirmation-message" style="display: none; color: green; text-align: center; margin-top: 20px;">
+                            Merci, votre message a bien été envoyé.
+                        </div>
+
+                        <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const confirmation = document.getElementById("confirmation-message");
+                            const form = document.querySelector("form");
+
+                            // Si "formSent" est présent dans localStorage => affichage du message
+                            if (localStorage.getItem("formSent") === "true") {
+                                confirmation.style.display = "block";
+                                localStorage.removeItem("formSent");
+                                if (form) form.reset();
+                            }
+
+                            // Quand on clique sur "Envoyer", on marque que le formulaire est parti
+                            form?.addEventListener("submit", function () {
+                                localStorage.setItem("formSent", "true");
+                            });
+                        });
+                        </script>
+
                     </div>
                 </div>
             </section>
@@ -218,7 +270,7 @@
                         <!-- Texte à droite -->
                         <div class="col-lg-7">
                             <div class="rdv-details"></br></br>
-                                <h1 class="rdv-title">PRENONS RENDEZ-VOUS</h1>
+                                <h2 class="rdv-title">PRENONS RENDEZ-VOUS</h2>
                                 <p style="color:white; font-size: 1.2rem;">Nous pouvons organiser une rencontre pour échanger sur différents sujets</p></br>
                                 <ul class="services-list">
                                     <li><i class="bi bi-check" style="color:#ffffff;font-size: 1.7rem;"></i> Création de société</li>
@@ -238,7 +290,7 @@
                 <div class="container p-5 d-flex align-items-center">
                     <div class="text-container-recrutement">
 
-                        </br><h1><span class="circle-dot"></span> Espace recrutement</h1></br>
+                        </br><h2><span class="circle-dot"></span> Espace recrutement</h2></br>
                         <p class="lead" style="text-align: justify;">
                             Vous travaillez dans l’expertise comptable ? Vous recherchez actuellement un emploi ?</br></br>
                             Si c’est le cas et que vous souhaitez rejoindre un cabinet, vous pouvez retrouver nos offres
@@ -260,7 +312,6 @@
         <a href="#" class="scroll-to-top">
             <i class="bi bi-arrow-up-circle-fill"></i>
         </a>
-
         <!-- Bouton remonter -->
         <script>
          
@@ -280,7 +331,6 @@
             });
 
         </script>
-        
         <!-- Lien vers Bootstrap JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -290,7 +340,7 @@
     <footer class="footer">
         <div class="container">
             <ul class="services-list2">
-                <li style ="text-align: center;">Notre cabinet est inscrit à l’Ordre des experts-comptables Nord Pas de Calais et à la Compagnie des commissaires aux comptes de Douai.</li>
+                <li >Notre cabinet est inscrit à l’Ordre des experts-comptables Nord Pas de Calais et à la Compagnie des commissaires aux comptes de Douai.</li>
             </ul></br>
             <div class="row">
                 <div class="footer-col">
@@ -298,9 +348,9 @@
                     <ul class="footer-links">
                         <li><a href="./cabinet.html">Notre équipe</a></li>
                         <li><a href="./cabinet.html#valeurs">Nos valeurs</a></li>
+                        <li><a href="./outils.html">Nos outils</a></li>
                         <li><a href="./blog.html">Blog</a></li>
                         <li><a href="./iso.html">ISO 9001</a></li>
-                        <li><a href="./contact.html#recrutement">Espace recrutement</a></li>
                         <li><a href="./mentions.html">Mentions légales</a></li>
                     </ul>
                 </div>
@@ -312,7 +362,7 @@
                         <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>
                         <li><a href="https://www.youtube.com/@PlacedesExperts" target="_blank">Youtube</a></li>
                         <li><a href="./contact.html#rdv">Prendre rendez-vous</a></li>
-                        
+                        <li><a href="./contact.html#recrutement">Espace recrutement</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

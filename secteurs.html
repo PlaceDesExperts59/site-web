@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-    <head>
+     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Place des Experts est un cabinet d'expertise comptable situé à Hazebrouck et La Madeleine. Nous accompagnons les entreprises en comptabilité, fiscalité et gestion. Découvrez nos services !">
+        <title>Place des Experts - Nos Secteurs d'Activité</title>
+        <meta name="description" content="Place des Experts accompagne les professionnels de l’immobilier, de la santé, du e-commerce, des professions libérales et de la restauration avec une expertise comptable dédiée à chaque secteur.">
+        <meta name="keywords" content="expert comptable immobilier, comptable professions médicales, comptabilité e-commerce, expert-comptable libéral, comptable restaurateur, Place des Experts Hazebrouck La Madeleine">
+        <meta name="author" content="Place des Experts">
         
-        <title>Place des Experts - Secteurs d'activité</title>
-        <link rel="icon" href="./images/Logo_fond_blanc.webp" type="image/png">
-        
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-        <link rel="preload" href="./style/expertises.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
         <meta property="og:title" content="Place des Experts - Cabinet d'expertise comptable">
         <meta property="og:description" content="Cabinet comptable à Hazebrouck et La Madeleine, spécialisé en comptabilité, fiscalité et gestion d'entreprise.">
         <meta property="og:image" content="https://www.placedesexperts.fr/images/Logo_fond_blanc.webp">
         <meta property="og:url" content="https://www.placedesexperts.fr">
         <meta property="og:type" content="website">
-    </head>
 
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="canonical" href="https://www.placedesexperts.fr/secteurs.html">
+
+
+        <link rel="preload" as="image" href="./images/Nos secteurs d'activité.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="./images/gouttes.webp" fetchpriority="high">
+        <link rel="preload" as="image" href="./images/Logo_fond_blanc.webp" fetchpriority="high">
+
+
+        <link rel="icon" href="./images/Logo_fond_blanc.webp" type="image/png">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        
+
+        <link rel="preload" href="./style/expertises.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link href="./style/expertises.css" rel="stylesheet">
+
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "AccountingService",
+            "name": "Place des Experts",
+            "url": "https://www.placedesexperts.fr",
+            "image": "https://www.placedesexperts.fr/images/Logo_fond_blanc.webp",
+            "description": "Cabinet d'expertise comptable à Hazebrouck et La Madeleine.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hazebrouck",
+                "addressRegion": "Hauts-de-France",
+                "postalCode": "59190",
+                "addressCountry": "FR"
+            }
+            }
+        </script>
+    </head>
     <body>
 
         <!-- Barre de navigation -->
@@ -81,11 +110,11 @@
         <section>
             <div class="container rounded text-white d-flex align-items-center position-relative p-5">
                 <div class="row bulles">
-                    <img src="./images/gouttes.png" 
+                    <img src="./images/gouttes.webp" 
                     width="80" height="60"
                     alt="Décoration graphique"
                     class="decoration-graphic-secteur"
-                    loading="lazy"
+                    loading="eager"
                     decoding="async">
                     <div class="col-lg-6">
                         <div class="text-container">
@@ -152,7 +181,7 @@
                                 <div class="container rounded d-flex align-items-center">
                                     <div class="row bulles2" style="margin: 0 !important;">
                                         <div class="text-container2">
-                                            <br><h1 class="display-4" style="font-size: 2rem;">L'<span class="highlight2">immobilier</span></h1><br>
+                                            <br><h2 class="display-4" style="font-size: 2rem;">L'<span class="highlight2">immobilier</span></h2><br>
                                             <p class="lead">
                                                 Nous assistons les professionnels de l’immobilier, les
                                                 investisseurs et les promoteurs dans la gestion et l’optimisation
@@ -167,15 +196,15 @@
                                 <!-- Section menu déroulant (Accordion) -->
                                 <section class="container">
                                     <div class="accordion" id="accordion1000"></br></br>
-                                        <h2 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour l’immobilier</h2></br>
+                                        <h3 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour l’immobilier</h3></br>
                                         
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1001">
+                                            <h3 class="accordion-header" id="heading1001">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1001" aria-expanded="false" aria-controls="collapse1001">
                                                     Aide à la prise de décision entre la location nue et la location meublée
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1001" class="accordion-collapse collapse" aria-labelledby="heading1001" data-bs-parent="#accordion1000">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Selon vos objectifs fiscaux, financiers et patrimoniaux, nous vous guidons dans le choix stratégique entre location nue
@@ -187,11 +216,11 @@
 
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1002">
+                                            <h3 class="accordion-header" id="heading1002">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1002" aria-expanded="false" aria-controls="collapse1002">
                                                     Montage du dossier financier avec détermination de la capacité d’emprunt
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1002" class="accordion-collapse collapse" aria-labelledby="heading1002" data-bs-parent="#accordion1000">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Afin de maximiser vos chances d’obtenir un financement, nous réalisons une évaluation détaillée de votre capacité
@@ -204,11 +233,11 @@
 
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1003">
+                                            <h3 class="accordion-header" id="heading1003">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1003" aria-expanded="false" aria-controls="collapse1003">
                                                     Accompagnement au choix du bien immobilier
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1003" class="accordion-collapse collapse" aria-labelledby="heading1003" data-bs-parent="#accordion1000">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nos experts vous accompagnent dans l’analyse des opportunités d’achat immobilier en fonction de votre stratégie
@@ -220,11 +249,11 @@
 
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1005">
+                                            <h3 class="accordion-header" id="heading1005">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1005" aria-expanded="false" aria-controls="collapse1005">
                                                     Assistance au niveau des déclarations fiscales
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1005" class="accordion-collapse collapse" aria-labelledby="heading1005" data-bs-parent="#accordion1000">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous vous assistons dans la gestion de vos obligations fiscales liées à l’immobilier, qu’il s’agisse de la déclaration des
@@ -235,7 +264,7 @@
                                         </div>
 
                                     </div></br></br>
-                                    <h2 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels de l’immobilier</h2>
+                                    <h3 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels de l’immobilier</h3>
                                 </section>
 
                                 <!-- Section cartes -->
@@ -306,10 +335,10 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h2></br>
+                                                <h3 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h3></br>
                                                 <ul class="custom-list">
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Conseils d’experts</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Conseils d’experts</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nos collaborateurs sont spécialisés dans les métiers de l’immobilier, ce qui nous permet de vous apporter des solutions
                                                             concrètes et adaptées à vos enjeux.
@@ -317,21 +346,21 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Proximité et disponibilité</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Proximité et disponibilité</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous vous accompagnons tout au long de votre projet, depuis la structuration patrimoniale jusqu’à la gestion quotidienne de vos actifs.
                                                         </p>
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Réduction de vos charges fiscales</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Réduction de vos charges fiscales</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Grâce à notre expertise fiscale, nous identifions les opportunités pour optimiser la fiscalité de votre patrimoine.
                                                         </p>
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Suivi personnalisé des projets</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Suivi personnalisé des projets</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             De l’acquisition à la gestion de patrimoine, nos experts sont disponibles pour répondre à toutes vos questions et s’assurer de la
                                                             conformité de vos démarches avec les réglementations en vigueur.
@@ -348,7 +377,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style="font-size: 1.5rem;">Notre conférence dédiée à l’investissement immobilier</h2></br>
+                                                <h3 class="section-title" style="font-size: 1.5rem;">Notre conférence dédiée à l’investissement immobilier</h3></br>
                                                 <div class="video-container">
                                                     <iframe width="560" height="315" 
                                                         src="https://www.youtube.com/embed/NR0YAyKOsqI" 
@@ -374,7 +403,7 @@
                                 <div class="container rounded d-flex align-items-center">
                                     <div class="row bulles2" style="margin: 0 !important;">
                                         <div class="text-container2">
-                                            <br><h1 class="display-4" style="font-size: 2rem;"><span class="highlight2">E-commerce</span></h1><br>
+                                            <br><h2 class="display-4" style="font-size: 2rem;"><span class="highlight2">E-commerce</span></h2><br>
                                             <p class="lead">
                                                 Chez Place des Experts, nous accompagnons les acteurs du e-commerce pour assurer la gestion et l’optimisation de leurs
                                                  activités en ligne. Qu’il s’agisse de petites boutiques ou de
@@ -393,15 +422,15 @@
                                 <!-- Section menu déroulant (Accordion) -->
                                 <section class="container">
                                     <div class="accordion" id="accordion1"></br></br>
-                                        <h2 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour les professionnels du e-commerce</h2></br>
+                                        <h3 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour les professionnels du e-commerce</h3></br>
                                         
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1010">
+                                            <h3 class="accordion-header" id="heading1010">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1010" aria-expanded="false" aria-controls="collapse1010">
                                                     Gestion de la TVA internationale
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1010" class="accordion-collapse collapse" aria-labelledby="heading1010" data-bs-parent="#accordion1">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous vous accompagnons dans la gestion de la TVA pour vos ventes en France, en Europe et à l’international, en
@@ -413,11 +442,11 @@
 
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1011">
+                                            <h3 class="accordion-header" id="heading1011">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1011" aria-expanded="false" aria-controls="collapse1011">
                                                     Suivi et analyse des performances financières
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1011" class="accordion-collapse collapse" aria-labelledby="heading1011" data-bs-parent="#accordion1">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Grâce à des outils de reporting financier, nous vous fournissons une vision claire de votre rentabilité, de vos coûts, et
@@ -428,11 +457,11 @@
 
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1012">
+                                            <h3 class="accordion-header" id="heading1012">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1012" aria-expanded="false" aria-controls="collapse1012">
                                                     Optimisation des stocks et des flux de trésorerie
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1012" class="accordion-collapse collapse" aria-labelledby="heading1012" data-bs-parent="#accordion1">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous vous aidons à optimiser la gestion de vos stocks pour minimiser les coûts d’entreposage et à anticiper vos
@@ -443,11 +472,11 @@
 
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1013">
+                                            <h3 class="accordion-header" id="heading1013">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1013" aria-expanded="false" aria-controls="collapse1013">
                                                     Accompagnement dans les obligations comptables et fiscales
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1013" class="accordion-collapse collapse" aria-labelledby="heading1013" data-bs-parent="#accordion1">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     En tant qu’e-commerçant, vous êtes soumis à des obligations comptables spécifiques. Nous assurons la tenue de
@@ -458,11 +487,11 @@
 
                                         <!-- Question 5 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1014">
+                                            <h3 class="accordion-header" id="heading1014">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1014" aria-expanded="false" aria-controls="collapse1014">
                                                     Conseil en structuration et financement de l’activité
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1014" class="accordion-collapse collapse" aria-labelledby="heading1014" data-bs-parent="#accordion1">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Que vous soyez en phase de lancement, d’expansion, ou de diversification, nous vous conseillons sur la structuration
@@ -474,7 +503,7 @@
 
 
                                     </div></br></br>
-                                    <h2 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels du e-commerce</h2>
+                                    <h3 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels du e-commerce</h3>
                                 </section>
                                 
                                 <!-- Section cartes -->
@@ -538,10 +567,10 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h2></br>
+                                                <h3 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h3></br>
                                                 <ul class="custom-list">
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Expertise sectorielle spécialisée</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Expertise sectorielle spécialisée</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Forts de notre expérience dans le secteur du e-commerce, nous comprenons les spécificités et les défis uniques de ce domaine,
                                                             notamment en matière de fiscalité, de gestion des stocks, et d’optimisation des coûts logistiques.
@@ -549,7 +578,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Maîtrise des enjeux fiscaux internationaux</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Maîtrise des enjeux fiscaux internationaux</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Avec une expertise dédiée aux aspects internationaux du e-commerce, tels que la TVA transfrontalière et la gestion des flux de
                                                             trésorerie, nous vous aidons à rester en conformité avec la législation tout en profitant des meilleures opportunités fiscales.
@@ -557,7 +586,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Accompagnement personnalisé</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Accompagnement personnalisé</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous proposons des solutions sur mesure qui s’adaptent à la taille, au modèle économique, et aux objectifs de votre entreprise,
                                                             pour répondre aux besoins spécifiques de votre activité en ligne.
@@ -565,7 +594,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Réactivité et proximité</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Réactivité et proximité</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous savons que le e-commerce évolue rapidement. Notre équipe est disponible et réactive pour répondre à vos demandes vous
                                                             offrant un soutien fiable et continu afin que vous puissiez vous concentrer pleinement sur le développement de votre activité.
@@ -586,7 +615,7 @@
                                 <div class="container rounded d-flex align-items-center">
                                     <div class="row bulles2" style="margin: 0 !important;">
                                         <div class="text-container2">
-                                            <br><h1 class="display-4" style="font-size: 2rem;">Les professions <span class="highlight2">médicales</span></h1><br>
+                                            <br><h2 class="display-4" style="font-size: 2rem;">Les professions <span class="highlight2">médicales</span></h2><br>
                                             <p class="lead">
                                                 Chez Place des Experts, nous comprenons les défis uniques
                                                 auxquels sont confrontés les professionnels du secteur médical.
@@ -606,15 +635,15 @@
                                 <!-- Section menu déroulant (Accordion) -->
                                 <section class="container">
                                     <div class="accordion" id="accordion10"></br></br>
-                                        <h2 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour les professions médicales</h2></br>
+                                        <h3 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour les professions médicales</h3></br>
                                         
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1006">
+                                            <h3 class="accordion-header" id="heading1006">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1006" aria-expanded="false" aria-controls="collapse1006">
                                                     Aide à la prise de décision du mode d’exercice
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1006" class="accordion-collapse collapse" aria-labelledby="heading1006" data-bs-parent="#accordion10">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nos experts vous conseillent sur le choix du mode d’exercice le plus adapté à votre situation : remplaçant libéral,
@@ -627,11 +656,11 @@
 
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1007">
+                                            <h3 class="accordion-header" id="heading1007">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1007" aria-expanded="false" aria-controls="collapse1007">
                                                     Gestion des formalités administratives
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1007" class="accordion-collapse collapse" aria-labelledby="heading1007" data-bs-parent="#accordion10">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous vous accompagnons dans toutes les démarches administratives nécessaires avant de commencer votre activité
@@ -645,11 +674,11 @@
 
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1008">
+                                            <h3 class="accordion-header" id="heading1008">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1008" aria-expanded="false" aria-controls="collapse1008">
                                                     Gestion de l’imposition
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1008" class="accordion-collapse collapse" aria-labelledby="heading1008" data-bs-parent="#accordion10">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     En fonction de votre mode d’exercice et de vos revenus, nous vous aidons à choisir le régime d’imposition le plus
@@ -662,11 +691,11 @@
 
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1009">
+                                            <h3 class="accordion-header" id="heading1009">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1009" aria-expanded="false" aria-controls="collapse1009">
                                                     Gestion des charges et des cotisations sociales
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1009" class="accordion-collapse collapse" aria-labelledby="heading1009" data-bs-parent="#accordion10">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     La gestion des charges et cotisations sociales est cruciale pour une activité libérale ou salariée. Nous vous assistons
@@ -678,7 +707,7 @@
 
 
                                     </div></br></br>
-                                    <h2 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels du secteur médical</h2>
+                                    <h3 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels du secteur médical</h3>
                                 </section>
 
                                 <!-- Section cartes -->
@@ -755,10 +784,10 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div></br>
-                                                <h2 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h2></br>
+                                                <h3 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h3></br>
                                                 <ul class="custom-list">
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Conseils spécialisés dans le secteur médical</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Conseils spécialisés dans le secteur médical</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nos collaborateurs sont formés aux particularités fiscales et sociales des professions médicales, ce qui nous permet de vous
                                                             proposer des solutions adaptés à votre situation et aux exigences de votre métier.
@@ -766,7 +795,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Proximité et disponibilité</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Proximité et disponibilité</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous vous soutenons à chaque étape de votre parcours, depuis le choix de votre mode d’exercice jusqu’à la gestion de vos
                                                             obligations administratives et sociales en restant disponibles pour répondre à toutes vos questions.
@@ -774,7 +803,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i>  Optimisation de vos charges et cotisations sociales</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i>  Optimisation de vos charges et cotisations sociales</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Grâce à notre expertise en gestion des charges, nous vous aidons à optimiser vos frais, cotisations et charges sociales, en
                                                             veillant à réduire les coûts tout en respectant les réglementations en vigueur.
@@ -782,7 +811,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i>  Suivi personnalisé et rigoureux</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i>  Suivi personnalisé et rigoureux</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Que vous soyez en libéral, remplaçant, titulaire ou salarié, nos experts vous offrent un accompagnement personnalisé et un suivi
                                                             précis pour assurer la conformité et l’optimisation de votre gestion administrative et fiscale.                                                           
@@ -800,7 +829,7 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style="font-size: 1.5rem;">Notre conférence dédiée aux jeunes Chirurgiens-Dentistes</h2></br>
+                                                <h3 class="section-title" style="font-size: 1.5rem;">Notre conférence dédiée aux jeunes Chirurgiens-Dentistes</h3></br>
                                                 <div class="video-container">
                                                     <iframe width="560" height="315" 
                                                         src="https://www.youtube.com/embed/HBCtJOSeUx0" 
@@ -825,7 +854,7 @@
                                 <div class="container rounded d-flex align-items-center">
                                     <div class="row bulles2" style="margin: 0 !important;">
                                         <div class="text-container2">
-                                            <br><h1 class="display-4" style="font-size: 2rem;">Les professions <span class="highlight2">libérales</span></h1><br>
+                                            <br><h2 class="display-4" style="font-size: 2rem;">Les professions <span class="highlight2">libérales</span></h2><br>
                                             <p class="lead">
                                                 Chez Place des Experts, nous accompagnons les professionnels
                                                 libéraux dans tous les aspects de la gestion de leur activité. Nous
@@ -843,15 +872,15 @@
                                 <!-- Section menu déroulant (Accordion) -->
                                 <section class="container">
                                     <div class="accordion" id="accordion100"></br></br>
-                                        <h2 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour les professionnels libéraux</h2></br>
+                                        <h3 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour les professionnels libéraux</h3></br>
                                         
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1015">
+                                            <h3 class="accordion-header" id="heading1015">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1015" aria-expanded="false" aria-controls="collapse1015">
                                                     Optimisation de la fiscalité personnelle et professionnelle
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1015" class="accordion-collapse collapse" aria-labelledby="heading1015" data-bs-parent="#accordion100">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous vous accompagnons dans le choix du régime fiscal, afin de déterminer le plus avantageux : micro-BNC,
@@ -863,11 +892,11 @@
 
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1016">
+                                            <h3 class="accordion-header" id="heading1016">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1016" aria-expanded="false" aria-controls="collapse1016">
                                                     Gestion des obligations comptables et déclaratives
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1016" class="accordion-collapse collapse" aria-labelledby="heading1016" data-bs-parent="#accordion100">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous prenons en charge l’ensemble de la comptabilité, y compris la saisie des opérations courantes, l’établissement du
@@ -878,11 +907,11 @@
 
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1017">
+                                            <h3 class="accordion-header" id="heading1017">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1017" aria-expanded="false" aria-controls="collapse1017">
                                                     Conseils en gestion de trésorerie et planification financière
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1017" class="accordion-collapse collapse" aria-labelledby="heading1017" data-bs-parent="#accordion100">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous nous occupons de l’élaboration de prévisions financières, suivi de la trésorerie et des charges pour garantir une
@@ -893,11 +922,11 @@
 
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1018">
+                                            <h3 class="accordion-header" id="heading1018">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1018" aria-expanded="false" aria-controls="collapse1018">
                                                     Accompagnement pour les charges sociales et cotisations
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1018" class="accordion-collapse collapse" aria-labelledby="heading1018" data-bs-parent="#accordion100">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous gérons les cotisations sociales auprès des caisses comme l’URSSAF ou la CIPAV, et optimisons les cotisations
@@ -908,11 +937,11 @@
 
                                         <!-- Question 5 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1019">
+                                            <h3 class="accordion-header" id="heading1019">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1019" aria-expanded="false" aria-controls="collapse1019">
                                                     Assistance dans la gestion des formalités administratives
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1019" class="accordion-collapse collapse" aria-labelledby="heading1019" data-bs-parent="#accordion100">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous vous aidons dans les démarches nécessaires à la création d’activité, telles que les formalités auprès des
@@ -924,7 +953,7 @@
 
 
                                     </div></br></br>
-                                    <h2 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels libéraux</h2>
+                                    <h3 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels libéraux</h3>
                                 </section>
  
                                 <!-- Section cartes -->
@@ -985,10 +1014,10 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h2></br>
+                                                <h3 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h3></br>
                                                 <ul class="custom-list">
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Expertise sectorielle spécialisée</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Expertise sectorielle spécialisée</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous maîtrisons les enjeux spécifiques des professions libérales, ce qui nous permet de proposer des solutions adaptées à votre
                                                              activité, en prenant en compte les particularités de votre secteur.
@@ -996,7 +1025,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Conseils en optimisation fiscale</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Conseils en optimisation fiscale</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Grâce à notre expertise en fiscalité, nous vous aidons à structurer vos finances pour maximiser vos revenus et alléger votre
                                                              imposition dans le respect de la réglementation.
@@ -1004,7 +1033,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Accompagnement administratif complet</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Accompagnement administratif complet</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous gérons pour vous toutes les formalités administratives, des inscriptions professionnelles aux déclarations fiscales, afin que
                                                             vous puissiez vous concentrer pleinement sur votre pratique.
@@ -1012,7 +1041,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Suivi personnalisé et réactif</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Suivi personnalisé et réactif</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous offrons un suivi continu et personnalisé, avec des collaborateurs dédiés pour répondre à vos besoins et questions,
                                                             garantissant une grande réactivité face aux défis de votre activité.
@@ -1020,7 +1049,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Vision à long terme</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Vision à long terme</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous vous aidons à construire une stratégie de développement durable pour votre activité libérale, en anticipant les évolutions
                                                             légales et économiques, en vous accompagnant sur le long terme dans chaque étape de votre carrière.
@@ -1041,7 +1070,7 @@
                                 <div class="container rounded d-flex align-items-center">
                                     <div class="row bulles2" style="margin: 0 !important;">
                                         <div class="text-container2">
-                                            <br><h1 class="display-4" style="font-size: 2rem;">Les <span class="highlight2">restaurateurs</span></h1><br>
+                                            <br><h2 class="display-4" style="font-size: 2rem;">Les <span class="highlight2">restaurateurs</span></h2><br>
                                             <p class="lead">
                                                 Chez Place des Experts, nous comprenons les défis quotidiens auxquels font face les
                                                 restaurateurs. Entre la gestion des coûts, la conformité fiscale et le suivi de la rentabilité, chaque
@@ -1058,15 +1087,15 @@
                                 <!-- Section menu déroulant (Accordion) -->
                                 <section class="container">
                                     <div class="accordion" id="accordionRestaurateurs"></br></br>
-                                        <h2 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour les restaurateurs</h2></br>
+                                        <h3 class="section-title" style="font-size:1.4rem;">Nos services d’expertise comptable pour les restaurateurs</h3></br>
                                         
                                         <!-- Question 1 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1015">
+                                            <h3 class="accordion-header" id="heading1015">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1015" aria-expanded="false" aria-controls="collapse1015">
                                                     Gestion des coûts et optimisation des marges
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1015" class="accordion-collapse collapse" aria-labelledby="heading1015" data-bs-parent="#accordionRestaurateurs">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous analysons vos coûts fixes et variables pour identifier des leviers d’optimisation. Grâce à une gestion précise des
@@ -1077,11 +1106,11 @@
 
                                         <!-- Question 2 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1016">
+                                            <h3 class="accordion-header" id="heading1016">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1016" aria-expanded="false" aria-controls="collapse1016">
                                                     Mise en conformité fiscale et juridique
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1016" class="accordion-collapse collapse" aria-labelledby="heading1016" data-bs-parent="#accordionRestaurateurs">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Les réglementations fiscales et juridiques dans la restauration évoluent régulièrement. Nous veillons à ce que votre
@@ -1092,11 +1121,11 @@
 
                                         <!-- Question 3 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1017">
+                                            <h3 class="accordion-header" id="heading1017">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1017" aria-expanded="false" aria-controls="collapse1017">
                                                     Suivi de trésorerie
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1017" class="accordion-collapse collapse" aria-labelledby="heading1017" data-bs-parent="#accordionRestaurateurs">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Pour anticiper les fluctuations saisonnières ou imprévues, nous vous accompagnons dans la gestion de votre
@@ -1107,11 +1136,11 @@
 
                                         <!-- Question 4 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1018">
+                                            <h3 class="accordion-header" id="heading1018">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1018" aria-expanded="false" aria-controls="collapse1018">
                                                     Gestion des fiches de paie et des charges sociales
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1018" class="accordion-collapse collapse" aria-labelledby="heading1018" data-bs-parent="#accordionRestaurateurs">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Avec une équipe dédiée, nous prenons en charge la gestion des salaires et des déclarations sociales de vos employés,
@@ -1122,11 +1151,11 @@
 
                                         <!-- Question 5 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1019">
+                                            <h3 class="accordion-header" id="heading1019">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1019" aria-expanded="false" aria-controls="collapse1019">
                                                     Accompagnement à la création ou au développement de votre restaurant
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1019" class="accordion-collapse collapse" aria-labelledby="heading1019" data-bs-parent="#accordionRestaurateurs">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Que vous soyez en phase de création, de reprise ou d’expansion, nous vous conseillons sur les démarches
@@ -1136,11 +1165,11 @@
                                         </div>
                                         <!-- Question 6 -->
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1020">
+                                            <h3 class="accordion-header" id="heading1020">
                                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1020" aria-expanded="false" aria-controls="collapse1020">
                                                     Analyse de performance et reporting
                                                 </button>
-                                            </h2>
+                                            </h3>
                                             <div id="collapse1020" class="accordion-collapse collapse" aria-labelledby="heading1020" data-bs-parent="#accordionRestaurateurs">
                                                 <div class="accordion-body" style="text-align: justify;">
                                                     Nous mettons à votre disposition des outils de reporting pour suivre vos performances en temps réel. Ces analyses
@@ -1152,7 +1181,7 @@
 
 
                                     </div></br></br>
-                                    <h2 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels de la restauration</h2>
+                                    <h3 class="section-title" style="font-size: 1.5rem;">Nos engagements envers les professionnels de la restauration</h3>
                                 </section>
  
                                 <!-- Section cartes -->
@@ -1211,10 +1240,10 @@
                                     <div class="container rounded text-white d-flex align-items-center" style="padding-top: 40px;">
                                         <div class="row">
                                             <div>
-                                                <h2 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h2></br>
+                                                <h3 class="section-title" style="font-size: 1.5rem;">Pourquoi choisir Place des Experts ?</h3></br>
                                                 <ul class="custom-list">
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Un savoir-faire dédié au secteur de la restauration</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Un savoir-faire dédié au secteur de la restauration</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nos collaborateurs maîtrisent les spécificités comptables, fiscales, sociales et juridiques propres à la restauration, vous
                                                             garantissant des solutions adaptées à vos enjeux.
@@ -1222,7 +1251,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Des outils digitaux performants</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Des outils digitaux performants</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous utilisons des outils modernes pour centraliser vos données et simplifier vos processus, tels que la gestion des tickets de
                                                             caisse, des factures fournisseurs et des suivis de trésorerie.
@@ -1230,7 +1259,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Optimisation fiscale et gestion des risques</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Optimisation fiscale et gestion des risques</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous identifions les dispositifs fiscaux avantageux pour maximiser vos bénéfices, tout en vous protégeant des risques liés à des
                                                             erreurs ou des oublis administratifs.
@@ -1238,7 +1267,7 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Un partenaire engagé dans votre réussite</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Un partenaire engagé dans votre réussite</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Notre mission va au-delà de la comptabilité. Nous sommes un partenaire stratégique, investi dans le développement et la
                                                             pérennité de votre restaurant.
@@ -1246,14 +1275,14 @@
                                                     </li>
 
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Vision à long terme</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Vision à long terme</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Grâce à des indicateurs clairs et des rapports réguliers, vous avez une vision précise de la santé financière de votre établissement
                                                              pour prendre les bonnes décisions au bon moment.
                                                         </p>
                                                     </li>
                                                     <li>
-                                                        <h2 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Réactivité et proximité</h2>
+                                                        <h3 class="section-title" style="font-size: 1.2rem;"><i class="bi bi-diamond-fill" style="font-size:0.8rem; padding-right:5px;"></i> Réactivité et proximité</h3>
                                                         <p style="color: #333; text-align: justify;">
                                                             Nous assurons un accompagnement de proximité pour vous offrir des réponses rapides et des solutions concrètes face à vos
                                                              problématiques. 
@@ -1325,33 +1354,34 @@
     <footer class="footer">
         <div class="container">
             <ul class="services-list">
-                <li style ="text-align: center;">Notre cabinet est inscrit à l’Ordre des experts-comptables Nord Pas de Calais et à la Compagnie des commissaires aux comptes de Douai.</li>
+                <li>Notre cabinet est inscrit à l’Ordre des experts-comptables Nord Pas de Calais et à la Compagnie des commissaires aux comptes de Douai.</li>
             </ul></br>
             <div class="row">
                 <div class="footer-col">
-                    <h3>Le cabinet</h3>
+                    <h4>Le cabinet</h4>
                     <ul class="footer-links">
                         <li><a href="./cabinet.html">Notre équipe</a></li>
                         <li><a href="./cabinet.html#valeurs">Nos valeurs</a></li>
+                        <li><a href="./outils.html">Nos outils</a></li>
                         <li><a href="./blog.html">Blog</a></li>
                         <li><a href="./iso.html">ISO 9001</a></li>
-                        <li><a href="./contact.html#recrutement">Espace recrutement</a></li>
                         <li><a href="./mentions.html">Mentions légales</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Nous retrouver</h3>
+                    <h4>Nous retrouver</h4>
                     <ul class="footer-links">
                         <li><a href="https://www.linkedin.com/company/place-des-experts/?viewAsMember=true" target="_blank">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/placedesexperts/profilecard/?igsh=MTJ0YzkxNzA2NDBhZA==" target="_blank">Instagram</a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=61558604020917" target="_blank">Facebook</a></li>
                         <li><a href="https://www.youtube.com/@PlacedesExperts" target="_blank">Youtube</a></li>
                         <li><a href="./contact.html#rdv">Prendre rendez-vous</a></li>
+                        <li><a href="./contact.html#recrutement">Espace recrutement</a></li>
                         
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Prendre contact avec nous ?</h3>
+                    <h4>Prendre contact avec nous ?</h4>
                         <i class="bi bi-arrow-return-right" style="color:#245360;font-size: 50px;margin-right:10px;margin-top: 10px; vertical-align: middle;"></i><a class = "btn btn-custom" style ="font-size:1.8rem; border-radius:10px;" href="./contact.html">Contact</a>
                 </div>
             </div>
