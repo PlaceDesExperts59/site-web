@@ -635,6 +635,7 @@ html {
     }
     .responsive_img{
         width: 100% !important;
+        border-radius: 40px !important;
     }
     .navbar-brand img {
         width: 90px;

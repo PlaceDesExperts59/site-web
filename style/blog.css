@@ -28,8 +28,6 @@ body {
 }
 .img-fluid2 {
     border-radius: 20px;
-    width: 400px;
-    height: auto;
 }
 .nav-link {
     font-size: 18px;
@@ -317,7 +315,7 @@ section {
 }
 /* Styles pour la page article.html */
 .article{
-    padding-left:3rem !important;
+    padding-left:3rem;
     padding-right:3rem !important;
     padding-top:1.8rem !important;
 }
@@ -498,6 +496,17 @@ section {
     .blog-article h2 {
         font-size: 1.8rem;
     }
+    .footer-phrase{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        text-align: left !important;
+    }
+    .article{
+        padding: 40px !important;
+    }
+    .blog-article{
+        padding: 15px !important;
+    }
     .blog-article h3 {
         font-size: 1.4rem;
     }
@@ -515,7 +524,6 @@ section {
         font-size: 1rem;
     }
     .article{
-        padding-left:1.8rem !important;
         padding-right:1.8rem !important;
         padding-top:0.8rem !important;
     }

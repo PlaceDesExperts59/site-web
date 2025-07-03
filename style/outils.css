@@ -376,6 +376,10 @@ h2 {
     .text-container{
         padding : 20px !important;
     }
+    .footer-phrase{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
     .text-container h1 {
         font-size: 2rem;
     }

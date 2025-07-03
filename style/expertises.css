@@ -562,7 +562,7 @@ h3 {
     margin-top: 20px;
 }
 .img-fluid {
-    margin:5px !important;
+    margin:5px;
 }
 .bubble-back {
     background-color: white;
@@ -674,6 +674,9 @@ h3 {
     }
     .responsive_img{
         width: 100% !important;
+        border-radius: 40px !important;
+        padding: 15px;
+        margin: 0px !important;
     }
     .img-fluid2 {
         width: 100%;
@@ -741,11 +744,12 @@ h3 {
         font-size: 0.95rem;
     }
     .bulles {
-        padding: 20px !important;
-        border-radius: 15px;
+        padding: 10px !important;
+        border-radius: 35px;
     }
     .text-container {
-        padding: 5px; 
+        padding: 10px; 
+        padding-bottom: 40px !important;
         border-radius: 20px;
     }
     .text-container h2 {
@@ -810,19 +814,34 @@ h3 {
         padding: 0px 8px;
     }
     .decoration-graphic-cabinet{
-        top: -1%;
+        top: -0%;
         right: -3%;
     }
     .decoration-graphic-secteur {
-        top: -2%;
+        top: 0%;
+        right: -2%;
+    }
+    .decoration-graphic {
+        top: 0%;
         right: -2%;
     }
     .lead {
         padding: 0px;
     }
+    .tab-content{
+        padding: 30px;
+    }
+    .responsive_cabinet{
+        padding-left:35px !important;
+        padding-right:20px !important;
+    }
     .services .container .row {
         display: flex;
         flex-direction: column !important;
+    }
+    .footer-phrase{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
     }
     .image-below-text {
         display: flex;
@@ -881,4 +900,8 @@ h3 {
     .text-container2{
         padding : 5px;
     }
+    .container {
+    width: 100% !important;
+    padding: 0%;
+    }   
 }
