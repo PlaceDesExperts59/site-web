@@ -43,7 +43,11 @@ exports.handler = async function () {
 
     const beforeArticles = staticUrls
       .filter(p => p.page !== "outils.html" && p.page !== "contact.html" && p.page !== "iso.html" && p.page !== "mentions.html")
-      .map(p => `<url><loc>${baseUrl}/${p.page}</loc><priority>${p.priority}</priority></url>`);
+      .map(p => {
+        const loc = p.page === "index.html" ? `${baseUrl}/` : `${baseUrl}/${p.page}`;
+        return `<url><loc>${loc}</loc><priority>${p.priority}</priority></url>`;
+      });
+
 
     const afterArticles = staticUrls
       .filter(p => ["outils.html", "contact.html", "iso.html", "mentions.html"].includes(p.page))
