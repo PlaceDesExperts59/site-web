@@ -1,4 +1,6 @@
 
+const Papa = require("papaparse");
+
 exports.handler = async function () {
   const staticUrls = [
     { page: "index.html", priority: 1.0 },
@@ -21,18 +23,24 @@ exports.handler = async function () {
     if (!response.ok) throw new Error(`Erreur fetch: ${response.statusText}`);
 
     const csv = await response.text();
-    const rows = csv.split("\n").slice(1).filter(Boolean);
-    console.log(`🧾 ${rows.length} lignes trouvées.`);
+    const parsed = Papa.parse(csv, {
+      header: true,
+      skipEmptyLines: true
+    });
 
-    const dynamicUrls = rows.map((row, i) => {
-      const parts = row.split(",");
-      const title = parts[1]?.trim();
-      if (!title) return null;
+    console.log(`🧾 ${parsed.data.length} lignes valides trouvées.`);
+
+    const dynamicUrls = parsed.data.map((row, i) => {
+      const title = row["Titre"]?.trim(); // <- lecture propre de la vraie colonne
+      if (!title) {
+        console.warn(`⚠️ Ligne ${i + 2} ignorée (pas de titre)`);
+        return null;
+      }
       const slug = normalizeTitle(title);
-      return `<url><loc>${baseUrl}/article.html?title=${encodeURIComponent(slug)}</loc><priority>0.75</priority></url>`;
+      const url = `${baseUrl}/article.html?title=${encodeURIComponent(slug)}`;
+      return `<url><loc>${url}</loc><priority>0.75</priority></url>`;
     }).filter(Boolean);
 
-    // Séparer les blocs : avant article (blog inclus), articles, après
     const beforeArticles = staticUrls
       .filter(p => p.page !== "outils.html" && p.page !== "contact.html" && p.page !== "iso.html" && p.page !== "mentions.html")
       .map(p => `<url><loc>${baseUrl}/${p.page}</loc><priority>${p.priority}</priority></url>`);
