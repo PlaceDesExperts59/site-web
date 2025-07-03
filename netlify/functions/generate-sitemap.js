@@ -38,7 +38,7 @@ exports.handler = async function () {
       }
       const slug = normalizeTitle(title);
       const url = `${baseUrl}/article.html?title=${encodeURIComponent(slug)}`;
-      return `<url><loc>${url}</loc><priority>0.75</priority></url>`;
+      return `<url><loc>${url}</loc><priority>0.5</priority></url>`;
     }).filter(Boolean);
 
     const beforeArticles = staticUrls
