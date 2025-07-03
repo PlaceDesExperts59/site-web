@@ -53,12 +53,14 @@ exports.handler = async function () {
       body: sitemapXml,
     };
   } catch (error) {
-    console.error("❌ Erreur finale attrapée :", error);
-    return {
-      statusCode: 500,
-      body: "Erreur lors de la génération du sitemap.",
-    };
-  }
+  console.error("❌ Erreur finale attrapée :", error);
+  return {
+    statusCode: 500,
+    headers: { "Content-Type": "text/plain" },
+    body: `Erreur lors de la génération du sitemap : ${error.message || error}`,
+  };
+}
+
 };
 
 function normalizeTitle(str = "") {
