@@ -1,5 +1,7 @@
 exports.handler = async function () {
   const baseUrl = "http://www2.placedesexperts.fr";
+  const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQeYPB8TcxaqiZL2FUMsiHxLkpg6669WPPq3gzfgz16s-EYrMA8Q4NrzJODs2EFr1cuL3OsvRtMi0Nq/pub?output=csv";
+
   const staticPages = [
     { path: "index.html", priority: "1.0" },
     { path: "cabinet.html", priority: "0.9" },
@@ -12,8 +14,6 @@ exports.handler = async function () {
     { path: "mentions.html", priority: "0.5" }
   ];
 
-  const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQeYPB8TcxaqiZL2FUMsiHxLkpg6669WPPq3gzfgz16s-EYrMA8Q4NrzJODs2EFr1cuL3OsvRtMi0Nq/pub?output=csv";
-
   try {
     const response = await fetch(sheetUrl);
     if (!response.ok) throw new Error(`Erreur HTTP: ${response.statusText}`);
@@ -22,26 +22,25 @@ exports.handler = async function () {
     const rows = csv.split("\n").slice(1).filter(Boolean);
 
     const dynamicUrls = rows.map((row, i) => {
-      const title = row.split(",")[0]?.trim();
+      const cells = row.split(",");
+      const title = cells[1]?.trim(); // colonne "Titre"
       if (!title) return null;
+
       const slug = normalizeTitle(title);
-      return {
-        loc: `${baseUrl}/article.html?title=${encodeURIComponent(slug)}`,
-        priority: "0.7"
-      };
+      const loc = `${baseUrl}/article.html?title=${encodeURIComponent(slug)}`;
+
+      return `<url><loc>${loc}</loc><priority>0.7</priority></url>`;
     }).filter(Boolean);
 
-    const sitemapXml = `
-<?xml version="1.0" encoding="UTF-8"?>
+    const staticXml = staticPages.map(p =>
+      `<url><loc>${baseUrl}/${p.path}</loc><priority>${p.priority}</priority></url>`
+    ).join("\n");
+
+    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${staticPages.map(p => `
-  <url><loc>${baseUrl}/${p.path}</loc><priority>${p.priority}</priority></url>
-`).join("")}
-${dynamicUrls.map(d => `
-  <url><loc>${d.loc}</loc><priority>${d.priority}</priority></url>
-`).join("")}
-</urlset>
-`.trim();
+${staticXml}
+${dynamicUrls.join("\n")}
+</urlset>`.trim();
 
     return {
       statusCode: 200,
