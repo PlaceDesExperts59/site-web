@@ -55,11 +55,9 @@
     </head>
 
     <body>
-
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <!-- Logo du site -->
                 <a class="navbar-brand" href="./index.html">
                     <img src="./images/Logo_fond_blanc.webp" 
                         width="120" height="100"
@@ -70,12 +68,10 @@
                         decoding="async">
                 </a>
 
-                <!-- Bouton pour mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Liens du menu -->
                 <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center; padding-right: 120px;"> <!-- Ajouter padding-right -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -114,7 +110,7 @@
                     class="decoration-graphic"
                     loading="eager"
                     decoding="async">
-                    <!-- Colonne gauche : texte, titre et logos -->
+                    <!-- Colonne gauche -->
                     <div class="col-lg-6">
                         <div class="text-container">
                         </br><h1 class="display-4">BLOG</h1></br>
@@ -128,7 +124,7 @@
                             
                         </div>
                     </div>
-                    <!-- Colonne droite : image pleine largeur -->
+                    <!-- Colonne droite -->
                     <div class="col-lg-6 d-flex justify-content-center align-items-center">
                         <img src="./images/Blog.webp"
                         alt="Image d'accueil"
@@ -143,7 +139,7 @@
             
         </section>
 
-        <!-- Barre de recherche avec icône de loupe -->
+        <!-- Barre de recherche -->
         <div class="search-bar-container d-flex align-items-center">
             <i class="bi bi-search search-icon"></i>
             <input type="text" id="search-input" placeholder="Rechercher dans les articles..." class="form-control">
@@ -159,7 +155,6 @@
 
         <!-- Script du Bouton pour remonter en haut de la page -->
         <script>
-            // Afficher/Masquer le bouton selon le défilement
             window.addEventListener('scroll', function() {
                 var scrollToTopButton = document.querySelector('.scroll-to-top');
                 if (window.scrollY > 300) {
@@ -168,8 +163,6 @@
                     scrollToTopButton.classList.remove('show');
                 }
             });
-
-            // Remonter en haut de la page lorsqu'on clique sur le bouton
             document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -191,32 +184,26 @@
                     const blogCardsContainer = document.getElementById('blog-cards-container');
                     blogCardsContainer.innerHTML = '';
         
-                    // Analyser le CSV avec PapaParse
                     const parsedData = Papa.parse(data, {
                         header: true,
                         skipEmptyLines: true
                     });
         
-                    // Nettoyer les clés des objets
                     const articlesData = parsedData.data.map(entry => {
                         const cleanedEntry = {};
                         Object.keys(entry).forEach(key => {
-                            const cleanedKey = key.trim(); // Supprimer les espaces autour de la clé
+                            const cleanedKey = key.trim(); 
                             cleanedEntry[cleanedKey] = entry[key].trim();
                         });
                         return cleanedEntry;
                     });
 
-                    // Mettre à jour le stockage local avec les nouvelles données
                     localStorage.setItem('articlesData', JSON.stringify(articlesData));
 
-                    // Restaurer la pagination et le défilement
                     const savedState = JSON.parse(localStorage.getItem('blogState'));
                     if (savedState) {
                         currentPage = savedState.currentPage || 1;
                         displayArticles(articlesData, currentPage);
-
-                        // Restaurer la position de défilement après un délai pour permettre le rendu
                         setTimeout(() => {
                             window.scrollTo(0, savedState.scrollPosition || 0);
                         }, 100);
@@ -224,15 +211,12 @@
                         displayArticles(articlesData, 1);
                     }
 
-        
-                    // Fonction pour parser les dates au format DD/MM/YYYY
                     function parseDate(dateString) {
                         if (!dateString) return new Date(0);
                         const [day, month, year] = dateString.split('/');
                         return new Date(`${year}-${month}-${day}`);
                     }
         
-                    // Trier les articles par date (du plus récent au plus ancien)
                     articlesData.sort((a, b) => {
                         const dateA = parseDate(a['Date de publication']);
                         const dateB = parseDate(b['Date de publication']);
@@ -311,10 +295,8 @@
                     paginationList.appendChild(li);
                 };
 
-                // Bouton "Première page"
                 addPageButton('<<', 1, false, currentPage === 1);
 
-                // Pages précédentes avec ellipses
                 if (currentPage > 3) {
                     addPageButton('1', 1);
                     const li = document.createElement('li');
@@ -323,12 +305,10 @@
                     paginationList.appendChild(li);
                 }
 
-                // Pages autour de la page actuelle
                 for (let i = Math.max(1, currentPage - 2); i <= Math.min(totalPages, currentPage + 2); i++) {
                     addPageButton(i, i, currentPage === i);
                 }
 
-                // Pages suivantes avec ellipses
                 if (currentPage < totalPages - 2) {
                     const li = document.createElement('li');
                     li.className = 'page-item disabled';
@@ -337,21 +317,18 @@
                     addPageButton(totalPages, totalPages);
                 }
 
-                // Bouton "Dernière page"
                 addPageButton('>>', totalPages, false, currentPage === totalPages);
 
                 paginationContainer.appendChild(paginationList);
             }
 
-
-
             function normalizeString(str) {
                 return str
                     .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "") // Supprime les accents
-                    .replace(/’/g, "'") // Remplace les apostrophes courbes
-                    .replace(/-/g, " ") // Remplace les tirets par des espaces
-                    .replace(/[^a-zA-Z0-9\s]/g, "") // Supprime les caractères spéciaux
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .replace(/’/g, "'") 
+                    .replace(/-/g, " ")
+                    .replace(/[^a-zA-Z0-9\s]/g, "")
                     .toLowerCase()
                     .trim();
             }
@@ -359,23 +336,15 @@
             function openArticle(articleTitle) {
                 const normalizedTitle = normalizeString(articleTitle);
                 const encodedTitle = encodeURIComponent(normalizedTitle);
-
-                // Sauvegarde de l'état de pagination et de défilement
                 const state = {
                     currentPage: currentPage,
                     scrollPosition: window.scrollY
                 };
                 localStorage.setItem('blogState', JSON.stringify(state));
 
-                // Redirection vers la page de l'article
                 window.location.href = `article.html?title=${encodedTitle}`;
             }
 
-
-
-
-
-        
             document.addEventListener('DOMContentLoaded', fetchCSV);
         </script>
 
@@ -391,15 +360,13 @@
                 return title.includes(searchInput) || author.includes(searchInput) || content.includes(searchInput);
             });
 
-            currentPage = 1; // Réinitialise à la première page
+            currentPage = 1;
             displayArticles(filteredArticles, currentPage);
 
-            // Affiche un message si aucun article trouvé
             if (filteredArticles.length === 0) {
                 document.getElementById('blog-cards-container').innerHTML = `<p>Aucun article trouvé pour votre recherche.</p>`;
             }
          
-            // Afficher les articles filtrés
             filteredArticles.forEach((entry, index) => {
                 const title = entry['Titre'];
                 const author = entry["Auteur de l'article"];
@@ -425,12 +392,10 @@
                 blogCardsContainer.insertAdjacentHTML('beforeend', cardHTML);
             });
 
-            // Afficher un message si aucun article n'est trouvé
             if (filteredArticles.length === 0) {
                 blogCardsContainer.innerHTML = `<p>Aucun article trouvé pour votre recherche.</p>`;
             }
         }
-            // Écouter les changements dans la barre de recherche
             document.getElementById('search-input').addEventListener('input', filterArticles);
         </script>
 

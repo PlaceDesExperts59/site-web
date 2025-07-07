@@ -92,38 +92,32 @@
             </a>
         </div>
         
-
         <div id="article-container" class="article-content"></div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
-        <!-- Chargement dynamique des articles depuis un CSV -->
+        <!-- Chargement des articles -->
         <script>
             const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeYPB8TcxaqiZL2FUMsiHxLkpg6669WPPq3gzfgz16s-EYrMA8Q4NrzJODs2EFr1cuL3OsvRtMi0Nq/pub?output=csv';
 
-            // Récupérer le titre depuis l'URL
             const urlParams = new URLSearchParams(window.location.search);
             const articleTitle = decodeURIComponent(urlParams.get('title'));
 
-            // Fonction pour normaliser un titre
             function normalizeString(str) {
                 return str
-                    .normalize("NFD") // Décompose les caractères accentués
-                    .replace(/[\u0300-\u036f]/g, "") // Supprime les accents
-                    .replace(/’/g, "'") // Remplace les apostrophes courbes par des droites
-                    .replace(/-/g, " ") // Remplace les tirets par des espaces
-                    .replace(/[^a-zA-Z0-9\s]/g, "") // Supprime les caractères non alphanumériques sauf les espaces
-                    .toLowerCase() // Transforme en minuscules
-                    .trim(); // Supprime les espaces inutiles
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .replace(/’/g, "'") 
+                    .replace(/-/g, " ")
+                    .replace(/[^a-zA-Z0-9\s]/g, "") 
+                    .toLowerCase()
+                    .trim();
             }
-
 
             async function fetchAndDisplayArticle() {
                 try {
                     const response = await fetch(csvUrl);
                     const data = await response.text();
-
-                    // Analyse du CSV avec PapaParse
                     const parsedData = Papa.parse(data, {
                         header: true,
                         skipEmptyLines: true
@@ -131,10 +125,8 @@
 
                     const articlesData = parsedData.data;
 
-                    // Affiche un log des articles disponibles pour débogage
                     console.log("Articles disponibles :", articlesData);
 
-                    // Afficher l'article correspondant
                     displayArticle(articlesData, articleTitle);
                 } catch (error) {
                     console.error("Erreur lors de la récupération des données :", error);
@@ -142,9 +134,8 @@
                 }
             }
 
-
             function displayArticle(articlesData, articleTitle) {
-                const normalizedTitle = normalizeString(articleTitle); // Normalisation du titre dans l'URL
+                const normalizedTitle = normalizeString(articleTitle);
                 const article = articlesData.find(entry => normalizeString(entry['Titre']) === normalizedTitle);
 
 
@@ -199,7 +190,6 @@
                         let image6 = article['Image6'];
                         const Source6 = article["Source6"];
 
-                        // Vérifier et corriger le chemin de l'image
                         if (!image || image.trim() === '') {
                             image = './images/Nos expertises/Comptabilité/02_Vision_moderne.webp';
                         } else if (!image.startsWith('http') && !image.startsWith('/')) {
@@ -288,8 +278,6 @@
                         document.getElementById('article-container').innerHTML = '<p>Article introuvable.</p>';
                     }
             }
-
-            // Charger et afficher l'article
             fetchAndDisplayArticle();
         </script>
 
@@ -302,11 +290,8 @@
         <script>
 
             function goBackToBlog() {
-                // Simplement rediriger vers la page blog
                 window.location.href = 'blog.html';
             }
-
-            // Afficher/Masquer le bouton selon le défilement
             window.addEventListener('scroll', function() {
                 const scrollToTopButton = document.querySelector('.scroll-to-top');
                 if (window.scrollY > 300) {
@@ -315,8 +300,6 @@
                     scrollToTopButton.classList.remove('show');
                 }
             });
-
-            // Remonter en haut de la page lorsqu'on clique sur le bouton
             document.querySelector('.scroll-to-top').addEventListener('click', function(e) {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
