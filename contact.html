@@ -197,57 +197,46 @@
                     <div class="col-md-9 contacteznous">
                         <h3 class="text-center" style="font-family: 'Playfair Display', serif;">Contactez-nous</h3></br>
 
-                        <form name="contact" method="POST" data-netlify="true" class="form-marg">
+                         <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                            onsubmit="event.preventDefault(); this.style.display='none'; document.getElementById('confirmation-message').style.display='block';" class="form-marg">
+                            
                             <input type="hidden" name="form-name" value="contact">
+                            <input type="hidden" name="bot-field"> <!-- pour éviter les spams -->
+
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label for="prenom" class="visually-hidden">Prénom</label>
-                                    <input type="text" class="form-control form-marg-prenom" id="prenom" name="prenom" placeholder="Prénom" required>
+                                <label for="prenom" class="visually-hidden">Prénom</label>
+                                <input type="text" class="form-control form-marg-prenom" id="prenom" name="prenom" placeholder="Prénom" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="nom" class="visually-hidden">Nom</label>
-                                    <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required>
+                                <label for="nom" class="visually-hidden">Nom</label>
+                                <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom" required>
                                 </div>
-                            </div></br>
+                            </div><br>
+
                             <div class="mb-3">
                                 <label for="email" class="visually-hidden">E-mail</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
-                            </div></br>
+                            </div><br>
+
                             <div class="mb-3">
                                 <label for="sujet" class="visually-hidden">Sujet(s)</label>
                                 <input type="text" class="form-control" id="sujet" name="sujet" placeholder="Sujet(s)" required>
-                            </div></br>
+                            </div><br>
+
                             <div class="mb-3">
                                 <label for="message" class="visually-hidden">Message</label>
                                 <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div></br>
-                        
+                            </div><br>
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-custom2">Envoyer</button>
                             </div>
                         </form>
+
                         <div id="confirmation-message" style="display: none; color: green; text-align: center; margin-top: 20px;">
                             Merci, votre message a bien été envoyé.
                         </div>
-
-                        <script>
-                        document.addEventListener("DOMContentLoaded", function () {
-                            const confirmation = document.getElementById("confirmation-message");
-                            const form = document.querySelector("form");
-
-                            // Si "formSent" est présent dans localStorage => affichage du message
-                            if (localStorage.getItem("formSent") === "true") {
-                                confirmation.style.display = "block";
-                                localStorage.removeItem("formSent");
-                                if (form) form.reset();
-                            }
-
-                            // Quand on clique sur "Envoyer", on marque que le formulaire est parti
-                            form?.addEventListener("submit", function () {
-                                localStorage.setItem("formSent", "true");
-                            });
-                        });
-                        </script>
 
                     </div>
                 </div>
