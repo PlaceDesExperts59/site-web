@@ -197,7 +197,8 @@
                     <div class="col-md-9 contacteznous">
                         <h3 class="text-center" style="font-family: 'Playfair Display', serif;">Contactez-nous</h3></br>
 
-                        <form action="https://formspree.io/f/xwpkpjnr" method="POST" class="form-marg">
+                        <form name="contact" method="POST" data-netlify="true" class="form-marg">
+                            <input type="hidden" name="form-name" value="contact">
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label for="prenom" class="visually-hidden">Prénom</label>
