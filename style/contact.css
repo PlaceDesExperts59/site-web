@@ -408,6 +408,16 @@ textarea::placeholder {
         text-align: left;
         width: 100%;
     }
+    .form-marg-prenom{
+        margin-bottom: 10px;
+    }
+    .form-marg{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .form-marg-titre{
+        margin-left:10px;
+    }
     #rdv {
         margin-bottom: 0px !important;
         padding: 0px !important;
