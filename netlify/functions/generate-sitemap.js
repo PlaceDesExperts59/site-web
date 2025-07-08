@@ -14,7 +14,7 @@ exports.handler = async function () {
     { page: "mentions.html", priority: 0.4 }
   ];
 
-  const baseUrl = "http://www2.placedesexperts.fr";
+  const baseUrl = "https://www.placedesexperts.fr";
   const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQeYPB8TcxaqiZL2FUMsiHxLkpg6669WPPq3gzfgz16s-EYrMA8Q4NrzJODs2EFr1cuL3OsvRtMi0Nq/pub?output=csv";
 
   try {
