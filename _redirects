@@ -1,7 +1,7 @@
 /nos-missions/                  /expertises        301
 /equipe-cabinet-flandres-audit /cabinet           301
 /blog/page/*                    /blog              301
-
+/*/1000         /blog     301
 /blog/credit-impot-recherche-demarches                   /article.html?title=credit%20dimpot%20recherche%20%20les%20demarches%20pour%20en%20beneficier     301
 /blog/conservation-des-documents-entreprise              /article.html?title=conservation%20des%20documents%20dune%20entreprise                         301
 /blog/auto-entrepreneur-ce-qu-il-faut-savoir             /article.html?title=auto%20entrepreneur%20%20ce%20quil%20faut%20savoir                         301
@@ -35,3 +35,12 @@
 /blog/bien-gerer-sa-tresorerie                           /article.html?title=bien%20gerer%20sa%20tresorerie                                             301
 /blog/notion-de-residence-principale                     /article.html?title=la%20notion%20de%20residence%20principale                                 301
 /blog/sci-ir-ou-is                                       /article.html?title=quelle%20imposition%20choisir%20pour%20sa%20sci%20%20ir%20ou%20%20is       301
+/blog/pret              /blog     301
+/blog/pret-de           /blog     301
+/blog/notion            /blog     301
+/?ref=tomba.io          /blog     301
+/?feed=rss              /blog     301
+/page/*/search            /blog     301
+/page/*/?s=*              /blog     301
+/?.s=*                    /blog     301
+/feed                     /blog     301
