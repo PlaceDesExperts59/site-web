@@ -266,7 +266,11 @@
                                 <p><em>Par ${author}, le ${date}</em></p>
                                 <p class="excerpt">${excerpt}</p>
                                 <div class="read-more-container">
-                                    <a class="read-more" onclick="openArticle('${title.replace(/'/g, "\\'")}')">En savoir plus</a>
+                                    <a 
+                                    class="read-more" 
+                                    href="/articles/${encodeURIComponent(title)}"
+                                    onclick="openArticle('${title.replace(/'/g, "\\'")}');return false;"
+                                    >En savoir plus</a>
                                 </div>
                             </div>
                         </div>
